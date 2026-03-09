@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 02, 2026 at 02:50 PM
+-- Generation Time: Mar 09, 2026 at 01:57 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -51,18 +51,6 @@ CREATE TABLE `product` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `product_review`
---
-
-CREATE TABLE `product_review` (
-  `product_review_id` int(11) NOT NULL COMMENT 'Primary key for a product review',
-  `product_id` int(11) NOT NULL COMMENT 'Foreign key for a product',
-  `review_id` int(11) NOT NULL COMMENT 'Foreign key for a review'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `review`
 --
 
@@ -72,6 +60,7 @@ CREATE TABLE `review` (
   `review_text` text NOT NULL COMMENT 'The text of a review',
   `review_published_datetime` datetime NOT NULL COMMENT 'Datetime of when a review was published',
   `review_rating` float NOT NULL COMMENT 'Star rating for a review',
+  `product_id` int(11) NOT NULL COMMENT 'Foreign key for a product',
   `user_id` int(11) NOT NULL COMMENT 'Foreign key for a user'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci;
 
@@ -118,12 +107,6 @@ ALTER TABLE `product`
   ADD PRIMARY KEY (`product_id`);
 
 --
--- Indexes for table `product_review`
---
-ALTER TABLE `product_review`
-  ADD PRIMARY KEY (`product_review_id`);
-
---
 -- Indexes for table `review`
 --
 ALTER TABLE `review`
@@ -156,12 +139,6 @@ ALTER TABLE `category`
 --
 ALTER TABLE `product`
   MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary key for a product';
-
---
--- AUTO_INCREMENT for table `product_review`
---
-ALTER TABLE `product_review`
-  MODIFY `product_review_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary key for a product review';
 
 --
 -- AUTO_INCREMENT for table `review`
