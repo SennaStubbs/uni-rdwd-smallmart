@@ -30,6 +30,41 @@
             </div>
         </header>
 
+        <main class="rows">
+            <div class="row collections">
+                <div class="container">
+                    <div class="collection">
+                        <div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+                        <div class="title">
+                            <h1>Food</h1>
+                            <a>View Collection</a>
+                        </div>
+                    </div>
+                    <div class="collection">
+                        <div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+                        <div class="title">
+                            <h1>Food</h1>
+                            <a>View Collection</a>
+                        </div>
+                    </div>
+                    <div class="collection">
+                        <div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+                        <div class="title">
+                            <h1>Food</h1>
+                            <a>View Collection</a>
+                        </div>
+                    </div>
+                    <div class="collection">
+                        <div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+                        <div class="title">
+                            <h1>Food</h1>
+                            <a>View Collection</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
         <!-- JavaScript -->
         <script type="text/javascript" src="/smallmart/website/js/main.js"></script>
     </body>
