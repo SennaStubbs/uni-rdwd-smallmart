@@ -63,6 +63,2769 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="container">
+                    <div class="row-title">
+                        <span class="material-symbols-outlined">star_shine</span>
+                        FEATURED
+                        <a>View All</a>
+                    </div>
+                    <div class="products-container">
+						<div class="product">
+							<div class="details">
+								<div class="title">
+									<!-- Product name -->
+									<h1>Candle Set</h1>
+									<!-- Product price -->
+									<h2>£1.19</h2>
+								</div>
+								<div class="bottom">
+									<div class="rating">
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<p>4.5 (150)</p>
+									</div>
+									<button class="favourite material-symbols-outlined">
+										favorite
+									</button>
+								</div>
+							</div>
+							<div class="image-container">
+								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+							</div>
+						</div>
+						<div class="product">
+							<div class="details">
+								<div class="title">
+									<!-- Product name -->
+									<h1>Candle Set</h1>
+									<!-- Product price -->
+									<h2>£1.19</h2>
+								</div>
+								<div class="bottom">
+									<div class="rating">
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<p>4.5 (150)</p>
+									</div>
+									<button class="favourite material-symbols-outlined">
+										favorite
+									</button>
+								</div>
+							</div>
+							<div class="image-container">
+								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+							</div>
+						</div>
+						<div class="product">
+							<div class="details">
+								<div class="title">
+									<!-- Product name -->
+									<h1>Candle Set</h1>
+									<!-- Product price -->
+									<h2>£1.19</h2>
+								</div>
+								<div class="bottom">
+									<div class="rating">
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<p>4.5 (150)</p>
+									</div>
+									<button class="favourite material-symbols-outlined">
+										favorite
+									</button>
+								</div>
+							</div>
+							<div class="image-container">
+								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+							</div>
+						</div>
+						<div class="product">
+							<div class="details">
+								<div class="title">
+									<!-- Product name -->
+									<h1>Candle Set</h1>
+									<!-- Product price -->
+									<h2>£1.19</h2>
+								</div>
+								<div class="bottom">
+									<div class="rating">
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<p>4.5 (150)</p>
+									</div>
+									<button class="favourite material-symbols-outlined">
+										favorite
+									</button>
+								</div>
+							</div>
+							<div class="image-container">
+								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+							</div>
+						</div>
+						<div class="product">
+							<div class="details">
+								<div class="title">
+									<!-- Product name -->
+									<h1>Candle Set</h1>
+									<!-- Product price -->
+									<h2>£1.19</h2>
+								</div>
+								<div class="bottom">
+									<div class="rating">
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<p>4.5 (150)</p>
+									</div>
+									<button class="favourite material-symbols-outlined">
+										favorite
+									</button>
+								</div>
+							</div>
+							<div class="image-container">
+								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+							</div>
+						</div>
+						<div class="product">
+							<div class="details">
+								<div class="title">
+									<!-- Product name -->
+									<h1>Candle Set</h1>
+									<!-- Product price -->
+									<h2>£1.19</h2>
+								</div>
+								<div class="bottom">
+									<div class="rating">
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<p>4.5 (150)</p>
+									</div>
+									<button class="favourite material-symbols-outlined">
+										favorite
+									</button>
+								</div>
+							</div>
+							<div class="image-container">
+								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+							</div>
+						</div>
+						<div class="product">
+							<div class="details">
+								<div class="title">
+									<!-- Product name -->
+									<h1>Candle Set</h1>
+									<!-- Product price -->
+									<h2>£1.19</h2>
+								</div>
+								<div class="bottom">
+									<div class="rating">
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<p>4.5 (150)</p>
+									</div>
+									<button class="favourite material-symbols-outlined">
+										favorite
+									</button>
+								</div>
+							</div>
+							<div class="image-container">
+								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+							</div>
+						</div>
+						<div class="product">
+							<div class="details">
+								<div class="title">
+									<!-- Product name -->
+									<h1>Candle Set</h1>
+									<!-- Product price -->
+									<h2>£1.19</h2>
+								</div>
+								<div class="bottom">
+									<div class="rating">
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<p>4.5 (150)</p>
+									</div>
+									<button class="favourite material-symbols-outlined">
+										favorite
+									</button>
+								</div>
+							</div>
+							<div class="image-container">
+								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+							</div>
+						</div>
+						<div class="product">
+							<div class="details">
+								<div class="title">
+									<!-- Product name -->
+									<h1>Candle Set</h1>
+									<!-- Product price -->
+									<h2>£1.19</h2>
+								</div>
+								<div class="bottom">
+									<div class="rating">
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<p>4.5 (150)</p>
+									</div>
+									<button class="favourite material-symbols-outlined">
+										favorite
+									</button>
+								</div>
+							</div>
+							<div class="image-container">
+								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+							</div>
+						</div>
+						<div class="product">
+							<div class="details">
+								<div class="title">
+									<!-- Product name -->
+									<h1>Candle Set This is a long name</h1>
+									<!-- Product price -->
+									<h2>£1.19</h2>
+								</div>
+								<div class="bottom">
+									<div class="rating">
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<p>4.5 (150)</p>
+									</div>
+									<button class="favourite material-symbols-outlined">
+										favorite
+									</button>
+								</div>
+							</div>
+							<div class="image-container">
+								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+							</div>
+						</div>
+                    </div>
+                </div>
+            </div>
+			<div class="row">
+                <div class="container">
+                    <div class="row-title">
+                        <span class="material-symbols-outlined">stars</span>
+                        NEWLY ADDED
+                        <a>View All</a>
+                    </div>
+                    <div class="products-container">
+						<div class="product">
+							<div class="details">
+								<div class="title">
+									<!-- Product name -->
+									<h1>Candle Set</h1>
+									<!-- Product price -->
+									<h2>£1.19</h2>
+								</div>
+								<div class="bottom">
+									<div class="rating">
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<p>4.5 (150)</p>
+									</div>
+									<button class="favourite material-symbols-outlined">
+										favorite
+									</button>
+								</div>
+							</div>
+							<div class="image-container">
+								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+							</div>
+						</div>
+						<div class="product">
+							<div class="details">
+								<div class="title">
+									<!-- Product name -->
+									<h1>Candle Set</h1>
+									<!-- Product price -->
+									<h2>£1.19</h2>
+								</div>
+								<div class="bottom">
+									<div class="rating">
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<p>4.5 (150)</p>
+									</div>
+									<button class="favourite material-symbols-outlined">
+										favorite
+									</button>
+								</div>
+							</div>
+							<div class="image-container">
+								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+							</div>
+						</div>
+						<div class="product">
+							<div class="details">
+								<div class="title">
+									<!-- Product name -->
+									<h1>Candle Set</h1>
+									<!-- Product price -->
+									<h2>£1.19</h2>
+								</div>
+								<div class="bottom">
+									<div class="rating">
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<p>4.5 (150)</p>
+									</div>
+									<button class="favourite material-symbols-outlined">
+										favorite
+									</button>
+								</div>
+							</div>
+							<div class="image-container">
+								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+							</div>
+						</div>
+						<div class="product">
+							<div class="details">
+								<div class="title">
+									<!-- Product name -->
+									<h1>Candle Set</h1>
+									<!-- Product price -->
+									<h2>£1.19</h2>
+								</div>
+								<div class="bottom">
+									<div class="rating">
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<p>4.5 (150)</p>
+									</div>
+									<button class="favourite material-symbols-outlined">
+										favorite
+									</button>
+								</div>
+							</div>
+							<div class="image-container">
+								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+							</div>
+						</div>
+						<div class="product">
+							<div class="details">
+								<div class="title">
+									<!-- Product name -->
+									<h1>Candle Set</h1>
+									<!-- Product price -->
+									<h2>£1.19</h2>
+								</div>
+								<div class="bottom">
+									<div class="rating">
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<p>4.5 (150)</p>
+									</div>
+									<button class="favourite material-symbols-outlined">
+										favorite
+									</button>
+								</div>
+							</div>
+							<div class="image-container">
+								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+							</div>
+						</div>
+						<div class="product">
+							<div class="details">
+								<div class="title">
+									<!-- Product name -->
+									<h1>Candle Set</h1>
+									<!-- Product price -->
+									<h2>£1.19</h2>
+								</div>
+								<div class="bottom">
+									<div class="rating">
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<p>4.5 (150)</p>
+									</div>
+									<button class="favourite material-symbols-outlined">
+										favorite
+									</button>
+								</div>
+							</div>
+							<div class="image-container">
+								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+							</div>
+						</div>
+						<div class="product">
+							<div class="details">
+								<div class="title">
+									<!-- Product name -->
+									<h1>Candle Set</h1>
+									<!-- Product price -->
+									<h2>£1.19</h2>
+								</div>
+								<div class="bottom">
+									<div class="rating">
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<p>4.5 (150)</p>
+									</div>
+									<button class="favourite material-symbols-outlined">
+										favorite
+									</button>
+								</div>
+							</div>
+							<div class="image-container">
+								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+							</div>
+						</div>
+						<div class="product">
+							<div class="details">
+								<div class="title">
+									<!-- Product name -->
+									<h1>Candle Set</h1>
+									<!-- Product price -->
+									<h2>£1.19</h2>
+								</div>
+								<div class="bottom">
+									<div class="rating">
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<p>4.5 (150)</p>
+									</div>
+									<button class="favourite material-symbols-outlined">
+										favorite
+									</button>
+								</div>
+							</div>
+							<div class="image-container">
+								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+							</div>
+						</div>
+						<div class="product">
+							<div class="details">
+								<div class="title">
+									<!-- Product name -->
+									<h1>Candle Set</h1>
+									<!-- Product price -->
+									<h2>£1.19</h2>
+								</div>
+								<div class="bottom">
+									<div class="rating">
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<p>4.5 (150)</p>
+									</div>
+									<button class="favourite material-symbols-outlined">
+										favorite
+									</button>
+								</div>
+							</div>
+							<div class="image-container">
+								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+							</div>
+						</div>
+						<div class="product">
+							<div class="details">
+								<div class="title">
+									<!-- Product name -->
+									<h1>Candle Set This is a long name</h1>
+									<!-- Product price -->
+									<h2>£1.19</h2>
+								</div>
+								<div class="bottom">
+									<div class="rating">
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<p>4.5 (150)</p>
+									</div>
+									<button class="favourite material-symbols-outlined">
+										favorite
+									</button>
+								</div>
+							</div>
+							<div class="image-container">
+								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+							</div>
+						</div>
+                    </div>
+                </div>
+            </div>
+			<div class="row">
+                <div class="container">
+                    <div class="row-title">
+                        <span class="material-symbols-outlined" style="width: 0.75em; margin-left: -0.25em">attach_money</span>
+                        ON SALE
+                        <a>View All</a>
+                    </div>
+                    <div class="products-container">
+						<div class="product">
+							<div class="details">
+								<div class="title">
+									<!-- Product name -->
+									<h1>Candle Set</h1>
+									<!-- Product price -->
+									<h2>£1.19</h2>
+								</div>
+								<div class="bottom">
+									<div class="rating">
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<p>4.5 (150)</p>
+									</div>
+									<button class="favourite material-symbols-outlined">
+										favorite
+									</button>
+								</div>
+							</div>
+							<div class="image-container">
+								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+							</div>
+						</div>
+						<div class="product">
+							<div class="details">
+								<div class="title">
+									<!-- Product name -->
+									<h1>Candle Set</h1>
+									<!-- Product price -->
+									<h2>£1.19</h2>
+								</div>
+								<div class="bottom">
+									<div class="rating">
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<p>4.5 (150)</p>
+									</div>
+									<button class="favourite material-symbols-outlined">
+										favorite
+									</button>
+								</div>
+							</div>
+							<div class="image-container">
+								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+							</div>
+						</div>
+						<div class="product">
+							<div class="details">
+								<div class="title">
+									<!-- Product name -->
+									<h1>Candle Set</h1>
+									<!-- Product price -->
+									<h2>£1.19</h2>
+								</div>
+								<div class="bottom">
+									<div class="rating">
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<p>4.5 (150)</p>
+									</div>
+									<button class="favourite material-symbols-outlined">
+										favorite
+									</button>
+								</div>
+							</div>
+							<div class="image-container">
+								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+							</div>
+						</div>
+						<div class="product">
+							<div class="details">
+								<div class="title">
+									<!-- Product name -->
+									<h1>Candle Set</h1>
+									<!-- Product price -->
+									<h2>£1.19</h2>
+								</div>
+								<div class="bottom">
+									<div class="rating">
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<p>4.5 (150)</p>
+									</div>
+									<button class="favourite material-symbols-outlined">
+										favorite
+									</button>
+								</div>
+							</div>
+							<div class="image-container">
+								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+							</div>
+						</div>
+						<div class="product">
+							<div class="details">
+								<div class="title">
+									<!-- Product name -->
+									<h1>Candle Set</h1>
+									<!-- Product price -->
+									<h2>£1.19</h2>
+								</div>
+								<div class="bottom">
+									<div class="rating">
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<p>4.5 (150)</p>
+									</div>
+									<button class="favourite material-symbols-outlined">
+										favorite
+									</button>
+								</div>
+							</div>
+							<div class="image-container">
+								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+							</div>
+						</div>
+						<div class="product">
+							<div class="details">
+								<div class="title">
+									<!-- Product name -->
+									<h1>Candle Set</h1>
+									<!-- Product price -->
+									<h2>£1.19</h2>
+								</div>
+								<div class="bottom">
+									<div class="rating">
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<p>4.5 (150)</p>
+									</div>
+									<button class="favourite material-symbols-outlined">
+										favorite
+									</button>
+								</div>
+							</div>
+							<div class="image-container">
+								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+							</div>
+						</div>
+						<div class="product">
+							<div class="details">
+								<div class="title">
+									<!-- Product name -->
+									<h1>Candle Set</h1>
+									<!-- Product price -->
+									<h2>£1.19</h2>
+								</div>
+								<div class="bottom">
+									<div class="rating">
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<p>4.5 (150)</p>
+									</div>
+									<button class="favourite material-symbols-outlined">
+										favorite
+									</button>
+								</div>
+							</div>
+							<div class="image-container">
+								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+							</div>
+						</div>
+						<div class="product">
+							<div class="details">
+								<div class="title">
+									<!-- Product name -->
+									<h1>Candle Set</h1>
+									<!-- Product price -->
+									<h2>£1.19</h2>
+								</div>
+								<div class="bottom">
+									<div class="rating">
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<p>4.5 (150)</p>
+									</div>
+									<button class="favourite material-symbols-outlined">
+										favorite
+									</button>
+								</div>
+							</div>
+							<div class="image-container">
+								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+							</div>
+						</div>
+						<div class="product">
+							<div class="details">
+								<div class="title">
+									<!-- Product name -->
+									<h1>Candle Set</h1>
+									<!-- Product price -->
+									<h2>£1.19</h2>
+								</div>
+								<div class="bottom">
+									<div class="rating">
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<p>4.5 (150)</p>
+									</div>
+									<button class="favourite material-symbols-outlined">
+										favorite
+									</button>
+								</div>
+							</div>
+							<div class="image-container">
+								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+							</div>
+						</div>
+						<div class="product">
+							<div class="details">
+								<div class="title">
+									<!-- Product name -->
+									<h1>Candle Set This is a long name</h1>
+									<!-- Product price -->
+									<h2>£1.19</h2>
+								</div>
+								<div class="bottom">
+									<div class="rating">
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<div class="star">
+											<span class="material-symbols-outlined star-outline">star</span>
+											<span class="material-symbols-outlined star-fill"
+												style="clip-path: polygon(
+													/* Starting points */
+													29% 100%,
+													29% 0%,
+													/* Fill amounts */
+													71% 0%,
+													71% 100%
+												);">
+												star
+											</span>
+										</div>
+										<p>4.5 (150)</p>
+									</div>
+									<button class="favourite material-symbols-outlined">
+										favorite
+									</button>
+								</div>
+							</div>
+							<div class="image-container">
+								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+							</div>
+						</div>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <!-- JavaScript -->
