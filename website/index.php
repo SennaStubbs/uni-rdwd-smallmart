@@ -50,7 +50,7 @@
                     <div class="collection">
                         <div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
                         <div class="title">
-                            <h1>Food</h1>
+                            <h1>Foo asd sa sa  asd as asdasddad d</h1>
                             <a>View Collection</a>
                         </div>
                     </div>
