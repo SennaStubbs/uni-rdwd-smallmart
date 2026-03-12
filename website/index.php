@@ -2828,6 +2828,9 @@
             </div>
         </main>
 
+		<!-- Footer -->
+        <?php include("../website/inc/footer.php"); ?>
+
         <!-- JavaScript -->
         <script type="text/javascript" src="/smallmart/website/js/main.js"></script>
     </body>
