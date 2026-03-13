@@ -5,7 +5,6 @@ function BackToTop() {
 }
 
 // Hide 'back to top' if screen too small
-console.log(document.body.clientHeight);
 if (document.body.clientHeight < 1500) {
     document.getElementById('back-to-top').classList.add('hidden');
 }
