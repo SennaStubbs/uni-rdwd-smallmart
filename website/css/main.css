@@ -74,6 +74,8 @@ body {
 
 /* Navigation bar */
 nav {
+    z-index: 20;
+
     display: flex;
     justify-content: space-between;
     flex-flow: row;
