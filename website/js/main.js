@@ -1,3 +1,27 @@
+// Dropdown
+function ToggleDropdown(dropdownBtn, dropdownMenu, relative) {
+    let visible = dropdownMenu.classList.contains('hidden');
+
+    // Toggle menu
+    dropdownMenu.classList.toggle('hidden');
+
+    // Change arrow rotation, if it exists
+    let arrowElement = dropdownBtn.getElementsByClassName('material-symbols-outlined');
+    console.log(visible);
+    if (arrowElement.length > 0)
+        if (visible)
+            arrowElement[0].innerHTML = 'keyboard_arrow_up';
+        else
+            arrowElement[0].innerHTML = 'keyboard_arrow_down';
+
+    // Set menu position relative to button, if applicable
+    if (relative == true) {
+        let buttonRect = dropdownBtn.getBoundingClientRect();
+        let menuRect = dropdownMenu.getBoundingClientRect();
+        dropdownMenu.style.left = ((buttonRect.left + (buttonRect.width / 2)) - (menuRect.width / 2)) + 'px';
+    }
+}
+
 // Scroll back to top
 function BackToTop() {
     document.body.scrollTop = 0; // For Safari

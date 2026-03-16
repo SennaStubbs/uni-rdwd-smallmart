@@ -3,6 +3,7 @@ A responsive dynamic website for a catalogue of (real) miniature items. Every pr
 
 # To Do
 ## Frontend
+- Responsive elements
 - Animated web elements
 - Remaining pages from the design
     - Categories
