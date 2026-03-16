@@ -1,0 +1,13 @@
+RewriteEngine on
+
+RewriteCond %{THE_REQUEST} /([^.]+)\.php [NC]
+RewriteRule ^ /%1 [NC,L,R]
+
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^ %{REQUEST_URI}.php [NC,L]
+
+ErrorDocument 404 /smallmart/error.php
+ErrorDocument 500 /smallmart/error.php
+ErrorDocument 403 /smallmart/error.php
+ErrorDocument 400 /smallmart/error.php
+ErrorDocument 401 /smallmart/error.php

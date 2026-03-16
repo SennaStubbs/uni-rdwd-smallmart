@@ -23,7 +23,7 @@
         <?php include("../website/inc/navigation.php"); ?>
 
         <!-- Header -->
-        <header style="background-image: url(/smallmart/website/assets/header.webp)">
+        <header class="home" style="background-image: url(/smallmart/website/assets/header.webp)">
             <div class="content">
                 <p>Large sale for various miniature products! Up to 50% off!!</p>
                 <a>Check it out!</a>
