@@ -1,11 +1,14 @@
 RewriteEngine on
 
+
+# Remove ".php"
 RewriteCond %{THE_REQUEST} /([^.]+)\.php [NC]
 RewriteRule ^ /%1 [NC,L,R]
 
 RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^ %{REQUEST_URI}.php [NC,L]
 
+# Error redirect
 ErrorDocument 404 /smallmart/error.php
 ErrorDocument 500 /smallmart/error.php
 ErrorDocument 403 /smallmart/error.php
