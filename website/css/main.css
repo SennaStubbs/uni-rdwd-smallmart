@@ -470,12 +470,15 @@ header.home {
 header.search {
     flex-direction: column;
 
+    padding: 30px;
+
     min-height: 200px;
-    height: 200px;
+    height: fit-content;
 }
 
 header.search h1.title {
     font-size: 64px;
+    text-align: center;
 }
 
 header.search h2.search-title {

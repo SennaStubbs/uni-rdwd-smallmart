@@ -199,7 +199,7 @@
 			</div>
 			<?php } else { ?>
 			<div class="center-page no-queries">
-				<p>No results could be found for the search query '<strong><?php echo htmlspecialchars($search) ?></strong>'</p>
+				<p>No results could be found for your search query.</p>
 				<p>Try again!</p>
 				<a onclick="history.back()">GO BACK</a>
 			</div>
