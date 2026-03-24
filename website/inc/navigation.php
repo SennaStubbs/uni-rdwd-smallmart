@@ -13,7 +13,7 @@
         <img src="/smallmart/website/assets/brand/full-logo.png">
     </a>
     <!-- Categories dropdown -->
-    <a class="dropdown" onclick="ToggleDropdown(this, document.getElementById('categories-dropdown'))">
+    <a class="dropdown" data-dropdown-id="categories-dropdown" onclick="ToggleDropdown(this)">
         CATALOGUE
         <span class="material-symbols-outlined">keyboard_arrow_down</span>
     </a>
@@ -68,7 +68,7 @@
         </div> 
     </div>
     <!-- More dropdown -->
-    <a class="dropdown" onclick="ToggleDropdown(this, document.getElementById('more-dropdown'), true)">
+    <a class="dropdown" data-dropdown-id="more-dropdown" onclick="ToggleDropdown(this, true)">
         MORE
         <span class="material-symbols-outlined">keyboard_arrow_down</span>
     </a>

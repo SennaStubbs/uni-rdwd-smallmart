@@ -1,13 +1,25 @@
 // Dropdown
-function ToggleDropdown(dropdownBtn, dropdownMenu, relative) {
-    let visible = dropdownMenu.classList.contains('hidden');
+function ToggleDropdown(dropdownBtn, relative, visible) {
+    let dropdownMenu = document.getElementById(dropdownBtn.dataset.dropdownId);
+
+    // Hide other dropdown menus
+    if (typeof(visible) != 'boolean') {
+        for (let _dropdownBtn of document.getElementsByClassName('dropdown')) {
+            if (_dropdownBtn.dataset.dropdownId != dropdownBtn.dataset.dropdownId) {
+                ToggleDropdown(_dropdownBtn, false, false);
+            }
+        }
+        visible = dropdownMenu.classList.contains('hidden');
+    }
 
     // Toggle menu
-    dropdownMenu.classList.toggle('hidden');
+    if (visible)
+        dropdownMenu.classList.remove('hidden');
+    else
+        dropdownMenu.classList.add('hidden');
 
     // Change arrow rotation, if it exists
     let arrowElement = dropdownBtn.getElementsByClassName('material-symbols-outlined');
-    console.log(visible);
     if (arrowElement.length > 0)
         if (visible)
             arrowElement[0].innerHTML = 'keyboard_arrow_up';
