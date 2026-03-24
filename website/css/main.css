@@ -73,6 +73,15 @@ body {
     box-shadow: 0px 1px 0px var(--text-shadow-thin);
 }
 
+.center-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: calc(100vh - 385px);
+}
+
 /* Navigation bar */
 nav {
     z-index: 20;
@@ -346,6 +355,10 @@ header {
     box-sizing: border-box;
 }
 
+header.small {
+    height: 200px
+}
+
 header .bg-colour {
     position: absolute;
 
@@ -363,6 +376,7 @@ header h1.title {
 
     width: fit-content;
     height: fit-content;
+    min-height: 74px;
 
     margin: 0;
     padding: 0 14px;
@@ -452,6 +466,33 @@ header.home {
     padding: 15px 0 85px 0;
 }
 
+/* Search header */
+header.search {
+    flex-direction: column;
+
+    min-height: 200px;
+    height: 200px;
+}
+
+header.search h1.title {
+    font-size: 64px;
+}
+
+header.search h2.search-title {
+    z-index: 1;
+
+    width: fit-content;
+    height: 60px;
+
+    margin: 0;
+
+    color: var(--text-light);
+    font-size: 40px;
+    text-shadow: 0px 3px 0px var(--text-shadow-thin);
+    -webkit-text-stroke: 6px var(--text-dark);
+    paint-order: stroke fill;
+}
+
 /* Footer */
 footer {
     display: flex;
@@ -535,6 +576,10 @@ footer:has(#back-to-top.hidden) {
 }
 
 /* Main rows */
+main {
+    position: relative;
+}
+
 main.rows {
     display: flex;
     flex-flow: column;
@@ -1089,6 +1134,9 @@ main.rows {
     color: var(--text-light);
     font-size: 24px;
     text-shadow: 0px 2px 0px var(--text-shadow-thin);
+    text-decoration: none;
+
+    cursor: pointer;
 }
 
 .products-grid-main .products-filters a:has(.material-symbols-outlined) {
@@ -1176,6 +1224,8 @@ main.rows {
 
     color: var(--text-light);
     font-size: 16px;
+
+    text-shadow: 0px 1px 0px var(--text-shadow-thin);
 }
 
 /* Pagination */
@@ -1262,4 +1312,38 @@ main.rows {
 
 .products-section .pagination a.direction.prev {
     margin-right: auto;
+}
+
+/* No queries for products */
+.no-queries {
+    flex-direction: column;
+}
+
+.no-queries p {
+    margin: 5px 0;
+
+    color: var(--text-light);
+    text-shadow: 0px 1px 0px var(--text-shadow-thin);
+    font-size: 24px;
+}
+
+.no-queries a {
+    margin: 10px 0;
+    padding: 2px 8px;
+
+    background-color: var(--web-tone-2);
+
+    border-radius: 5px;
+
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 700;
+    text-shadow: 0px 1px 0px var(--text-shadow-thin);
+
+    box-shadow: 0px 5px 0px var(--web-shadow-2);
+
+    user-select: none;
+
+    cursor: pointer;
 }

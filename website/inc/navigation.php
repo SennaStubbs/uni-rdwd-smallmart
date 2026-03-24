@@ -78,10 +78,13 @@
     </div>
     <!-- Search bar -->
     <div class="search-bar">
-        <div class="container">
-            <input type="text" placeholder="Search...">
-            <button class="material-symbols-outlined">search</button>
-        </div>
+        <!-- <div class="container"> -->
+            <form action="search.php" method="get" class="container" >
+                <input type="text" name="q" placeholder="Search..." class="hide-validation-message"
+                value="<?php echo isset($_GET['q']) ? htmlspecialchars($_GET['q']) : '' ?>" required>
+                <button type="submit" class="material-symbols-outlined">search</button>
+            </form>
+        <!-- </div> -->
     </div>
     <!-- Wishlist -->
     <a href="/smallmart/website/" style="font-weight: normal" class="button">

@@ -32,3 +32,13 @@ function BackToTop() {
 if (document.body.clientHeight < 1500) {
     document.getElementById('back-to-top').classList.add('hidden');
 }
+
+// Prevent invalid message appearing on inputs with 'hide-validation-message' class
+document.addEventListener('invalid', (function () {
+  return function (e) {
+    if (e.target.classList.contains('hide-validation-message')) {
+        e.preventDefault();
+        e.target.focus();
+    }
+  };
+})(), true);
