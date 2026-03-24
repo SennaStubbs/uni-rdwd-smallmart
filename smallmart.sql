@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 09, 2026 at 01:57 PM
+-- Generation Time: Mar 25, 2026 at 12:04 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -45,8 +45,25 @@ CREATE TABLE `product` (
   `product_description` text NOT NULL COMMENT 'Description of a product',
   `product_image` varchar(100) NOT NULL COMMENT 'Image URL for a product',
   `product_price` int(5) NOT NULL COMMENT 'Price of a product',
-  `category_id` int(11) NOT NULL COMMENT 'Foreign key for a category'
+  `product_details` text NOT NULL COMMENT 'Details of a product, separated by commas.',
+  `category_id` text NOT NULL COMMENT 'List of foreign keys for categories, separated by commas'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci;
+
+--
+-- Dumping data for table `product`
+--
+
+INSERT INTO `product` (`product_id`, `product_name`, `product_description`, `product_image`, `product_price`, `product_details`, `category_id`) VALUES
+(1, 'Burger', 'Crafted to perfection, our Miniature Burgers will add a touch of realism to your dollhouse. Made with precise attention to detail, these perfectly scaled burgers are an essential addition to any miniature kitchen. Indulge in 1:12 scale perfection with our Dollhouse Miniature Burgers. Types available: Type A, Type B.', '/smallmart/website/assets/products/burger_1.jpg', 32, '', '1'),
+(2, 'Brownie', 'Enhance your dollhouse with this intricately detailed brownie miniature. Each piece is handcrafted to perfection, adding a touch of realism to your miniature world. Made with high-quality materials for long-lasting durability. Perfect for collectors or dollhouse enthusiasts.', '/smallmart/website/assets/products/brownie_1.jpg', 40, '', '1'),
+(3, 'Bread', 'Experience the charm of a dollhouse with our miniatures. Each random piece of bread adds a unique touch to your collection. Expertly crafted with attention to detail, these miniatures are essential for any dollhouse enthusiast. Bring your imagination to life with these intricate pieces.', '/smallmart/website/assets/products/bread_1.jpg', 24, '', '1'),
+(4, 'Alcoholic Beverage Bottle', 'This miniature alcoholic beverage bottle (random colour) is the perfect addition to any dollhouse or collection. Made with attention to detail, this tiny bottle adds a realistic touch to any miniature setting. Crafted with high-quality materials, it is sure to impress and enhance any display.', '/smallmart/website/assets/products/alcoholic-beverage-bottle_1.jpg', 32, '', '1'),
+(5, 'Air Fryer', 'This Miniature Air Fryer is the perfect addition to your doll house kitchen! With its realistic details and tiny size, it brings authenticity to your miniature world. Add this to your collection and bring your doll house kitchen to life.', '/smallmart/website/assets/products/air-fryer_1.jpg', 514, '', '1'),
+(6, 'Cooking Decor Set', 'Enhance your child\'s imaginative play with our Cooking Decor Set, complete with a doll house for added fun. Stimulate creativity and fine motor skills as they pretend to cook and decorate with realistic accessories. Perfect for ages 3 and up.', '/smallmart/website/assets/products/cooking-decor-set_1.jpg', 138, '', '1'),
+(7, 'Coffee Mug', 'This miniature coffee mug is the perfect addition to any dollhouse. Expertly crafted, it provides a realistic touch to any miniature kitchen or dining room. Made with precision and attention to detail, it is a must-have for any dollhouse enthusiast.', '/smallmart/website/assets/products/coffee-mug_1.jpg', 24, '', '1'),
+(8, 'Clock', 'Miniature Clock (random colour). Expertly crafted, this clock is a perfect addition to any dollhouse. With its miniature size, it adds a touch of elegance and functionality to any room.', '/smallmart/website/assets/products/clock_1.jpg', 17, '', '1'),
+(9, 'Carpet', 'Miniature Carpet (15 cm x 10 cm). Expertly crafted for dollhouse enthusiasts, this miniature carpet adds a touch of elegance and realism to any miniature setting. Made to scale, its intricate design and quality materials make it a must-have for any collector. Available colours: Light Blue, Red.', '/smallmart/website/assets/products/carpet_1.jpg', 142, '', '1'),
+(10, 'Candle Set', 'Crafted for dollhouse enthusiasts, this Miniature Candle Set adds a realistic touch to any miniature scene. Hand-crafted with intricate detail, these candles provide the perfect accent piece for creating a cozy and charming atmosphere. A must-have set for your miniature collection.', '/smallmart/website/assets/products/candle-set_1.jpg', 119, '', '1');
 
 -- --------------------------------------------------------
 
@@ -138,7 +155,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary key for a product';
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary key for a product', AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `review`
