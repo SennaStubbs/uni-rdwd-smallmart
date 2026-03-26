@@ -17,20 +17,22 @@
             "SELECT COUNT(*)
             AS total
             FROM product
-            WHERE product_name LIKE '%$search%'
-            OR product_description LIKE '%$search%'"
+            WHERE product_name LIKE '%$search_sql%'
+            OR product_description LIKE '%$search_sql%'"
         );
         $total_row = mysqli_fetch_assoc($total_query);
         $total_products = $total_row['total'];
         $total_pages = ceil($total_products / $limit);
 
         // Fetch products for this page
-        $sql =
+        $stmt =
             "SELECT *
             FROM product
-            WHERE product_name LIKE '%$search%'
-            OR product_description LIKE '%$search%'
+            WHERE product_name LIKE '%$search_sql%'
+            OR product_description LIKE '%$search_sql%'
             LIMIT $limit OFFSET $offset";
-        $product_result = mysqli_query($dbconnect, $sql);
+        $sql = $dbconnect->prepare($stmt);
+        $sql->execute();
+        $product_result = $sql->get_result();
     }
 ?>

@@ -12,6 +12,8 @@
     $total_pages = ceil($total_products / $limit);
 
     // Fetch products for this page
-    $sql = "SELECT * FROM product LIMIT $limit OFFSET $offset";
-    $product_result = mysqli_query($dbconnect, $sql);
+    $stmt = "SELECT * FROM product LIMIT $limit OFFSET $offset";
+    $sql = $dbconnect->prepare($stmt);
+    $sql->execute();
+    $product_result = $sql->get_result();
 ?>

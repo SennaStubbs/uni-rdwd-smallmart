@@ -30,7 +30,9 @@
             </div>
         </header>
 
+		<!-- Page rows -->
         <main class="rows">
+			<!-- Collections -->
             <div class="row collections">
                 <div class="container">
                     <div class="collection">
