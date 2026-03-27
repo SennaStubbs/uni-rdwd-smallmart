@@ -12,13 +12,13 @@ if (isset($details)) {
 ?>
 
 <?php if (isset($split_details["featured"])) {
-    if ((int)$split_details["featured"] > 0) { ?>
+    if ((int)$split_details["featured"]) { ?>
 <div class="product" style="order: <?php echo $split_details["featured"] ?>">
     <?php } else { ?>
-<div class="product">
+<div class="product" style="order: 999999999">
     <?php }
 } else { ?>
-<div class="product">
+<div class="product" style="order: 999999999">
 <?php } ?>
     <div class="details">
         <div class="title">

@@ -13,12 +13,22 @@
 			$s3 = '%,' . $categoryId;
 			$s4 = '%,' . $categoryId . ',%';
 
-			// Getting featured products
-			$stmt = "SELECT * FROM product
-						WHERE category_id LIKE ? OR
-							category_id LIKE ? OR
-							category_id LIKE ? OR
-							category_id LIKE ?";
+			// Get all products and their 'featured' property, then order
+			// by the featured value to limit appropriately
+			$stmt = "SELECT *,
+						CAST(
+							SUBSTRING_INDEX(
+								SUBSTRING_INDEX(product_details, 'featured=', -1),
+								',', 1
+							) AS UNSIGNED
+						) AS featured_value
+					FROM product
+					WHERE category_id LIKE ? OR
+			 			  category_id LIKE ? OR
+			 			  category_id LIKE ? OR
+			 			  category_id LIKE ?
+					ORDER BY featured_value ASC
+					LIMIT 10";
 			$sql = $dbconnect->prepare($stmt);
 			$sql->bind_param('ssss', $s1, $s2, $s3, $s4);
 			$sql->execute();
