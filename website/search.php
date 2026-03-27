@@ -25,9 +25,9 @@
 
         <!-- Header -->
         <header class="small search" style="background-image: url(/smallmart/website/assets/header.webp)">
-			<div class="bg-colour" style="background-color: #FFFFFF"></div>
+			<div class="bg-colour"></div>
 			<h2 class="search-title">SEARCHING FOR</h2>
-            <h1 class="title" style="background-color: #F6F6F6; box-shadow: 0px 5px 0px #C4C4C4; color: var(--text-dark)"><?php echo strtoupper(htmlspecialchars($search)) ?></h1>
+            <h1 class="title"><?php echo strtoupper(htmlspecialchars($search)) ?></h1>
         </header>
 
         <main>
@@ -73,99 +73,9 @@
 					<div class="products-grid">
 						<?php
 							if (mysqli_num_rows($product_result) > 0) {
-								while($row = mysqli_fetch_assoc($product_result)) { ?>
-									<div class="product">
-										<div class="details">
-											<div class="title">
-												<!-- Product name -->
-												<h1><?php echo $row['product_name'] ?></h1>
-												<!-- Product price -->
-												<h2>£<?php echo number_format($row['product_price'] / 100, 2) ?></h2>
-											</div>
-											<div class="bottom">
-												<div class="rating">
-													<div class="star">
-														<span class="material-symbols-outlined star-outline">star</span>
-														<span class="material-symbols-outlined star-fill"
-															style="clip-path: polygon(
-																/* Starting points */
-																29% 100%,
-																29% 0%,
-																/* Fill amounts */
-																71% 0%,
-																71% 100%
-															);">
-															star
-														</span>
-													</div>
-													<div class="star">
-														<span class="material-symbols-outlined star-outline">star</span>
-														<span class="material-symbols-outlined star-fill"
-															style="clip-path: polygon(
-																/* Starting points */
-																29% 100%,
-																29% 0%,
-																/* Fill amounts */
-																71% 0%,
-																71% 100%
-															);">
-															star
-														</span>
-													</div>
-													<div class="star">
-														<span class="material-symbols-outlined star-outline">star</span>
-														<span class="material-symbols-outlined star-fill"
-															style="clip-path: polygon(
-																/* Starting points */
-																29% 100%,
-																29% 0%,
-																/* Fill amounts */
-																71% 0%,
-																71% 100%
-															);">
-															star
-														</span>
-													</div>
-													<div class="star">
-														<span class="material-symbols-outlined star-outline">star</span>
-														<span class="material-symbols-outlined star-fill"
-															style="clip-path: polygon(
-																/* Starting points */
-																29% 100%,
-																29% 0%,
-																/* Fill amounts */
-																71% 0%,
-																71% 100%
-															);">
-															star
-														</span>
-													</div>
-													<div class="star">
-														<span class="material-symbols-outlined star-outline">star</span>
-														<span class="material-symbols-outlined star-fill"
-															style="clip-path: polygon(
-																/* Starting points */
-																29% 100%,
-																29% 0%,
-																/* Fill amounts */
-																71% 0%,
-																71% 100%
-															);">
-															star
-														</span>
-													</div>
-													<p>4.5 (150)</p>
-												</div>
-												<button class="favourite material-symbols-outlined">
-													favorite
-												</button>
-											</div>
-										</div>
-										<div class="image-container">
-											<div class="image" style="background-image: url(<?php echo $row['product_image'] ?>)"></div>
-										</div>
-									</div>
-								<?php }
+								while($row = mysqli_fetch_assoc($product_result)) {
+									include('inc/product.php');
+								}
 							}
 						?>
 					</div>

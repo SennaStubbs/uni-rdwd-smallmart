@@ -35,34 +35,32 @@
 			<!-- Collections -->
             <div class="row collections">
                 <div class="container">
-                    <div class="collection">
-                        <div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
+					<?php
+						// Getting featured collections
+						$stmt = "SELECT * FROM category";
+						$sql = $dbconnect->prepare($stmt);
+						$sql->execute();
+						$collections_result = $sql->get_result();
+
+						if (mysqli_num_rows($collections_result) > 0) {
+							while($row = mysqli_fetch_assoc($collections_result)) {
+								$details = explode(',', $row['category_details']);
+
+								foreach ($details as $detail) {
+									$split_detail = preg_split("/=/", $detail, 2);
+									if ($split_detail[0] == "featured" && (int)$split_detail[1] > 0) { ?>
+					<div class="collection" style="order: <?php echo (int)$split_detail[1] ?>">
+                        <div class="image" style="background-image: url(<?php echo $row['category_image'] ?>)"></div>
                         <div class="title">
-                            <h1>Food</h1>
+                            <h1><?php echo $row['category_name'] ?></h1>
                             <a>View Collection</a>
                         </div>
                     </div>
-                    <div class="collection">
-                        <div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
-                        <div class="title">
-                            <h1>Food</h1>
-                            <a>View Collection</a>
-                        </div>
-                    </div>
-                    <div class="collection">
-                        <div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
-                        <div class="title">
-                            <h1>Foo asd sa sa  asd as asdasddad d</h1>
-                            <a>View Collection</a>
-                        </div>
-                    </div>
-                    <div class="collection">
-                        <div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
-                        <div class="title">
-                            <h1>Food</h1>
-                            <a>View Collection</a>
-                        </div>
-                    </div>
+									<?php }
+								}
+							}
+						}
+					?>
                 </div>
             </div>
             <div class="row">
@@ -73,190 +71,28 @@
                         <a>View All</a>
                     </div>
                     <div class="products-container">
-						<div class="product">
-							<div class="details">
-								<div class="title">
-									<!-- Product name -->
-									<h1>Candle Set This is a long name</h1>
-									<!-- Product price -->
-									<h2>£1.19</h2>
-								</div>
-								<div class="bottom">
-									<div class="rating">
-										<div class="star">
-											<span class="material-symbols-outlined star-outline">star</span>
-											<span class="material-symbols-outlined star-fill"
-												style="clip-path: polygon(
-													/* Starting points */
-													29% 100%,
-													29% 0%,
-													/* Fill amounts */
-													71% 0%,
-													71% 100%
-												);">
-												star
-											</span>
-										</div>
-										<div class="star">
-											<span class="material-symbols-outlined star-outline">star</span>
-											<span class="material-symbols-outlined star-fill"
-												style="clip-path: polygon(
-													/* Starting points */
-													29% 100%,
-													29% 0%,
-													/* Fill amounts */
-													71% 0%,
-													71% 100%
-												);">
-												star
-											</span>
-										</div>
-										<div class="star">
-											<span class="material-symbols-outlined star-outline">star</span>
-											<span class="material-symbols-outlined star-fill"
-												style="clip-path: polygon(
-													/* Starting points */
-													29% 100%,
-													29% 0%,
-													/* Fill amounts */
-													71% 0%,
-													71% 100%
-												);">
-												star
-											</span>
-										</div>
-										<div class="star">
-											<span class="material-symbols-outlined star-outline">star</span>
-											<span class="material-symbols-outlined star-fill"
-												style="clip-path: polygon(
-													/* Starting points */
-													29% 100%,
-													29% 0%,
-													/* Fill amounts */
-													71% 0%,
-													71% 100%
-												);">
-												star
-											</span>
-										</div>
-										<div class="star">
-											<span class="material-symbols-outlined star-outline">star</span>
-											<span class="material-symbols-outlined star-fill"
-												style="clip-path: polygon(
-													/* Starting points */
-													29% 100%,
-													29% 0%,
-													/* Fill amounts */
-													71% 0%,
-													71% 100%
-												);">
-												star
-											</span>
-										</div>
-										<p>4.5 (150)</p>
-									</div>
-									<button class="favourite material-symbols-outlined">
-										favorite
-									</button>
-								</div>
-							</div>
-							<div class="image-container">
-								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
-							</div>
-						</div>
-						<?php for ($i = 0; $i < 9; $i++) {
-							echo '<div class="product">
-							<div class="details">
-								<div class="title">
-									<!-- Product name -->
-									<h1>Candle Set</h1>
-									<!-- Product price -->
-									<h2>£1.19</h2>
-								</div>
-								<div class="bottom">
-									<div class="rating">
-										<div class="star">
-											<span class="material-symbols-outlined star-outline">star</span>
-											<span class="material-symbols-outlined star-fill"
-												style="clip-path: polygon(
-													/* Starting points */
-													29% 100%,
-													29% 0%,
-													/* Fill amounts */
-													71% 0%,
-													71% 100%
-												);">
-												star
-											</span>
-										</div>
-										<div class="star">
-											<span class="material-symbols-outlined star-outline">star</span>
-											<span class="material-symbols-outlined star-fill"
-												style="clip-path: polygon(
-													/* Starting points */
-													29% 100%,
-													29% 0%,
-													/* Fill amounts */
-													71% 0%,
-													71% 100%
-												);">
-												star
-											</span>
-										</div>
-										<div class="star">
-											<span class="material-symbols-outlined star-outline">star</span>
-											<span class="material-symbols-outlined star-fill"
-												style="clip-path: polygon(
-													/* Starting points */
-													29% 100%,
-													29% 0%,
-													/* Fill amounts */
-													71% 0%,
-													71% 100%
-												);">
-												star
-											</span>
-										</div>
-										<div class="star">
-											<span class="material-symbols-outlined star-outline">star</span>
-											<span class="material-symbols-outlined star-fill"
-												style="clip-path: polygon(
-													/* Starting points */
-													29% 100%,
-													29% 0%,
-													/* Fill amounts */
-													71% 0%,
-													71% 100%
-												);">
-												star
-											</span>
-										</div>
-										<div class="star">
-											<span class="material-symbols-outlined star-outline">star</span>
-											<span class="material-symbols-outlined star-fill"
-												style="clip-path: polygon(
-													/* Starting points */
-													29% 100%,
-													29% 0%,
-													/* Fill amounts */
-													71% 0%,
-													71% 100%
-												);">
-												star
-											</span>
-										</div>
-										<p>4.5 (150)</p>
-									</div>
-									<button class="favourite material-symbols-outlined">
-										favorite
-									</button>
-								</div>
-							</div>
-							<div class="image-container">
-								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
-							</div>
-						</div>';
-						} ?>
+						<?php
+							// Getting featured products
+							$stmt = "SELECT * FROM product
+									 WHERE category_id LIKE '8' OR
+										   category_id LIKE '8,%' OR
+										   category_id LIKE '%,8' OR
+										   category_id LIKE '%,8,%';";
+							$sql = $dbconnect->prepare($stmt);
+							$sql->execute();
+							$featured_prod_results = $sql->get_result();
+
+							if (mysqli_num_rows($featured_prod_results) > 0) {
+								while($row = mysqli_fetch_assoc($featured_prod_results)) { 
+									$details = explode(',', $row['product_details']);
+
+									foreach ($details as $detail) {
+										$split_detail = preg_split("/=/", $detail, 2);
+										include('inc/product.php');
+									}
+								}
+							}
+						?>
                     </div>
                 </div>
             </div>

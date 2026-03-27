@@ -7,7 +7,7 @@
         $search_sql = mysqli_escape_string($dbconnect, $search);
 
         // Pagination setup
-        $limit = 9;
+        $limit = 12;
         $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
         $page = max($page, 1); // ensure it's at least 1
         $offset = ($page - 1) * $limit;
