@@ -23,6 +23,7 @@
     /* Text */
     --text-light: #FFFFFF;
     --text-dark: #000000;
+    --text-discount: #266198;
 
     --text-shadow-thin: rgba(0, 0, 0, 0.25);
     --text-shadow-thick: rgba(0, 0, 0, 0.5);
@@ -716,6 +717,8 @@ main.rows {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    border-radius: 3px;
 }
 
 .product .details {
@@ -744,6 +747,7 @@ main.rows {
     margin: 5px 12px 0 12px;
 }
 
+/* Product name */
 .product .details .title h1 {
     margin: 0;
 
@@ -753,13 +757,57 @@ main.rows {
     text-shadow: 0px 1px 0px var(--text-shadow-thin);
 }
 
+/* Product price */
 .product .details .title h2 {
+    z-index: 1;
+
+    position: relative;
+
     margin: 0;
 
     font-size: 15px;
     font-weight: 400;
 
     text-shadow: 0px 1px 0px var(--text-shadow-thin);
+}
+
+/* Original price in discounted product */
+.product .details .title h2 span.og-price {
+    z-index: -1;
+
+    position: absolute;
+    bottom: 75%;
+    right: 80%;
+
+    opacity: 50%;
+
+    color: var(--text-dark);
+    font-size: 10px;
+}
+
+.product .details .title h2 span.og-price::before {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    top: 50%;
+    bottom: 50%;
+
+    transform-origin: center;
+    transform: rotate(-20deg);
+
+    background-color: var(--text-dark);
+
+    width: 100%;
+    height: 1px;
+}
+
+/* Discounted price */
+.product .details .title h2:has(span.og-price) {
+    top: 2px;
+
+    color: var(--text-discount);
+    font-weight: 700;
 }
 
 /* Product rating and favourite button */

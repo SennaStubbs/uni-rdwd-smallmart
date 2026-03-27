@@ -1,14 +1,35 @@
-<?php if (isset($split_detail)): ?>
-<div class="product" style="order: <?php echo $split_detail[0] == "featured" && (int)$split_detail[1] > 0 ? $split_detail[1] : '' ?>">
-<?php else: ?>
+
+<?php
+$split_details = [];
+if (isset($details)) {
+    foreach ($details as $detail) {
+        $split_detail = preg_split("/=/", $detail, 2);
+        if (isset($split_detail[0]) && isset($split_detail[1])) {
+            $split_details[$split_detail[0]] = $split_detail[1];
+        }
+    }
+}
+?>
+
+<?php if (isset($split_details["featured"])) {
+    if ((int)$split_details["featured"] > 0) { ?>
+<div class="product" style="order: <?php echo $split_details["featured"] ?>">
+    <?php } else { ?>
 <div class="product">
-<?php endif ?>
+    <?php }
+} else { ?>
+<div class="product">
+<?php } ?>
     <div class="details">
         <div class="title">
             <!-- Product name -->
             <h1><?php echo $row['product_name'] ?></h1>
             <!-- Product price -->
+             <?php if (isset($split_details["discounted-price"])) { ?>
+            <h2><span class="og-price">£<?php echo number_format($row['product_price'] / 100, 2) ?></span>£<?php echo number_format($split_detail[1] / 100, 2) ?></h2>
+            <?php } else { ?>
             <h2>£<?php echo number_format($row['product_price'] / 100, 2) ?></h2>
+            <?php } ?>
         </div>
         <div class="bottom">
             <div class="rating">

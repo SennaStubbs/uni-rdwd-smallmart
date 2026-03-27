@@ -7,6 +7,30 @@
         include("../website/inc/dbconnect.php");
 
 		
+		function LoadProducts($dbconnect, $categoryId) {
+			$s1 = (string)$categoryId;
+			$s2 = $categoryId . ',%';
+			$s3 = '%,' . $categoryId;
+			$s4 = '%,' . $categoryId . ',%';
+
+			// Getting featured products
+			$stmt = "SELECT * FROM product
+						WHERE category_id LIKE ? OR
+							category_id LIKE ? OR
+							category_id LIKE ? OR
+							category_id LIKE ?";
+			$sql = $dbconnect->prepare($stmt);
+			$sql->bind_param('ssss', $s1, $s2, $s3, $s4);
+			$sql->execute();
+			$prod_results = $sql->get_result();
+
+			if (mysqli_num_rows($prod_results) > 0) {
+				while($row = mysqli_fetch_assoc($prod_results)) {
+					$details = explode(',', $row['product_details']);
+					include('inc/product.php');
+				}
+			}
+		}
     }
 ?>
 
@@ -71,28 +95,7 @@
                         <a>View All</a>
                     </div>
                     <div class="products-container">
-						<?php
-							// Getting featured products
-							$stmt = "SELECT * FROM product
-									 WHERE category_id LIKE '8' OR
-										   category_id LIKE '8,%' OR
-										   category_id LIKE '%,8' OR
-										   category_id LIKE '%,8,%';";
-							$sql = $dbconnect->prepare($stmt);
-							$sql->execute();
-							$featured_prod_results = $sql->get_result();
-
-							if (mysqli_num_rows($featured_prod_results) > 0) {
-								while($row = mysqli_fetch_assoc($featured_prod_results)) { 
-									$details = explode(',', $row['product_details']);
-
-									foreach ($details as $detail) {
-										$split_detail = preg_split("/=/", $detail, 2);
-										include('inc/product.php');
-									}
-								}
-							}
-						?>
+						<?php LoadProducts($dbconnect, 8); ?>
                     </div>
                 </div>
             </div>
@@ -104,190 +107,7 @@
                         <a>View All</a>
                     </div>
                     <div class="products-container">
-						<div class="product">
-							<div class="details">
-								<div class="title">
-									<!-- Product name -->
-									<h1>Candle Set This is a long name</h1>
-									<!-- Product price -->
-									<h2>£1.19</h2>
-								</div>
-								<div class="bottom">
-									<div class="rating">
-										<div class="star">
-											<span class="material-symbols-outlined star-outline">star</span>
-											<span class="material-symbols-outlined star-fill"
-												style="clip-path: polygon(
-													/* Starting points */
-													29% 100%,
-													29% 0%,
-													/* Fill amounts */
-													71% 0%,
-													71% 100%
-												);">
-												star
-											</span>
-										</div>
-										<div class="star">
-											<span class="material-symbols-outlined star-outline">star</span>
-											<span class="material-symbols-outlined star-fill"
-												style="clip-path: polygon(
-													/* Starting points */
-													29% 100%,
-													29% 0%,
-													/* Fill amounts */
-													71% 0%,
-													71% 100%
-												);">
-												star
-											</span>
-										</div>
-										<div class="star">
-											<span class="material-symbols-outlined star-outline">star</span>
-											<span class="material-symbols-outlined star-fill"
-												style="clip-path: polygon(
-													/* Starting points */
-													29% 100%,
-													29% 0%,
-													/* Fill amounts */
-													71% 0%,
-													71% 100%
-												);">
-												star
-											</span>
-										</div>
-										<div class="star">
-											<span class="material-symbols-outlined star-outline">star</span>
-											<span class="material-symbols-outlined star-fill"
-												style="clip-path: polygon(
-													/* Starting points */
-													29% 100%,
-													29% 0%,
-													/* Fill amounts */
-													71% 0%,
-													71% 100%
-												);">
-												star
-											</span>
-										</div>
-										<div class="star">
-											<span class="material-symbols-outlined star-outline">star</span>
-											<span class="material-symbols-outlined star-fill"
-												style="clip-path: polygon(
-													/* Starting points */
-													29% 100%,
-													29% 0%,
-													/* Fill amounts */
-													71% 0%,
-													71% 100%
-												);">
-												star
-											</span>
-										</div>
-										<p>4.5 (150)</p>
-									</div>
-									<button class="favourite material-symbols-outlined">
-										favorite
-									</button>
-								</div>
-							</div>
-							<div class="image-container">
-								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
-							</div>
-						</div>
-						<?php for ($i = 0; $i < 9; $i++) {
-							echo '<div class="product">
-							<div class="details">
-								<div class="title">
-									<!-- Product name -->
-									<h1>Candle Set</h1>
-									<!-- Product price -->
-									<h2>£1.19</h2>
-								</div>
-								<div class="bottom">
-									<div class="rating">
-										<div class="star">
-											<span class="material-symbols-outlined star-outline">star</span>
-											<span class="material-symbols-outlined star-fill"
-												style="clip-path: polygon(
-													/* Starting points */
-													29% 100%,
-													29% 0%,
-													/* Fill amounts */
-													71% 0%,
-													71% 100%
-												);">
-												star
-											</span>
-										</div>
-										<div class="star">
-											<span class="material-symbols-outlined star-outline">star</span>
-											<span class="material-symbols-outlined star-fill"
-												style="clip-path: polygon(
-													/* Starting points */
-													29% 100%,
-													29% 0%,
-													/* Fill amounts */
-													71% 0%,
-													71% 100%
-												);">
-												star
-											</span>
-										</div>
-										<div class="star">
-											<span class="material-symbols-outlined star-outline">star</span>
-											<span class="material-symbols-outlined star-fill"
-												style="clip-path: polygon(
-													/* Starting points */
-													29% 100%,
-													29% 0%,
-													/* Fill amounts */
-													71% 0%,
-													71% 100%
-												);">
-												star
-											</span>
-										</div>
-										<div class="star">
-											<span class="material-symbols-outlined star-outline">star</span>
-											<span class="material-symbols-outlined star-fill"
-												style="clip-path: polygon(
-													/* Starting points */
-													29% 100%,
-													29% 0%,
-													/* Fill amounts */
-													71% 0%,
-													71% 100%
-												);">
-												star
-											</span>
-										</div>
-										<div class="star">
-											<span class="material-symbols-outlined star-outline">star</span>
-											<span class="material-symbols-outlined star-fill"
-												style="clip-path: polygon(
-													/* Starting points */
-													29% 100%,
-													29% 0%,
-													/* Fill amounts */
-													71% 0%,
-													71% 100%
-												);">
-												star
-											</span>
-										</div>
-										<p>4.5 (150)</p>
-									</div>
-									<button class="favourite material-symbols-outlined">
-										favorite
-									</button>
-								</div>
-							</div>
-							<div class="image-container">
-								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
-							</div>
-						</div>';
-						} ?>
+						<?php LoadProducts($dbconnect, 9); ?>
                     </div>
                 </div>
             </div>
@@ -299,190 +119,7 @@
                         <a>View All</a>
                     </div>
                     <div class="products-container">
-						<div class="product">
-							<div class="details">
-								<div class="title">
-									<!-- Product name -->
-									<h1>Candle Set This is a long name</h1>
-									<!-- Product price -->
-									<h2>£1.19</h2>
-								</div>
-								<div class="bottom">
-									<div class="rating">
-										<div class="star">
-											<span class="material-symbols-outlined star-outline">star</span>
-											<span class="material-symbols-outlined star-fill"
-												style="clip-path: polygon(
-													/* Starting points */
-													29% 100%,
-													29% 0%,
-													/* Fill amounts */
-													71% 0%,
-													71% 100%
-												);">
-												star
-											</span>
-										</div>
-										<div class="star">
-											<span class="material-symbols-outlined star-outline">star</span>
-											<span class="material-symbols-outlined star-fill"
-												style="clip-path: polygon(
-													/* Starting points */
-													29% 100%,
-													29% 0%,
-													/* Fill amounts */
-													71% 0%,
-													71% 100%
-												);">
-												star
-											</span>
-										</div>
-										<div class="star">
-											<span class="material-symbols-outlined star-outline">star</span>
-											<span class="material-symbols-outlined star-fill"
-												style="clip-path: polygon(
-													/* Starting points */
-													29% 100%,
-													29% 0%,
-													/* Fill amounts */
-													71% 0%,
-													71% 100%
-												);">
-												star
-											</span>
-										</div>
-										<div class="star">
-											<span class="material-symbols-outlined star-outline">star</span>
-											<span class="material-symbols-outlined star-fill"
-												style="clip-path: polygon(
-													/* Starting points */
-													29% 100%,
-													29% 0%,
-													/* Fill amounts */
-													71% 0%,
-													71% 100%
-												);">
-												star
-											</span>
-										</div>
-										<div class="star">
-											<span class="material-symbols-outlined star-outline">star</span>
-											<span class="material-symbols-outlined star-fill"
-												style="clip-path: polygon(
-													/* Starting points */
-													29% 100%,
-													29% 0%,
-													/* Fill amounts */
-													71% 0%,
-													71% 100%
-												);">
-												star
-											</span>
-										</div>
-										<p>4.5 (150)</p>
-									</div>
-									<button class="favourite material-symbols-outlined">
-										favorite
-									</button>
-								</div>
-							</div>
-							<div class="image-container">
-								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
-							</div>
-						</div>
-						<?php for ($i = 0; $i < 9; $i++) {
-							echo '<div class="product">
-							<div class="details">
-								<div class="title">
-									<!-- Product name -->
-									<h1>Candle Set</h1>
-									<!-- Product price -->
-									<h2>£1.19</h2>
-								</div>
-								<div class="bottom">
-									<div class="rating">
-										<div class="star">
-											<span class="material-symbols-outlined star-outline">star</span>
-											<span class="material-symbols-outlined star-fill"
-												style="clip-path: polygon(
-													/* Starting points */
-													29% 100%,
-													29% 0%,
-													/* Fill amounts */
-													71% 0%,
-													71% 100%
-												);">
-												star
-											</span>
-										</div>
-										<div class="star">
-											<span class="material-symbols-outlined star-outline">star</span>
-											<span class="material-symbols-outlined star-fill"
-												style="clip-path: polygon(
-													/* Starting points */
-													29% 100%,
-													29% 0%,
-													/* Fill amounts */
-													71% 0%,
-													71% 100%
-												);">
-												star
-											</span>
-										</div>
-										<div class="star">
-											<span class="material-symbols-outlined star-outline">star</span>
-											<span class="material-symbols-outlined star-fill"
-												style="clip-path: polygon(
-													/* Starting points */
-													29% 100%,
-													29% 0%,
-													/* Fill amounts */
-													71% 0%,
-													71% 100%
-												);">
-												star
-											</span>
-										</div>
-										<div class="star">
-											<span class="material-symbols-outlined star-outline">star</span>
-											<span class="material-symbols-outlined star-fill"
-												style="clip-path: polygon(
-													/* Starting points */
-													29% 100%,
-													29% 0%,
-													/* Fill amounts */
-													71% 0%,
-													71% 100%
-												);">
-												star
-											</span>
-										</div>
-										<div class="star">
-											<span class="material-symbols-outlined star-outline">star</span>
-											<span class="material-symbols-outlined star-fill"
-												style="clip-path: polygon(
-													/* Starting points */
-													29% 100%,
-													29% 0%,
-													/* Fill amounts */
-													71% 0%,
-													71% 100%
-												);">
-												star
-											</span>
-										</div>
-										<p>4.5 (150)</p>
-									</div>
-									<button class="favourite material-symbols-outlined">
-										favorite
-									</button>
-								</div>
-							</div>
-							<div class="image-container">
-								<div class="image" style="background-image: url(/smallmart/website/assets/header.webp)"></div>
-							</div>
-						</div>';
-						} ?>
+						<?php LoadProducts($dbconnect, 10); ?>
                     </div>
                 </div>
             </div>
