@@ -810,6 +810,15 @@ main.rows {
     font-weight: 700;
 }
 
+/* Discount in grid container */
+.products-grid .product .details .title h2 span.og-price {
+    font-size: 12px;
+}
+
+.products-grid .product .details .title h2:has(span.og-price) {
+    top: 4px;
+}
+
 /* Product rating and favourite button */
 .product .details .bottom {
     display: flex;
