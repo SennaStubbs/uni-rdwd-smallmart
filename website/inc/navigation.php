@@ -19,19 +19,19 @@
     </a>
     <div id="categories-dropdown" class="hidden">
         <div class="categories key-categories">
-            <a>
+            <a href="/smallmart/website/category?category=8">
                 <span class="material-symbols-outlined">star_shine</span>
                 FEATURED
             </a>
-            <a>
+            <a href="/smallmart/website/category?category=9">
                 <span class="material-symbols-outlined">stars</span>
                 NEWLY ADDED
             </a>
-            <a>
+            <a href="/smallmart/website/category?category=10">
                 <span class="material-symbols-outlined">attach_money</span>
                 ON SALE
             </a>
-            <a>
+            <a href="/smallmart/website/category?category=11">
                 <span class="material-symbols-outlined">mood</span>
                 POPULAR
             </a>

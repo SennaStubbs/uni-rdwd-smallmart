@@ -82,7 +82,6 @@
 					</div>
 					<p class="product-no">Showing <b><?php echo max(0, min(1, mysqli_num_rows($product_result))) + $offset; ?> - <?php echo mysqli_num_rows($product_result) + $offset; ?></b> of <b><?php echo $total_products; ?></b> products</p>
 					<div class="pagination">
-						
 						<a class="direction prev <?php if ($page <= 1): ?>hidden<?php endif; ?>" href="?<?php
 							echo http_build_query(array(
 								'page' => $page - 1,
