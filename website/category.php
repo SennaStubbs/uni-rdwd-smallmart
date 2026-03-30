@@ -14,10 +14,7 @@
     }
 
 	// Get category information
-	if (isset($_GET['category'])) {
-		$categoryId = (int)$_GET['category'];
-
-		$category = $_GET['category'];
+	if ($categoryId != -1) {
 		$stmt = "SELECT *
 				FROM category
 				WHERE category_id = ?";
@@ -25,15 +22,19 @@
 		$sql->bind_param('i', $categoryId);
 		$sql->execute();
 		$category_result = $sql->get_result();
-		// Only using the first row found
-		$category_row = mysqli_fetch_assoc($category_result);
+		if (mysqli_num_rows($category_result) > 0) {
+			// Only using the first row found
+			$category_row = mysqli_fetch_assoc($category_result);
 
-		$category_details = [];
-		foreach (explode(',', $category_row['category_details']) as $detail) {
-			$split_detail = preg_split("/=/", $detail, 2);
-			if (isset($split_detail[0]) && isset($split_detail[1])) {
-				$category_details[$split_detail[0]] = $split_detail[1];
+			$category_details = [];
+			foreach (explode(',', $category_row['category_details']) as $detail) {
+				$split_detail = preg_split("/=/", $detail, 2);
+				if (isset($split_detail[0]) && isset($split_detail[1])) {
+					$category_details[$split_detail[0]] = $split_detail[1];
+				}
 			}
+		} else {
+			header('location: error');
 		}
 	}
 	else {
@@ -211,7 +212,7 @@
 						<a class="direction prev <?php if ($page <= 1): ?>hidden<?php endif; ?>" href="?<?php
 							echo http_build_query(array(
 								'page' => $page - 1,
-								'category' => $categoryId
+								'id' => $categoryId
 							)) ?>">PREV</a>
 						
 
@@ -219,7 +220,7 @@
 							<a class="number <?php if ($i === $page) echo 'active'; ?>" href="?<?php
 							echo http_build_query(array(
 								'page' => $i,
-								'category' => $categoryId
+								'id' => $categoryId
 							)) ?>">
 								<?php echo $i; ?>
 							</a>
@@ -228,7 +229,7 @@
 						<a class="direction next <?php if ($page >= $total_pages): ?>hidden<?php endif; ?>" href="?<?php
 							echo http_build_query(array(
 								'page' => $page + 1,
-								'category' => $categoryId
+								'id' => $categoryId
 							)) ?>">NEXT</a>
 					</div>
 				</div>

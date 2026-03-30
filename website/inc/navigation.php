@@ -19,52 +19,54 @@
     </a>
     <div id="categories-dropdown" class="hidden">
         <div class="categories key-categories">
-            <a href="/smallmart/website/category?category=8">
-                <span class="material-symbols-outlined">star_shine</span>
-                FEATURED
+            <?php
+                // Get categories that have 'main_category=true' in their details
+                $stmt = "SELECT *
+                        FROM category
+                        WHERE SUBSTRING_INDEX(
+                                SUBSTRING_INDEX(category_details, 'main_category=', -1),
+                                ',', 1) = 'true'";
+                $sql = $dbconnect->prepare($stmt);
+                $sql->execute();
+                $main_cate_results = $sql->get_result();
+
+                if (mysqli_num_rows($main_cate_results) > 0) {
+                    while($row = mysqli_fetch_assoc($main_cate_results)) {
+                        foreach (explode(',', $row['category_details']) as $detail) {
+			                $split_detail = preg_split("/=/", $detail, 2);
+                            if (trim($split_detail[0]) == 'icon') { ?>
+            <a href="/smallmart/website/category?id=<?php echo $row['category_id'] ?>">
+                <span class="material-symbols-outlined"><?php echo $split_detail[1] ?></span>
+                <?php echo strtoupper($row['category_name']); ?>
             </a>
-            <a href="/smallmart/website/category?category=9">
-                <span class="material-symbols-outlined">stars</span>
-                NEWLY ADDED
-            </a>
-            <a href="/smallmart/website/category?category=10">
-                <span class="material-symbols-outlined">attach_money</span>
-                ON SALE
-            </a>
-            <a href="/smallmart/website/category?category=11">
-                <span class="material-symbols-outlined">mood</span>
-                POPULAR
-            </a>
+                            <?php }
+                        }
+                    }
+                }
+            ?>
         </div>
         <div class="categories">
-            <a>
-                <span class="material-symbols-outlined">fork_spoon</span>
-                Food
+            <?php
+                $stmt = "SELECT *
+				         FROM category";
+                $sql = $dbconnect->prepare($stmt);
+                $sql->execute();
+                $category_result = $sql->get_result();
+                
+                if (mysqli_num_rows($category_result) > 0) {
+                    while($row = mysqli_fetch_assoc($category_result)) {
+                        foreach (explode(',', $row['category_details']) as $detail) {
+			                $split_detail = preg_split("/=/", $detail, 2);
+                            if (trim($split_detail[0]) == 'icon') { ?>
+            <a href="/smallmart/website/category?id=<?php echo $row['category_id'] ?>">
+                <span class="material-symbols-outlined"><?php echo $split_detail[1] ?></span>
+                <?php echo $row['category_name']; ?>
             </a>
-            <a>
-                <span class="material-symbols-outlined">music_note_2</span>
-                Musical Instruments
-            </a>
-            <a>
-                <span class="material-symbols-outlined">blender</span>
-                Kitchen Collection
-            </a>
-            <a>
-                <span class="material-symbols-outlined">nature</span>
-                Foliage
-            </a>
-            <a>
-                <span class="material-symbols-outlined">house</span>
-                House Furniture
-            </a>
-            <a>
-                <span class="material-symbols-outlined">sunny</span>
-                Outdoor Furniture
-            </a>
-            <a>
-                <span class="material-symbols-outlined">stars_2</span>
-                Miscellaneous
-            </a>
+                            <?php }
+                        }
+                    }
+                }
+            ?>
         </div> 
     </div>
     <!-- More dropdown -->
