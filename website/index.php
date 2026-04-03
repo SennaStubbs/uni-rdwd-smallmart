@@ -83,13 +83,13 @@
 								foreach ($details as $detail) {
 									$split_detail = preg_split("/=/", $detail, 2);
 									if ($split_detail[0] == "featured" && (int)$split_detail[1] > 0) { ?>
-					<div class="collection" style="order: <?php echo (int)$split_detail[1] ?>">
+					<button onclick="ClickLink(event, '/smallmart/website/category?id=<?php echo $row['category_id'] ?>')" class="collection" style="order: <?php echo (int)$split_detail[1] ?>">
                         <div class="image" style="background-image: url(<?php echo $row['category_image'] ?>)"></div>
                         <div class="title">
                             <h1><?php echo $row['category_name'] ?></h1>
                             <a>View Collection</a>
                         </div>
-                    </div>
+					</button>
 									<?php }
 								}
 							}
@@ -102,7 +102,7 @@
                     <div class="row-title">
                         <span class="material-symbols-outlined">star_shine</span>
                         FEATURED
-                        <a>View All</a>
+                        <a href="/smallmart/website/category?id=8">View All</a>
                     </div>
                     <div class="products-container">
 						<?php LoadProducts($dbconnect, 8); ?>
@@ -114,7 +114,7 @@
                     <div class="row-title">
                         <span class="material-symbols-outlined">stars</span>
                         NEWLY ADDED
-                        <a>View All</a>
+                        <a href="/smallmart/website/category?id=9">View All</a>
                     </div>
                     <div class="products-container">
 						<?php LoadProducts($dbconnect, 9); ?>
@@ -126,7 +126,7 @@
                     <div class="row-title">
                         <span class="material-symbols-outlined" style="width: 0.75em; margin-left: -0.25em">attach_money</span>
                         ON SALE
-                        <a>View All</a>
+                        <a href="/smallmart/website/category?id=10">View All</a>
                     </div>
                     <div class="products-container">
 						<?php LoadProducts($dbconnect, 10); ?>

@@ -9,8 +9,8 @@ RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^ %{REQUEST_URI}.php [NC,L]
 
 # Error redirect
-ErrorDocument 404 /smallmart/error.php
-ErrorDocument 500 /smallmart/error.php
-ErrorDocument 403 /smallmart/error.php
-ErrorDocument 400 /smallmart/error.php
-ErrorDocument 401 /smallmart/error.php
+ErrorDocument 404 /smallmart/website/error
+ErrorDocument 500 /smallmart/website/error
+ErrorDocument 403 /smallmart/website/error
+ErrorDocument 400 /smallmart/website/error
+ErrorDocument 401 /smallmart/website/error

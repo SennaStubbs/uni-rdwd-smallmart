@@ -45,6 +45,19 @@ if (document.body.clientHeight < 1500) {
     document.getElementById('back-to-top').classList.add('hidden');
 }
 
+// Button that behaviours like an anchor tag, with the option to open in a new tab
+function ClickLink(event, url, openInNewTab = false) {
+    event.preventDefault();
+
+    // Make sure the user is not trying to press a different link
+    if (event.target.tagName != "A" && [0, 1].includes(event.button)) {
+        if (openInNewTab == true)
+            window.open(url, '_blank').focus();
+        else
+            window.location.href = url
+    }
+}
+
 // Prevent invalid message appearing on inputs with 'hide-validation-message' class
 document.addEventListener('invalid', (function () {
   return function (e) {

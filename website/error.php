@@ -20,7 +20,12 @@
         <!-- Navigation bar -->
         <?php include("../website/inc/navigation.php"); ?>
 
-        
+        <main class="center-page error">
+            <img src="/smallmart/website/assets/misc/pug.png">
+            <h1>This page does not exist!</h1>
+            <p>Sorry :/</p>
+            <a onclick="history.back()">GO BACK</a>
+        </main>
 
 		<!-- Footer -->
         <?php include("../website/inc/footer.php"); ?>

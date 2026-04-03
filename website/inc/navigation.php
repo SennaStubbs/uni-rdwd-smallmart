@@ -47,8 +47,12 @@
         </div>
         <div class="categories">
             <?php
+                // Get categories that do not have 'main_category=true' in their details
                 $stmt = "SELECT *
-				         FROM category";
+                        FROM category
+                        WHERE SUBSTRING_INDEX(
+                                SUBSTRING_INDEX(category_details, 'main_category=', -1),
+                                ',', 1) != 'true'";
                 $sql = $dbconnect->prepare($stmt);
                 $sql->execute();
                 $category_result = $sql->get_result();
