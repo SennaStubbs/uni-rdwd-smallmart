@@ -86,6 +86,10 @@ body {
     height: calc(100vh - var(--footer-height) - var(--nav-height) - var(--header-height));
 }
 
+:has(.grid-spacer) .center-page {
+    height: calc(100vh - var(--footer-height) - var(--nav-height) - var(--header-height) - 40px);
+}
+
 /* Navigation bar */
 nav {
     z-index: 20;
@@ -1443,4 +1447,50 @@ main.rows {
 .error img {
     max-height: 100%;
     max-width: 100%;
+}
+
+/* Content container for information pages */
+.content-container {
+    padding: 15px; 
+
+    background-color: var(--web-tone-6);
+    box-shadow: 0px 6px 0px inset var(--web-tone-2);
+    border-radius: 10px;
+}
+
+/* About page */
+.about {
+    color: var(--text-light);
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 0px 3px 0px var(--text-shadow-thin);
+}
+
+.about .content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    margin: 0 230px;
+}
+
+.about * {
+    margin: 0;
+}
+
+.about a {
+    width: fit-content;
+
+    padding: 3px 8px;
+    
+    background-color: var(--web-tone-2);
+    box-shadow: 0px 4px 0px var(--web-shadow-2);
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+    user-select: none;
 }
