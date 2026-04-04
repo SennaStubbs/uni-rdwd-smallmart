@@ -47,7 +47,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>About Us | Smallmart</title>
+        <title>Contact Us | Smallmart</title>
         <link rel="icon" type="image/png" href="/smallmart/website/assets/brand/small-logo.png">
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="/smallmart/website/css/main.css">
@@ -58,26 +58,22 @@
 
         <!-- Header -->
         <header class="small" style="background-image: url(/smallmart/website/assets/header.webp)">
-			<div class="bg-colour" style="background-color: #FF00A1"></div>
-            <h1 class="title" style="background-color: #DC0247; box-shadow: 0px 5px 0px #BA0009; color: white">
-				ABOUT US
+			<div class="bg-colour" style="background-color: #F200FF"></div>
+            <h1 class="title" style="background-color: #DC0293; box-shadow: 0px 5px 0px #BA0060; color: white">
+				CONTACT US
 			</h1>
         </header>
 
         <div class="grid-spacer"></div>
 
 		<!-- Page rows -->
-        <main class="center-page about">
+        <main class="center-page contact">
 			<div class="content-container">
-                <p>
-                    <strong>Smallmart</strong> is a store specializing in a diverse array of
-                    handcrafted and readymade miniature collectibles. The
-                    shop caters to collectors, hobbyists, and enthusiasts
-                    seeking finely detailed miniatures that capture the
-                    essence of their real-life counterparts.
-                </p>
-                <p><strong>Want to contact us?</strong></p>
-                <a href="/smallmart/website/contact-us">Click to visit!</a>
+                <p>Looking to contact us for support or business inquiries? Email us at:</p>
+                <h1>SENNASTUBBS@GMAIL.COM</h1>
+                <p>You can also find us at: <strong>Salisbury SP4 7DE</strong></p>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d25817.479784850202!2d-1.8505955!3d51.1824636!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4873e63b850af611%3A0x979170e2bcd3d2dd!2sStonehenge!5e1!3m2!1sen!2suk!4v1775311493538!5m2!1sen!2suk"
+					width="922" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </main>
 

@@ -79,8 +79,8 @@
         <span class="material-symbols-outlined">keyboard_arrow_down</span>
     </a>
     <div id="more-dropdown" class="hidden">
-        <a>About Us</a>
-        <a>Contact Us</a>
+        <a href="/smallmart/website/about-us">About Us</a>
+        <a href="/smallmart/website/contact-us">Contact Us</a>
     </div>
     <!-- Search bar -->
     <div class="search-bar">

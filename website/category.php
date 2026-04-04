@@ -35,10 +35,12 @@
 			}
 		} else {
 			header('location: error');
+			exit;
 		}
 	}
 	else {
 		header('location: error');
+		exit;
 	}
 ?>
 

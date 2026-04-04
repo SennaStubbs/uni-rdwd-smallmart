@@ -87,7 +87,7 @@
                         <div class="image" style="background-image: url(<?php echo $row['category_image'] ?>)"></div>
                         <div class="title">
                             <h1><?php echo $row['category_name'] ?></h1>
-                            <a>View Collection</a>
+                            <a href="/smallmart/website/category?id=<?php echo $row['category_id'] ?>">View Collection</a>
                         </div>
 					</button>
 									<?php }

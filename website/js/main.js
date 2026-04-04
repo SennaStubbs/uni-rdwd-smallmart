@@ -47,10 +47,11 @@ if (document.body.clientHeight < 1500) {
 
 // Button that behaviours like an anchor tag, with the option to open in a new tab
 function ClickLink(event, url, openInNewTab = false) {
-    event.preventDefault();
 
     // Make sure the user is not trying to press a different link
     if (event.target.tagName != "A" && [0, 1].includes(event.button)) {
+        event.preventDefault();
+        
         if (openInNewTab == true)
             window.open(url, '_blank').focus();
         else
