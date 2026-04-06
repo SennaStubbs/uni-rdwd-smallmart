@@ -74,8 +74,8 @@
 						<?php
 							if (mysqli_num_rows($product_result) > 0) {
 								while($row = mysqli_fetch_assoc($product_result)) {
-									$details = explode(',', $row['product_details']);
-									include('inc/product.php');
+									$details = $row['product_details'];
+									include('inc/product_item.php');
 								}
 							}
 						?>

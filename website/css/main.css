@@ -1542,3 +1542,228 @@ main.rows {
 
     box-sizing: border-box;
 }
+
+/* Product page */
+.product-page {
+    display: flex;
+    flex-direction: column;
+
+    padding: 56px 25px 25px 25px;
+    padding-top: 56px;
+
+    box-sizing: border-box;
+}
+
+.product-page .main-container {
+    width: 100%;
+    max-width: 1460px;
+
+    margin: 0 auto;
+
+    box-sizing: border-box;
+}
+
+.product-page .divider {
+    height: 3px;
+    max-height: 3px;
+
+    margin: 33px 0;
+
+    background-color: var(--text-light);
+    box-shadow: 0px 2px 0px var(--text-shadow-thin);
+}
+
+.product-page .container {
+    display: flex;
+    gap: 32px;
+}
+
+/* Product details */
+.product-page .container .product-info {
+    width: 500px;
+    height: fit-content;
+    
+    padding: 15px;
+
+    background-color: var(--web-tone-6);
+    box-shadow: 0px 6px 0px inset var(--web-shadow-3);
+    border-radius: 10px;
+
+    color: var(--text-light);
+
+    box-sizing: border-box;
+}
+
+/* Product name */
+.product-page .product-info h1 {
+    margin: 0 0 3px 0;
+    font-size: 48px;
+    text-shadow: 0px 3px 0px var(--text-shadow-thin);
+}
+
+/* Product star rating */
+.product-page .product-info .rating {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin-bottom: 12px;
+}
+
+.product-page .product-info .rating .star {
+    filter: drop-shadow(0px 2px 0px var(--text-shadow-thin));
+}
+
+.product-page .product-info .rating .star * {
+    font-size: 40px;
+}
+
+.product-page .product-info .rating p {
+    margin: 0 0 0 10px;
+
+    font-size: 24px;
+    text-shadow: 0px 2px 0px var(--text-shadow-thin);
+}
+
+/* Product price */
+.product-page .product-info h2 {
+    margin: 0;
+
+    font-size: 32px;
+    font-weight: normal;
+    text-shadow: 0px 2px 0px var(--text-shadow-thin);
+}
+
+/* Product variants */
+.product-page .product-info .variants {
+    margin: 15px 5px 20px 5px;
+}
+
+.product-page .product-info .variants h3 {
+    margin: 0;
+
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 0px 2px 0px var(--text-shadow-thin);
+}
+
+.product-page .product-info .variants .variants-grid {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    position: relative;
+
+    margin-top: 11px;
+}
+
+.product-page .product-info .variants .variants-grid a {
+    position: relative;
+
+    margin: 0;
+    padding: 3px 6px;
+
+    background-color: var(--web-tone-3);
+    box-shadow: 0px 3px 0px var(--web-shadow-3);
+    border: none;
+    border-radius: 10px;
+
+    color: var(--text-light);
+    font-size: 24px;
+    text-shadow: 0px 1px 0px var(--text-shadow-thin);
+    text-decoration: none;
+
+    user-select: none;
+    cursor: pointer;
+}
+
+.product-page .product-info .variants .variants-grid a.selected {
+    top: 2px;
+
+    background-color: var(--web-tone-2);
+    box-shadow: 0px 1px 0px var(--web-shadow-2);
+}
+
+/* Add to wishlist button */
+.product-page .product-info .add-to-wishlist {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    height: 36px;
+
+    margin-top: 10px;
+    padding: 4px;
+
+    background-color: var(--web-tone-2);
+    box-shadow: 0px 3px 0px var(--web-shadow-2);
+    border: none;
+    border-radius: 5px;
+
+    color: var(--text-light);
+    font-size: 24px;
+    text-shadow: 0px 1px 0px var(--text-shadow-thin);
+
+    user-select: none;
+    cursor: pointer;
+}
+
+.product-page .product-info .add-to-wishlist .material-symbols-outlined {
+    font-size: 28px;
+}
+
+/* Product info divider */
+.product-page .product-info .divider {
+    margin: 14px 0;
+}
+
+/* Product description */
+.product-page .product-info p {
+    margin: 0;
+
+    font-size: 24px;
+    text-shadow: 0px 2px 0px var(--text-shadow-thin);
+}
+
+/* Product images */
+.product-page .container .images {
+    flex: 1;
+    
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    gap: 32px;
+}
+
+.product-page .container .images button {
+    margin: 0;
+    padding: 10px;
+
+    box-shadow: 0px 6px 0px var(--web-shadow-5);
+
+    border: none;
+    border-radius: 10px;
+
+    user-select: none;
+    cursor: pointer;
+}
+
+.product-page .container .images .main-image-container {
+    max-height: 666px;
+
+    grid-column: span 3;
+}
+
+.product-page .container .images .image-container {
+    max-height: 240px;
+}
+
+.product-page .container .images .image {
+    max-width: 100%;
+    height: 100%;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border-radius: 8px;
+}

@@ -14,31 +14,22 @@
     }
 
 	// Get category information
-	if ($categoryId != -1) {
-		$stmt = "SELECT *
-				FROM category
-				WHERE category_id = ?";
-		$sql = $dbconnect->prepare($stmt);
-		$sql->bind_param('i', $categoryId);
-		$sql->execute();
-		$category_result = $sql->get_result();
-		if (mysqli_num_rows($category_result) > 0) {
-			// Only using the first row found
-			$category_row = mysqli_fetch_assoc($category_result);
+	$stmt = "SELECT *
+			FROM category
+			WHERE category_id = ?";
+	$sql = $dbconnect->prepare($stmt);
+	$sql->bind_param('i', $categoryId);
+	$sql->execute();
+	$category_result = $sql->get_result();
+	if (mysqli_num_rows($category_result) > 0) {
+		// Only using the first row found
+		$category_row = mysqli_fetch_assoc($category_result);
 
-			$category_details = [];
-			foreach (explode(',', $category_row['category_details']) as $detail) {
-				$split_detail = preg_split("/=/", $detail, 2);
-				if (isset($split_detail[0]) && isset($split_detail[1])) {
-					$category_details[$split_detail[0]] = $split_detail[1];
-				}
-			}
-		} else {
-			header('location: error');
-			exit;
-		}
-	}
-	else {
+		$details = $category_row['category_details'];
+		include('../website/inc/split_details.php');
+		$category_details = isset($split_details) ? $split_details : [];
+		
+	} else {
 		header('location: error');
 		exit;
 	}
@@ -113,8 +104,8 @@
 						<?php
 							if (mysqli_num_rows($product_result) > 0) {
 								while($row = mysqli_fetch_assoc($product_result)) {
-									$details = explode(',', $row['product_details']);
-									include('inc/product.php');
+									$details = $row['product_details'];
+									include('inc/product_item.php');
 								}
 							}
 						?>

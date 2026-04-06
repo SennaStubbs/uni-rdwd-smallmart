@@ -36,8 +36,8 @@
 
 			if (mysqli_num_rows($prod_results) > 0) {
 				while($row = mysqli_fetch_assoc($prod_results)) {
-					$details = explode(',', $row['product_details']);
-					include('inc/product.php');
+					$details = $row['product_details'];
+					include('inc/product_item.php');
 				}
 			}
 		}
@@ -78,11 +78,10 @@
 
 						if (mysqli_num_rows($collections_result) > 0) {
 							while($row = mysqli_fetch_assoc($collections_result)) {
-								$details = explode(',', $row['category_details']);
-
-								foreach ($details as $detail) {
-									$split_detail = preg_split("/=/", $detail, 2);
-									if ($split_detail[0] == "featured" && (int)$split_detail[1] > 0) { ?>
+								$details = $row['category_details'];
+								include('../website/inc/split_details.php');
+								if (isset($split_details)) {
+									if (isset($split_details["featured"]) && (int)$split_details["featured"] > 0) { ?>
 					<button onclick="ClickLink(event, '/smallmart/website/category?id=<?php echo $row['category_id'] ?>')" class="collection" style="order: <?php echo (int)$split_detail[1] ?>">
                         <div class="image" style="background-image: url(<?php echo $row['category_image'] ?>)"></div>
                         <div class="title">
