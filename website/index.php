@@ -140,17 +140,43 @@
                         RECENT REVIEWS
                     </div>
                     <div class="reviews-row-container">
-						<?php for ($i = 0; $i < 6; $i++) {
-						echo '<div class="review">
-							<a class="product-name">Guitar</a>
+						<?php
+							// Get reviews
+							$stmt = "SELECT review_id, review_title, review_text, review_published_datetime, review_rating, user_id, product_id
+									 FROM review
+									 ORDER BY review_published_datetime DESC
+									 LIMIT 6"; // Order by newest -> oldest
+							$sql = $dbconnect->prepare($stmt);
+							$sql->execute();
+							$reviews_result = $sql->get_result();
+
+							if (mysqli_num_rows($reviews_result) > 0) {
+								while ($row = mysqli_fetch_assoc($reviews_result)) {
+									// Get product name
+									$stmt = "SELECT product_name
+											 FROM product
+											 WHERE product_id = ?"; // Order by newest -> oldest
+									$sql = $dbconnect->prepare($stmt);
+									$sql->bind_param('i', $row['product_id']);
+									$sql->execute();
+									$product_result = $sql->get_result();
+									$product_row = mysqli_fetch_assoc($product_result); ?>
+						<div class="review">
+							<a class="product-name" href="/smallmart/website/product.php?id=<?php echo $row['product_id'] ?>"><?php echo $product_row['product_name'] ?></a>
 							<div class="title">
 								<!-- Review title -->
-								<h1>Might Mini Guitar</h1>
+								<h1><?php echo $row['review_title'] ?></h1>
 								<!-- Review published date -->
-								<h2>11/2/26</h2>
+								<h2><?php echo date_format(datetime::createFromFormat('Y-m-d H:i:s', $row['review_published_datetime']), 'd/m/Y') ?></h2>
 							</div>
 							<div class="divider"></div>
 							<div class="rating">
+								<?php
+									// Set star fills
+									for ($index = 0; $index < 5; $index++) {
+										$starValue = Clamp($row['review_rating'] - $index, 0, 1);
+										$starFillValue = $starValue * (71 - 29);
+										?>
 								<div class="star">
 									<span class="material-symbols-outlined star-outline">star</span>
 									<span class="material-symbols-outlined star-fill"
@@ -159,74 +185,33 @@
 											29% 100%,
 											29% 0%,
 											/* Fill amounts */
-											71% 0%,
-											71% 100%
+											<?php echo 29 + $starFillValue; ?>% 0%,
+											<?php echo 29 + $starFillValue; ?>% 100%
 										);">
 										star
 									</span>
 								</div>
-								<div class="star">
-									<span class="material-symbols-outlined star-outline">star</span>
-									<span class="material-symbols-outlined star-fill"
-										style="clip-path: polygon(
-											/* Starting points */
-											29% 100%,
-											29% 0%,
-											/* Fill amounts */
-											71% 0%,
-											71% 100%
-										);">
-										star
-									</span>
-								</div>
-								<div class="star">
-									<span class="material-symbols-outlined star-outline">star</span>
-									<span class="material-symbols-outlined star-fill"
-										style="clip-path: polygon(
-											/* Starting points */
-											29% 100%,
-											29% 0%,
-											/* Fill amounts */
-											71% 0%,
-											71% 100%
-										);">
-										star
-									</span>
-								</div>
-								<div class="star">
-									<span class="material-symbols-outlined star-outline">star</span>
-									<span class="material-symbols-outlined star-fill"
-										style="clip-path: polygon(
-											/* Starting points */
-											29% 100%,
-											29% 0%,
-											/* Fill amounts */
-											71% 0%,
-											71% 100%
-										);">
-										star
-									</span>
-								</div>
-								<div class="star">
-									<span class="material-symbols-outlined star-outline">star</span>
-									<span class="material-symbols-outlined star-fill"
-										style="clip-path: polygon(
-											/* Starting points */
-											29% 100%,
-											29% 0%,
-											/* Fill amounts */
-											71% 0%,
-											71% 100%
-										);">
-										star
-									</span>
-								</div>
-								<p>5<span>/5</span></p>
+									<?php } ?>
+								<p><?php echo $row['review_rating'] ?><span>/5</span></p>
 							</div>
-							<p class="review-text">This tiny guitar prop is beautifully crafted with painted strings and a glossy body finish that gives it a premium feel. It...hat gives it a premiu</p>
+							<p class="review-text"><?php echo substr($row['review_text'], 0, 147) . '...' ?></p>
 							<div class="divider"></div>
-							<p class="user">StrumBuddy</p>
-						</div>'; } ?>
+							<?php
+								// Get review user
+								$stmt = "SELECT user_display_name
+											FROM user
+											WHERE user_id = ?";
+								$sql = $dbconnect->prepare($stmt);
+								$sql->bind_param('i', $row['user_id']);
+								$sql->execute();
+								$user_result = $sql->get_result();
+								$user_row = mysqli_fetch_assoc($user_result);
+							?>
+							<p class="user"><?php echo $user_row['user_display_name'] ?></p>
+						</div>
+							<?php }
+							}
+						?>
                     </div>
                 </div>
             </div>
