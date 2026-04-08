@@ -28,10 +28,11 @@
         $stmt =
             "SELECT *
             FROM product
-            WHERE product_name LIKE '%$search_sql%'
-            OR product_description LIKE '%$search_sql%'
-            LIMIT $limit OFFSET $offset";
+            WHERE product_name LIKE '%?%'
+            OR product_description LIKE '%?%'
+            LIMIT ? OFFSET ?";
         $sql = $dbconnect->prepare($stmt);
+        $sql->bind_param('ssii', $search_sql, $search_sql, $limit, $offset);
         $sql->execute();
         $product_result = $sql->get_result();
     }

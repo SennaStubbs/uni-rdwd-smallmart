@@ -40,9 +40,9 @@
                     category_id LIKE ? OR
                     category_id LIKE ? OR
                     category_id LIKE ?
-                LIMIT $limit OFFSET $offset";
+                LIMIT ? OFFSET ?";
     $sql = $dbconnect->prepare($stmt);
-    $sql->bind_param('ssss', $c1, $c2, $c3, $c4);
+    $sql->bind_param('ssssii', $c1, $c2, $c3, $c4, $limit, $offset);
     $sql->execute();
     $product_result = $sql->get_result();
 ?>
