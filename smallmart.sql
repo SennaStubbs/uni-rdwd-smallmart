@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 08, 2026 at 04:59 AM
+-- Generation Time: Apr 08, 2026 at 06:17 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -116,7 +116,9 @@ INSERT INTO `product` (`product_id`, `product_name`, `product_description`, `pro
 (42, 'Trophy', 'This miniature dollhouse is a must-have for any collector. Crafted with exquisite detail, this 1/12 scale replica boasts hand-painted features and intricate furnishings. Perfect for showcasing your love for exquisite craftsmanship and interior design.', '/smallmart/website/assets/products/trophy_1.jpg,/smallmart/website/assets/products/trophy_2.jpg,/smallmart/website/assets/products/trophy_3.jpg,/smallmart/website/assets/products/trophy_4.jpg', 111, 'featured=5', '9'),
 (43, 'Vase Set', 'Expertly crafted with precision, this miniature set of vases is the perfect addition to any dollhouse. Made with attention to detail and high-quality materials, these vases provide a realistic and elegant touch to any miniature home. Enhance your dollhouse decor with this beautiful vase set.', '/smallmart/website/assets/products/vase-set_1.jpg', 59, 'variants=\"Colour\":{\"Purple\":\"/smallmart/website/assets/products/vase-set_1.jpg,/smallmart/website/assets/products/vase-set_6.jpg,/smallmart/website/assets/products/vase-set_7.jpg\",\"Pink\":\"/smallmart/website/assets/products/vase-set_2.jpg,/smallmart/website/assets/products/vase-set_5.jpg\",\"Light blue\":\"/smallmart/website/assets/products/vase-set_3.jpg,/smallmart/website/assets/products/vase-set_4.jpg\"}', ''),
 (44, 'Waffle Toaster', 'Introducing our Waffle Toaster, perfect for any miniature collection. With its compact design, it\'s easy to store and display. Enjoy perfectly toasted waffles without taking up too much space. A must-have for avid collectors.', '/smallmart/website/assets/products/waffle-toaster_1.jpg,/smallmart/website/assets/products/waffle-toaster_2.jpg,/smallmart/website/assets/products/waffle-toaster_3.jpg,/smallmart/website/assets/products/waffle-toaster_4.jpg', 190, 'featured=6', '9'),
-(45, 'Water Filter', 'This Water Filter is a perfect addition to any dollhouse. With its miniature size, it will fit seamlessly into any room. Add a touch of realism to your dollhouse.', '/smallmart/website/assets/products/water-filter_1.jpg', 36, '', '');
+(45, 'Water Filter', 'This Water Filter is a perfect addition to any dollhouse. With its miniature size, it will fit seamlessly into any room. Add a touch of realism to your dollhouse.', '/smallmart/website/assets/products/water-filter_1.jpg', 36, '', ''),
+(46, 'Mini LED Fireplace Set', 'The Mini LED Fireplace Set is a carefully designed dollhouse accessory that simulates a realistic fire effect. Ideal for enhancing the aesthetic of miniature environments, this fireplace adds a touch of warmth and authenticity, making it an engaging focal point in any dollhouse setting.', '/smallmart/website/assets/products/mini-led-fireplace-set_1.jpg,/smallmart/website/assets/products/mini-led-fireplace-set_2.jpg,/smallmart/website/assets/products/mini-led-fireplace-set_3.jpg,/smallmart/website/assets/products/mini-led-fireplace-set_4.jpg,/smallmart/website/assets/products/mini-led-fireplace-set_5.jpg,/smallmart/website/assets/products/mini-led-fireplace-set_6.jpg,/smallmart/website/assets/products/mini-led-fireplace-set_7.jpg', 1262, '', '1'),
+(47, 'Breakfast Dining Table Set', 'The Breakfast Dining Table Set is a meticulously crafted dollhouse miniature designed with attention to detail. It serves as an ideal addition for enhancing the realism of miniature environments. Measuring accurately to scale, this set allows for intricate storytelling and decoration in dollhouse displays.', '/smallmart/website/assets/products/breakfast-dining-table-set_1.jpg,/smallmart/website/assets/products/breakfast-dining-table-set_2.jpg,/smallmart/website/assets/products/breakfast-dining-table-set_3.jpg', 1343, '', '1');
 
 -- --------------------------------------------------------
 
@@ -2111,7 +2113,9 @@ INSERT INTO `review` (`review_id`, `review_title`, `review_text`, `review_publis
 (1960, 'Exactly the quality I hoped for', 'This water filter delivered exactly the level of quality I was hoping for when ordering. Overall, this water filter completely met my expectations and I would rate it very highly.', '2027-01-02 11:01:19', 5, 45, 52),
 (1961, 'Instantly became a centerpiece', 'The water filter instantly became a centerpiece in my miniature setup and draws attention naturally. Overall, this water filter completely met my expectations and I would rate it very highly.', '2027-02-02 00:56:02', 5, 45, 53),
 (1962, 'Feels special among similar pieces', 'Even among similar miniatures, the water filter feels special and thoughtfully crafted. Overall, this water filter completely met my expectations and I would rate it very highly.', '2027-02-27 15:33:34', 5, 45, 54),
-(1963, 'Eye-catching without dominating', 'The water filter manages to be eye-catching without overpowering the rest of the miniature scene. Overall, this water filter completely met my expectations and I would rate it very highly.', '2027-03-11 05:16:58', 5, 45, 55);
+(1963, 'Eye-catching without dominating', 'The water filter manages to be eye-catching without overpowering the rest of the miniature scene. Overall, this water filter completely met my expectations and I would rate it very highly.', '2027-03-11 05:16:58', 5, 45, 55),
+(1964, 'Surprisingly realistic flame effect', 'The LED flame effect on this miniature fireplace is far more convincing than I expected. When placed inside a dollhouse living room, it immediately creates a cozy focal point without looking exaggerated or toy-like. The glow is subtle and adds atmosphere rather than distracting from the scene, which makes it ideal for realistic interior setups.', '2026-01-18 19:42:11', 4.8, 46, 12),
+(1965, 'Adds warmth and character to interiors', 'This mini LED fireplace brings a sense of warmth and character to miniature interiors that static decor pieces cannot. The proportions feel correct, the detailing around the frame is clean, and the lighting effect enhances evening-style scenes especially well. It works best as a centerpiece element in a furnished room rather than a background prop.', '2026-02-03 14:08:36', 4.7, 46, 27);
 
 -- --------------------------------------------------------
 
@@ -2249,13 +2253,13 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary key for a product', AUTO_INCREMENT=46;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary key for a product', AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT for table `review`
 --
 ALTER TABLE `review`
-  MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary key for a review', AUTO_INCREMENT=1964;
+  MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary key for a review', AUTO_INCREMENT=1966;
 
 --
 -- AUTO_INCREMENT for table `user`
