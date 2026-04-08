@@ -767,12 +767,14 @@ main.rows {
 
 /* Product name */
 .product .details .title h1 {
-    margin: 0;
+    margin: 0 10px 0 0;
 
     font-size: 16px;
     font-weight: 700;
 
     text-shadow: 0px 1px 0px var(--text-shadow-thin);
+
+    box-sizing: border-box;
 }
 
 /* Product price */
@@ -1894,4 +1896,38 @@ main.rows {
     user-select: none;
 
     box-sizing: border-box;
+}
+
+/* Related products */
+.related-products {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    margin-bottom: 7px;
+}
+
+.related-products .row-title {
+    margin: 0 9px;
+
+    color: var(--text-light);
+    font-size: 48px;
+    font-weight: 700;
+    text-shadow: 0px 2px 0px var(--text-shadow-thin);
+}
+
+.related-products .products-container {
+    display: grid;
+    grid-auto-columns: 230px;
+    gap: 12px;
+    /* gap: 12px 34px; */
+    justify-content: space-between;
+
+    margin: 0 30px;
+
+    box-sizing: border-box;
+}
+
+.related-products .products-container .product {
+    grid-area: 1 / auto;
 }

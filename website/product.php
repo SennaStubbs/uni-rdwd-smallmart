@@ -214,6 +214,35 @@
                     <button id="load-more-reviews" onclick="LoadMoreReviews()">LOAD MORE REVIEWS</button>
                 </div>
                 <div class="divider"></div>
+                <div class="related-products">
+                    <h1 class="row-title">Related Products</h1>
+                    <div class="products-container">
+                        <?php
+                            // Load related products (in the same category and
+                            // uses first word in the product name for similar products)
+                            $stmt = "SELECT *
+                                    FROM product
+                                    WHERE (category_id LIKE SUBSTRING_INDEX(category_id, ',', 1) OR
+                                        category_id LIKE CONCAT(SUBSTRING_INDEX(category_id, ',', 1), ',%') OR
+                                        category_id LIKE CONCAT(',%', SUBSTRING_INDEX(category_id, ',', 1)) OR
+                                        category_id LIKE CONCAT('%,', SUBSTRING_INDEX(category_id, ',', 1), ',%') OR
+                                        product_name LIKE CONCAT('%', SUBSTRING_INDEX(product_name, ' ', 1), '%'))
+                                        AND product_id <> ?
+                                    LIMIT 5"; // Could possibly order by sales(? if added later)
+                            $sql = $dbconnect->prepare($stmt);
+                            $sql->bind_param('i', $productId);
+                            $sql->execute();
+                            $prod_results = $sql->get_result();
+
+                            if (mysqli_num_rows($prod_results) > 0) {
+                                while($row = mysqli_fetch_assoc($prod_results)) {
+                                    $details = $row['product_details'];
+                                    include('inc/product_item.php');
+                                }
+                            }
+                        ?>
+                    </div>
+                </div>
             </div>
         </main>
 
