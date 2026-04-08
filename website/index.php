@@ -5,6 +5,7 @@
         session_start();
 
         include("../website/inc/dbconnect.php");
+		include("../website/inc/functions.php");
 
 		
 		function LoadProducts($dbconnect, $categoryId) {
