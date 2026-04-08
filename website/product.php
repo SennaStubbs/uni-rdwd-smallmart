@@ -5,6 +5,7 @@
         session_start();
 
         include("../website/inc/dbconnect.php");
+        include("../website/inc/functions.php");
 
         // Getting product
 		$productId = isset($_GET['id']) ? (int)$_GET['id'] : -1;
@@ -126,6 +127,24 @@
                     <div class="product-info">
                         <h1><?php echo $product_row['product_name'] ?></h1>
                         <div class="rating">
+                            <?php
+                                // Get overall review ratings
+                                // Get reviews
+                                $stmt = "SELECT COUNT(*) as totalCount, AVG(review_rating) as avgRating
+                                        FROM review
+                                        WHERE product_id = ?";
+                                $sql = $dbconnect->prepare($stmt);
+                                $sql->bind_param('i', $productId);
+                                $sql->execute();
+                                $totalReviews_Result = $sql->get_result();
+
+                                $totalReviews_Row = mysqli_fetch_assoc($totalReviews_Result);
+
+                                // Stars
+                                for ($index = 0; $index < 5; $index++) {
+                                    $starValue = Clamp($totalReviews_Row['avgRating'] - $index, 0, 1);
+                                    $starFillValue = $starValue * (71 - 29); ?>
+
                             <div class="star">
                                 <span class="material-symbols-outlined star-outline">star</span>
                                 <span class="material-symbols-outlined star-fill"
@@ -134,69 +153,15 @@
                                         29% 100%,
                                         29% 0%,
                                         /* Fill amounts */
-                                        71% 0%,
-                                        71% 100%
+                                        <?php echo 29 + $starFillValue; ?>% 0%,
+                                        <?php echo 29 + $starFillValue; ?>% 100%
                                     );">
                                     star
                                 </span>
                             </div>
-                            <div class="star">
-                                <span class="material-symbols-outlined star-outline">star</span>
-                                <span class="material-symbols-outlined star-fill"
-                                    style="clip-path: polygon(
-                                        /* Starting points */
-                                        29% 100%,
-                                        29% 0%,
-                                        /* Fill amounts */
-                                        71% 0%,
-                                        71% 100%
-                                    );">
-                                    star
-                                </span>
-                            </div>
-                            <div class="star">
-                                <span class="material-symbols-outlined star-outline">star</span>
-                                <span class="material-symbols-outlined star-fill"
-                                    style="clip-path: polygon(
-                                        /* Starting points */
-                                        29% 100%,
-                                        29% 0%,
-                                        /* Fill amounts */
-                                        71% 0%,
-                                        71% 100%
-                                    );">
-                                    star
-                                </span>
-                            </div>
-                            <div class="star">
-                                <span class="material-symbols-outlined star-outline">star</span>
-                                <span class="material-symbols-outlined star-fill"
-                                    style="clip-path: polygon(
-                                        /* Starting points */
-                                        29% 100%,
-                                        29% 0%,
-                                        /* Fill amounts */
-                                        71% 0%,
-                                        71% 100%
-                                    );">
-                                    star
-                                </span>
-                            </div>
-                            <div class="star">
-                                <span class="material-symbols-outlined star-outline">star</span>
-                                <span class="material-symbols-outlined star-fill"
-                                    style="clip-path: polygon(
-                                        /* Starting points */
-                                        29% 100%,
-                                        29% 0%,
-                                        /* Fill amounts */
-                                        71% 0%,
-                                        71% 100%
-                                    );">
-                                    star
-                                </span>
-                            </div>
-                            <p>4.5 (150)</p>
+                            <?php } ?>
+                            
+                            <p><?php echo number_format($totalReviews_Row['avgRating'], '1')?> (<?php echo $totalReviews_Row['totalCount'] ?>)</p>
                         </div>
                         <?php //if (isset($split_details["discounted-price"])) { ?>
                         <!-- <h2><span class="og-price">£<?php //echo number_format($product_row['product_price'] / 100, 2) ?></span>£<?php //echo number_format($split_detail[1] / 100, 2) ?></h2> -->
@@ -226,13 +191,88 @@
                     </div>
                 </div>
                 <div class="divider"></div>
+                <div id="reviews">
+                    <?php
+                        // Get reviews
+                        $stmt = "SELECT review_id, review_title, review_text, review_published_datetime, review_rating, user_id
+                                 FROM review
+                                 WHERE product_id = ?
+                                 ORDER BY review_published_datetime DESC
+                                 LIMIT 3"; // Order by newest -> oldest
+                        $sql = $dbconnect->prepare($stmt);
+                        $sql->bind_param('i', $productId);
+                        $sql->execute();
+                        $reviews_result = $sql->get_result();
+                    ?>
+                    <h1 class="title">Reviews (<?php echo $totalReviews_Row['totalCount'] ?>)</h1>
+                    <?php
+                        if (mysqli_num_rows($product_result) > 0) {
+							while($row = mysqli_fetch_assoc($reviews_result)) { ?>
+                    <div class="review">
+                        <div class="title">
+                            <h1><?php echo $row['review_title'] ?></h1>
+                            <h2><?php echo date_format(datetime::createFromFormat('Y-m-d H:i:s', $row['review_published_datetime']), 'd/m/Y') ?></h2>
+                        </div>
+                        <div class="rating">
+                            <?php
+                                // Set star fills
+                                for ($index = 0; $index < 5; $index++) {
+                                    $starValue = Clamp($row['review_rating'] - $index, 0, 1);
+                                    $starFillValue = $starValue * (71 - 29);
+                                    ?>
+                            <div class="star">
+                                <span class="material-symbols-outlined star-outline">star</span>
+                                <span class="material-symbols-outlined star-fill"
+                                    style="clip-path: polygon(
+                                        /* Starting points */
+                                        29% 100%,
+                                        29% 0%,
+                                        /* Fill amounts */
+                                        <?php echo 29 + $starFillValue; ?>% 0%,
+                                        <?php echo 29 + $starFillValue; ?>% 100%
+                                    );">
+                                    star
+                                </span>
+                            </div>
+                                <?php }
+                            ?>
+                            <p><?php echo number_format($row['review_rating'], 1) ?></p>
+                        </div>
+                        <div class="divider"></div>
+                        <p class="review-text"><?php echo $row['review_text'] ?></p>
+                        <?php
+                            // Get review user
+                            $stmt = "SELECT user_display_name
+                                     FROM user
+                                     WHERE user_id = ?";
+                            $sql = $dbconnect->prepare($stmt);
+                            $sql->bind_param('i', $row['user_id']);
+                            $sql->execute();
+                            $user_result = $sql->get_result();
+                            $user_row = mysqli_fetch_assoc($user_result);
+                        ?>
+                        <h3 class="reviewer"><?php echo $user_row['user_display_name'] ?></h3>
+                    </div>
+                        <?php } 
+                    } ?>
+                    <button id="load-more-reviews">LOAD MORE REVIEWS</button>
+                </div>
+                <div class="divider"></div>
             </div>
         </main>
 
 		<!-- Footer -->
         <?php include("../website/inc/footer.php"); ?>
 
+        <?php
+            // Assigning PHP variables to JavaScript variables
+        ?>
+        <script>
+            var totalReviewsCount = <?php echo $totalReviews_Row['totalCount'] ?>;
+        </script>
+
         <!-- JavaScript -->
         <script type="text/javascript" src="/smallmart/website/js/main.js"></script>
+        <script type="text/javascript" src="/smallmart/website/js/product-page.js"></script>
     </body>
 </html>

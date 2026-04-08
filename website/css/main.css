@@ -1767,3 +1767,131 @@ main.rows {
 
     border-radius: 8px;
 }
+
+/* Reviews */
+#reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    padding: 0 15px;
+
+    box-sizing: border-box;
+}
+
+#reviews h1.title {
+    margin: 0;
+
+    color: var(--text-light);
+    font-size: 48px;
+    text-shadow: 0px 3px 0px var(--text-shadow-thin);
+}
+
+/* Individual review */
+#reviews .review {
+    display: flex;
+    flex-direction: column;
+
+    padding: 15px;
+
+    background-color: var(--web-tone-4);
+    border-radius: 10px;
+
+    color: var(--text-dark);
+    text-shadow: 0px 2px 0px var(--text-shadow-thin);
+    
+    box-shadow: 0px 4px 0px var(--web-shadow-4);
+    box-sizing: border-box;
+}
+
+/* Review title */
+#reviews .review div.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#reviews .review div.title h1 {
+    margin: 0;
+
+    font-size: 40px;
+}
+
+/* Published date */
+#reviews .review div.title h2 {
+    margin: 0;
+
+    font-size: 20px;
+    font-weight: normal;
+}
+
+/* Review star rating */
+#reviews .review .rating {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin-bottom: 6px;
+
+    text-shadow: none;
+}
+
+#reviews .review .rating .star {
+    filter: drop-shadow(0px 2px 0px var(--text-shadow-thin));
+}
+
+#reviews .review .rating .star * {
+    font-size: 35px;
+}
+
+#reviews .review .rating p {
+    margin: 0 0 0 7px;
+
+    font-size: 24px;
+    text-shadow: 0px 2px 0px var(--text-shadow-thin);
+}
+
+/* Review divider */
+#reviews .review .divider {
+    margin: 14px 0;
+
+    background-color: var(--text-dark);
+}
+
+/* Review text */
+#reviews .review .review-text {
+    margin: 0 0 10px 0;
+
+    font-size: 24px;
+}
+
+/* Reviewer */
+#reviews .review .reviewer {
+    margin: 0;
+
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* 'Load more reviews' button */
+#load-more-reviews {
+    margin: 0 auto;
+    padding: 4px 10px;
+
+    background-color: var(--web-tone-2);
+    box-shadow: 0px 5px 0px var(--web-shadow-2);
+    
+    border: none;
+    border-radius: 5px;
+
+    color: var(--text-light);
+    text-shadow: 0px 1px 0px var(--text-shadow-thin);
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+
+    cursor: pointer;
+    user-select: none;
+
+    box-sizing: border-box;
+}

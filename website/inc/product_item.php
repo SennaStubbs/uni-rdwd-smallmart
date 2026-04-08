@@ -18,7 +18,7 @@
             <h1><?php echo $row['product_name'] ?></h1>
             <!-- Product price -->
             <?php if (isset($split_details["discounted-price"])) { ?>
-            <h2><span class="og-price">£<?php echo number_format($row['product_price'] / 100, 2) ?></span>£<?php echo number_format($split_detail[1] / 100, 2) ?></h2>
+            <h2><span class="og-price">£<?php echo number_format($row['product_price'] / 100, 2) ?></span>£<?php echo number_format($split_details["discounted-price"] / 100, 2) ?></h2>
             <?php } else { ?>
             <h2>£<?php echo number_format($row['product_price'] / 100, 2) ?></h2>
             <?php } ?>
@@ -103,6 +103,6 @@
         </div>
     </div>
     <div class="image-container">
-        <div class="image" style="background-image: url(<?php echo $row['product_image'] ?>)"></div>
+        <div class="image" style="background-image: url(<?php echo explode(',', $row['product_image'], 2)[0] ?>)"></div>
     </div>
 </div>
