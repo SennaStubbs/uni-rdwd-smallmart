@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 08, 2026 at 06:17 AM
+-- Generation Time: Apr 08, 2026 at 06:52 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -2115,7 +2115,17 @@ INSERT INTO `review` (`review_id`, `review_title`, `review_text`, `review_publis
 (1962, 'Feels special among similar pieces', 'Even among similar miniatures, the water filter feels special and thoughtfully crafted. Overall, this water filter completely met my expectations and I would rate it very highly.', '2027-02-27 15:33:34', 5, 45, 54),
 (1963, 'Eye-catching without dominating', 'The water filter manages to be eye-catching without overpowering the rest of the miniature scene. Overall, this water filter completely met my expectations and I would rate it very highly.', '2027-03-11 05:16:58', 5, 45, 55),
 (1964, 'Surprisingly realistic flame effect', 'The LED flame effect on this miniature fireplace is far more convincing than I expected. When placed inside a dollhouse living room, it immediately creates a cozy focal point without looking exaggerated or toy-like. The glow is subtle and adds atmosphere rather than distracting from the scene, which makes it ideal for realistic interior setups.', '2026-01-18 19:42:11', 4.8, 46, 12),
-(1965, 'Adds warmth and character to interiors', 'This mini LED fireplace brings a sense of warmth and character to miniature interiors that static decor pieces cannot. The proportions feel correct, the detailing around the frame is clean, and the lighting effect enhances evening-style scenes especially well. It works best as a centerpiece element in a furnished room rather than a background prop.', '2026-02-03 14:08:36', 4.7, 46, 27);
+(1965, 'Adds warmth and character to interiors', 'This mini LED fireplace brings a sense of warmth and character to miniature interiors that static decor pieces cannot. The proportions feel correct, the detailing around the frame is clean, and the lighting effect enhances evening-style scenes especially well. It works best as a centerpiece element in a furnished room rather than a background prop.', '2026-02-03 14:08:36', 4.7, 46, 27),
+(1966, 'Small detail that adds a lot of realism', 'This miniature clock does more than just fill space — it helps establish a sense of realism in a room. The proportions feel right, and it blends naturally into interior scenes without drawing too much attention to itself.', '2026-02-21 10:36:54', 4.6, 8, 19),
+(1967, 'Great accessory for themed rooms', 'I used this vase set while styling a themed miniature room and it worked extremely well. Each piece has enough character to stand on its own while still feeling cohesive as a group.', '2026-01-29 17:12:09', 4.8, 43, 34),
+(1968, 'Looks good even in close-up photos', 'This miniature sewing machine holds up well even when photographed up close. The shapes and surface details are clean enough that it doesn’t break immersion in tighter shots.', '2026-03-04 13:49:21', 4.7, 34, 7),
+(1969, 'Nice balance between simple and detailed', 'The coffee mug strikes a nice balance by being detailed enough to look realistic without feeling overworked. It works especially well in casual kitchen or dining setups.', '2026-02-12 09:58:33', 4.5, 7, 41),
+(1970, 'Works well as a finishing accessory', 'This suitcase feels like the kind of accessory you add last, once the rest of the scene is complete. It helps suggest a story without dominating the setup.', '2026-01-17 18:26:40', 4.6, 35, 52),
+(1971, 'Brings quiet realism to the room', 'This miniature carpet works especially well for grounding a scene. It adds a lived-in feel without overpowering other furnishings, and the texture helps soften the overall look of the room.', '2027-04-03 11:24:18', 4.6, 9, 14),
+(1972, 'Charming shelf accent', 'I placed this tiny radio on a shelf in a miniature living room and it immediately added character. It feels like one of those details that makes a space feel intentional rather than staged.', '2027-04-17 16:02:41', 4.7, 32, 28),
+(1973, 'Strong visual addition without clutter', 'This hanging swing adds visual interest without crowding the scene. It works well in outdoor or open-space setups and doesn’t distract from surrounding miniature elements.', '2027-05-01 13:45:06', 4.5, 23, 6),
+(1974, 'Simple piece that enhances realism', 'The miniature telephone is subtle but effective. It doesn’t immediately draw attention, but once noticed, it helps the overall scene feel more believable and complete.', '2027-04-22 09:31:54', 4.6, 38, 47),
+(1975, 'Nicely sized decorative centerpiece', 'This traditional lamp sits at just the right scale to act as a decorative centerpiece. The shape and proportions feel balanced, making it easy to place in a variety of interior layouts.', '2027-05-09 18:19:27', 4.8, 39, 31);
 
 -- --------------------------------------------------------
 
@@ -2259,7 +2269,7 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT for table `review`
 --
 ALTER TABLE `review`
-  MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary key for a review', AUTO_INCREMENT=1966;
+  MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary key for a review', AUTO_INCREMENT=1976;
 
 --
 -- AUTO_INCREMENT for table `user`
