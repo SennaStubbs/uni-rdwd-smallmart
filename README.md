@@ -16,3 +16,5 @@ A responsive dynamic website for a catalogue of (real) miniature items. Every pr
 - Review sorting (highest, lowest, newest, oldest)
 - User management
 - Re-organise files and directories
+    - Split CSS into separate pages (e.g. product page)
+    - Move re-used PHP code into 'functions.php'
