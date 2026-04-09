@@ -15,3 +15,4 @@ A responsive dynamic website for a catalogue of (real) miniature items. Every pr
     - Will require more columns in 'product' table
 - Review sorting (highest, lowest, newest, oldest)
 - User management
+- Re-organise files and directories
