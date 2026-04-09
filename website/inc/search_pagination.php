@@ -13,14 +13,16 @@
         $offset = ($page - 1) * $limit;
 
         // Get total product count for page links
-        $total_query = mysqli_query($dbconnect, 
-            "SELECT COUNT(*)
-            AS total
+        $stmt =
+            "SELECT COUNT(*) AS total
             FROM product
-            WHERE product_name LIKE '%$search_sql%'
-            OR product_description LIKE '%$search_sql%'"
-        );
-        $total_row = mysqli_fetch_assoc($total_query);
+            WHERE product_name LIKE CONCAT('%',?,'%')
+            OR product_description LIKE CONCAT('%',?,'%')";
+        $sql = $dbconnect->prepare($stmt);
+        $sql->bind_param('ss', $search_sql, $search_sql);
+        $sql->execute();
+        $total_result = $sql->get_result();
+        $total_row = mysqli_fetch_assoc($total_result);
         $total_products = $total_row['total'];
         $total_pages = ceil($total_products / $limit);
 
@@ -28,8 +30,8 @@
         $stmt =
             "SELECT *
             FROM product
-            WHERE product_name LIKE '%?%'
-            OR product_description LIKE '%?%'
+            WHERE product_name LIKE CONCAT('%',?,'%')
+            OR product_description LIKE CONCAT('%',?,'%')
             LIMIT ? OFFSET ?";
         $sql = $dbconnect->prepare($stmt);
         $sql->bind_param('ssii', $search_sql, $search_sql, $limit, $offset);

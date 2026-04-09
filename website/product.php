@@ -76,30 +76,38 @@
                 <div class="container">
                     <div class="images">
                         <?php
+                            $allImages = [];
+
                             if (isset($split_variants)) {
 
                                 $index = 1;
+                                $imageIndex = 0;
                                 foreach ($split_variants[array_keys($split_variants)[$selected_variant != "" ? $selected_variant - 1 : 0]] as $v_image) {
                                     if ($index == 1 ) {?>
-                        <button class="main-image-container">
+                        <button class="main-image-container" onclick="OpenImageViewer(<?php echo $imageIndex ?>)">
                             <img class="image" src="<?php echo $v_image ?>" />
                         </button>
                                 <?php } else { ?>
-                        <button class="image-container">
+                        <button class="image-container" onclick="OpenImageViewer(<?php echo $imageIndex ?>)">
                             <img class="image" src="<?php echo $v_image ?>" />
                         </button>
                                     <?php }
                                     $index++;
+                                    $imageIndex++;
+                                    array_push($allImages, $v_image);
                                 }
 
                                 $index = 1;
                                 foreach ($split_variants as $variant) {
                                     if (($index != $selected_variant && $selected_variant != "") || ($selected_variant == "" && $index != 1)) {
                                         foreach ($variant as $v_image) {?>
-                        <button class="image-container">
+                        <button class="image-container" onclick="OpenImageViewer(<?php echo $imageIndex ?>)">
                             <img class="image" src="<?php echo $v_image ?>" />
                         </button>
-                                    <?php }
+                                    <?php
+                                            $imageIndex++;
+                                            array_push($allImages, $v_image);
+                                        }
                                     }
 
                                     $index++;
@@ -109,16 +117,17 @@
                                 $index = 1;
                                 foreach ($images as $image) {
                                     if ($index == 1) { ?>
-                        <button class="main-image-container">
+                        <button class="main-image-container" onclick="OpenImageViewer(<?php echo $index - 1 ?>)">
                             <img class="image" src="<?php echo $image ?>" />
                         </button>
                                     <?php } else { ?>
-                        <button class="image-container">
+                        <button class="image-container" onclick="OpenImageViewer(<?php echo $index - 1 ?>)">
                             <img class="image" src="<?php echo $image ?>" />
                         </button>
                                     <?php }
 
                                     $index++;
+                                    array_push($allImages, $image);
                                 }
                             }
                             
@@ -144,7 +153,6 @@
                                 for ($index = 0; $index < 5; $index++) {
                                     $starValue = Clamp($totalReviews_Row['avgRating'] - $index, 0, 1);
                                     $starFillValue = $starValue * (71 - 29); ?>
-
                             <div class="star">
                                 <span class="material-symbols-outlined star-outline">star</span>
                                 <span class="material-symbols-outlined star-fill"
@@ -206,11 +214,13 @@
                     ?>
                     <h1 class="title">Reviews (<?php echo $totalReviews_Row['totalCount'] ?>)</h1>
                     <?php
-                        if (mysqli_num_rows($product_result) > 0) {
+                        if (mysqli_num_rows($reviews_result) > 0) {
 							while($row = mysqli_fetch_assoc($reviews_result)) {
                                 include('../website/inc/review.php');
                             }
-                    } ?>
+                        } else { ?>
+                        <h1 id="no-reviews">This product has no reviews.</h1>
+                    <?php } ?>
                     <button id="load-more-reviews" onclick="LoadMoreReviews()">LOAD MORE REVIEWS</button>
                 </div>
                 <div class="divider"></div>
@@ -246,6 +256,22 @@
             </div>
         </main>
 
+        <!-- Product image viewer -->
+        <div id="image-viewer" class="hidden">
+            <div class="close">
+                <button class="material-symbols-outlined" onclick="CloseImageViewer()">close</button>
+            </div>
+            <div id="viewer-main-image">
+                <img src="/smallmart/website/assets/header.webp">
+            </div>
+            <!-- Other images available to view -->
+            <div id="viewer-images">
+                <div class="counter">
+                    <p>0 of 0</p>
+                </div>
+            </div>
+        </div>
+
 		<!-- Footer -->
         <?php include("../website/inc/footer.php"); ?>
 
@@ -255,6 +281,14 @@
         <script>
             var productId = <?php echo $productId ?>;
             var totalReviewsCount = <?php echo $totalReviews_Row['totalCount'] ?>;
+
+            var imagesList = [<?php
+                $index = 1;
+                foreach ($allImages as $image) {
+                    echo "'" . $image . "'" . ($index < count($allImages) ? "," : "");
+                    $index++;
+                }
+            ?>];
         </script>
 
         <!-- JavaScript -->
