@@ -5,10 +5,10 @@ A responsive dynamic website for a catalogue of (real) miniature items. Every pr
 - Responsive elements
 - Animated web elements
 - Remaining pages from the design
-    - Log in
-    - Sign up
     - User account
     - User wishlist
+
+- User log in and sign up
 
 ## Optional tasks
 - Category / search sorting (featured, newest, oldest)
