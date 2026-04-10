@@ -2223,7 +2223,13 @@ main.log-in .container p a:active {
     cursor: pointer;
 }
 
-main.log-in .container button[type="submit"] {
+/* Error message */
+#error-message {
+    color: var(--web-shadow-2);
+}
+
+/* Submit button */
+main.log-in .container button[form] {
     margin: 0;
     padding: 3px 10px;
 

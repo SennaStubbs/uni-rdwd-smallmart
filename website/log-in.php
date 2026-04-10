@@ -6,6 +6,12 @@
 
         include("../website/inc/dbconnect.php");
 		include("../website/inc/functions.php");
+
+        // Redirect if already logged in
+        if (isset($_SESSION['user_id'])) {
+            header('location: user.php');
+            exit();
+        }
     }
 ?>
 
@@ -33,8 +39,9 @@
                         <button type="button" class="visibility material-symbols-outlined" onclick="ToggleInputVisibility(this)">visibility</button>
                     </div>
 				</form>
+                <p class="hidden" id="error-message"></p>
 				<p>Don't have an account? <a href="/smallmart/website/sign-up">Sign up here!</a></p>
-				<button form="log-in" type="submit">LOG IN</button>
+				<button form="log-in" type="button" onclick="LogIn(event)">LOG IN</button>
 			</div>
         </main>
 
