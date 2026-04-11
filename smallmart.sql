@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 08, 2026 at 06:52 AM
+-- Generation Time: Apr 10, 2026 at 09:46 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -2135,9 +2135,9 @@ INSERT INTO `review` (`review_id`, `review_title`, `review_text`, `review_publis
 
 CREATE TABLE `user` (
   `user_id` int(11) NOT NULL COMMENT 'Primary key for a user',
-  `username` varchar(20) NOT NULL COMMENT 'A user''s username',
+  `user_email` varchar(255) NOT NULL COMMENT 'A user''s email',
   `user_display_name` varchar(30) NOT NULL COMMENT 'Display name for a user',
-  `user_password` varchar(30) NOT NULL COMMENT 'The (hashed) password of a user',
+  `user_password` varchar(255) NOT NULL COMMENT 'The (hashed) password of a user',
   `user_access_level` int(1) NOT NULL COMMENT 'The access level of a user'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_swedish_ci;
 
@@ -2145,63 +2145,63 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`user_id`, `username`, `user_display_name`, `user_password`, `user_access_level`) VALUES
-(1, 'minichef101', 'MiniChef101', 'changeme', 0),
-(2, 'strumbuddy', 'StrumBuddy', 'changeme', 0),
-(3, 'tinydecorator', 'TinyDecorator', 'changeme', 0),
-(4, 'snackmini', 'SnackMini', 'changeme', 0),
-(5, 'littleadventurer', 'LittleAdventurer', 'changeme', 0),
-(6, 'tinytroublemaker', 'TinyTroubleMaker', 'changeme', 0),
-(7, 'zoejames', 'Zoe James', 'changeme', 0),
-(8, 'minimodelmaster', 'MiniModelMaster', 'changeme', 0),
-(9, 'harpersingh', 'Harper Singh', 'changeme', 0),
-(10, 'craftwizard', 'CraftWizard', 'changeme', 0),
-(11, 'finleyhughes', 'Finley Hughes', 'changeme', 0),
-(12, 'larabell', 'Lara Bell', 'changeme', 0),
-(13, 'minicrafter88', 'MiniCrafter88', 'changeme', 0),
-(14, 'alexmoreno', 'Alex Moreno', 'changeme', 0),
-(15, 'tinytinker', 'TinyTinker', 'changeme', 0),
-(16, 'savannahreed', 'Savannah Reed', 'changeme', 0),
-(17, 'dollhousepro', 'DollhousePro', 'changeme', 0),
-(18, 'liamcarter', 'Liam Carter', 'changeme', 0),
-(19, 'pixelprops', 'PixelProps', 'changeme', 0),
-(20, 'emilyharlow', 'Emily Harlow', 'changeme', 0),
-(21, 'miniscenemaster', 'MiniSceneMaster', 'changeme', 0),
-(22, 'noahbennett', 'Noah Bennett', 'changeme', 0),
-(23, 'craftcorner', 'CraftCorner', 'changeme', 0),
-(24, 'oliviajameson', 'Olivia Jameson', 'changeme', 0),
-(25, 'propwiz', 'PropWiz', 'changeme', 0),
-(26, 'ethanblake', 'Ethan Blake', 'changeme', 0),
-(27, 'tinycollective', 'TinyCollective', 'changeme', 0),
-(28, 'madisonfrost', 'Madison Frost', 'changeme', 0),
-(29, 'minihabits', 'MiniHabits', 'changeme', 0),
-(30, 'calebturner', 'Caleb Turner', 'changeme', 0),
-(31, 'sceneandscale', 'SceneAndScale', 'changeme', 0),
-(32, 'auroraking', 'Aurora King', 'changeme', 0),
-(33, 'microdetails', 'MicroDetails', 'changeme', 0),
-(34, 'henrycole', 'Henry Cole', 'changeme', 0),
-(35, 'tinyvibes', 'TinyVibes', 'changeme', 0),
-(36, 'phoebearnett', 'Phoebe Arnett', 'changeme', 0),
-(37, 'minimood', 'MiniMood', 'changeme', 0),
-(38, 'julianparks', 'Julian Parks', 'changeme', 0),
-(39, 'scalelab', 'ScaleLab', 'changeme', 0),
-(40, 'islamoore', 'Isla Moore', 'changeme', 0),
-(41, 'dollcrafthub', 'DollCraftHub', 'changeme', 0),
-(42, 'theomin', 'Theo Min', 'changeme', 0),
-(43, 'propsandplays', 'PropsAndPlays', 'changeme', 0),
-(44, 'harperlane', 'Harper Lane', 'changeme', 0),
-(45, 'tinyatelier', 'TinyAtelier', 'changeme', 0),
-(46, 'rowanellis', 'Rowan Ellis', 'changeme', 0),
-(47, 'miniscalejoy', 'MiniScaleJoy', 'changeme', 0),
-(48, 'averyknox', 'Avery Knox', 'changeme', 0),
-(49, 'microhome', 'MicroHome', 'changeme', 0),
-(50, 'lucafield', 'Luca Field', 'changeme', 0),
-(51, 'smallworlds', 'SmallWorlds', 'changeme', 0),
-(52, 'norawells', 'Nora Wells', 'changeme', 0),
-(53, 'tinydetailer', 'TinyDetailer', 'changeme', 0),
-(54, 'oscarvale', 'Oscar Vale', 'changeme', 0),
-(55, 'minicollectr', 'MiniCollectr', 'changeme', 0),
-(56, 'elirose', 'Eli Rose', 'changeme', 0);
+INSERT INTO `user` (`user_id`, `user_email`, `user_display_name`, `user_password`, `user_access_level`) VALUES
+(1, 'minichef101@example.com', 'MiniChef101', '$2y$10$vgsvJ/WXXMYcjvd3JA2WeOe7VsBNMxFuW9RY7xcfps8..cTYreI4q', 0),
+(2, 'strumbuddy@example.com', 'StrumBuddy', '$2y$10$jjCmZlujHS7fRTZx5A.1eu92DaAGM7Ritm9Jnv6Dy6zhPaD2dMuIq', 0),
+(3, 'tinydecorator@example.com', 'TinyDecorator', '$2y$10$I5hp929kuE2QkWmJyw8W.O.Wp2VHVDD3ca007pYjRxPhLT0jPQQXS', 0),
+(4, 'snackmini@example.com', 'SnackMini', '$2y$10$a.5UeXdnmyi5mOqH1y.GPOkYr.3rCPg8ntZmP1lVZDz9a6.VUvcP6', 0),
+(5, 'littleadventurer@example.com', 'LittleAdventurer', '$2y$10$I1MvhvWakIFTcbPvy/CSr.O73wlOC4R4IBk7ASwUNwC6Khh5olS8u', 0),
+(6, 'tinytroublemaker@example.com', 'TinyTroubleMaker', '$2y$10$bTVrRY5SeWqiaGX3d1touuvJdCg4Wh5I0vKXqPTnvrhz3p/iuBJo2', 0),
+(7, 'zoejames@example.com', 'Zoe James', '$2y$10$dXS6KEs5vVaYkioxJG.CU..CraFDp/h3uvyJE53srIOtzL/.BHmh6', 0),
+(8, 'minimodelmaster@example.com', 'MiniModelMaster', '$2y$10$qyjU8OqtOS.kVNsTO7a66OGmf88hOnyjPzrFaEHREj79YhwVfftu2', 0),
+(9, 'harpersingh@example.com', 'Harper Singh', '$2y$10$8PlV1mL62n9P5gVyquOBS.WcRn0zCN6oM29.unzFWJwDYvWmvpzOu', 0),
+(10, 'craftwizard@example.com', 'CraftWizard', '$2y$10$YtH3STTt4LvtZ.Y0Mfl2meJTKvc5izpfGxiqPtbHrn.wpzLgzP2fa', 0),
+(11, 'finleyhughes@example.com', 'Finley Hughes', '$2y$10$i.AMF9ERL8hSR5JNHM2s2OPLdaVykYaVIyWKfMEAQkJTXczaW4EZ2', 0),
+(12, 'larabell@example.com', 'Lara Bell', '$2y$10$hbXU50J5Z8M24iCTqmnJBOKbABACCalxMbm9IXeC8hyS8VwnkziI6', 0),
+(13, 'minicrafter88@example.com', 'MiniCrafter88', '$2y$10$F3AQg7XKYF1Gs664MT/0ceravSjTvGo7EfWm//NZokwIg1igLk4ai', 0),
+(14, 'alexmoreno@example.com', 'Alex Moreno', '$2y$10$tgc4VmYOZ00aJXWdzd/AuuoKtEF1QnQCdjAFSlB7FNnyHaLcuhOB.', 0),
+(15, 'tinytinker@example.com', 'TinyTinker', '$2y$10$drByxymU1Rngeo4nM94co.BXzKVAsZxHj5O9.FAChaHLD3dNGl5cy', 0),
+(16, 'savannahreed@example.com', 'Savannah Reed', '$2y$10$Xg4dCwMGg2kGYnlwKOTkX.NZzlL2UidjnAjPvInkQQJHT5KtzfqqC', 0),
+(17, 'dollhousepro@example.com', 'DollhousePro', '$2y$10$zntJq5zHlVHf6W3T68TB4.OaeVhKiQQZTgv1TPR8F7t3GBvEI9gvi', 0),
+(18, 'liamcarter@example.com', 'Liam Carter', '$2y$10$PEk9e4We871fFIC.cp0ljuW6uyEEskYBIrv9hpMPwobIbPWSGXfE6', 0),
+(19, 'pixelprops@example.com', 'PixelProps', '$2y$10$knYKDmHsa00Tj3mkiGnUlOgodEjC5IWujcE.dIl35nO/nNOcze82i', 0),
+(20, 'emilyharlow@example.com', 'Emily Harlow', '$2y$10$7U8M5g7UnkAK9iNEax.BtuQx/fm56WSJokdN0dVhXZGZ6DLVzTA2C', 0),
+(21, 'miniscenemaster@example.com', 'MiniSceneMaster', '$2y$10$IyPJvPYQBDuw2RkvObVNGeGj25/t.8DXCqLszS.Jw8Bn6ndeTVmOi', 0),
+(22, 'noahbennett@example.com', 'Noah Bennett', '$2y$10$XauFgnvey9lJhbXrWu9vaOkPwKYYP42btH8tc/vSM84VyObgX3YHa', 0),
+(23, 'craftcorner@example.com', 'CraftCorner', '$2y$10$V8d5Zxz8hfChoZi49MwaReXyQNGFwvkho5vn/gqZvFpA/Fu9QGZi.', 0),
+(24, 'oliviajameson@example.com', 'Olivia Jameson', '$2y$10$CSfwEb5dPt7GHmDLic.H..EUOAllnyucmTRy3zitfuzWdLK4PxqQu', 0),
+(25, 'propwiz@example.com', 'PropWiz', '$2y$10$0LUCBrkAduWGdAtyCHqHy.myAzlXWdiI3s6QYIoxNFK1MxrTTKDpK', 0),
+(26, 'ethanblake@example.com', 'Ethan Blake', '$2y$10$.q7QmnE.Fsw..7go6HXl3.LRDjj3TKf9ou0il59AUdpcW5MP2g366', 0),
+(27, 'tinycollective@example.com', 'TinyCollective', '$2y$10$48DV9.zerDlmdKghqk4inulJnZAkNrrtHG/OUGeQFXX5GYgJ2Yo6i', 0),
+(28, 'madisonfrost@example.com', 'Madison Frost', '$2y$10$LZTX./a61KN1L1pZDqHdhuG.fItKCTqZBMm75Oea4Mkpt747F6iQ.', 0),
+(29, 'minihabits@example.com', 'MiniHabits', '$2y$10$ng1HkeIx/AscuWl4rDaxAecE01wV2NsE9GLeSyG9FXAX52FRvS5t.', 0),
+(30, 'calebturner@example.com', 'Caleb Turner', '$2y$10$Nnq0nEE4guKjg3BzG2Jbb.Cwib14bfwSmkEdhjurAew7owJ21s.sq', 0),
+(31, 'sceneandscale@example.com', 'SceneAndScale', '$2y$10$O.aOHn0PxtLEXvZ1hkCygeNUEm5UgJWH9hPVFWrTMZ6DxUoFFvXbK', 0),
+(32, 'auroraking@example.com', 'Aurora King', '$2y$10$AGDVw1O3F6gXqhuxFb0a..UkrvmzVWzqwuzfqqrZUnN2hP8qAwEpu', 0),
+(33, 'microdetails@example.com', 'MicroDetails', '$2y$10$8Ys9ihUrta8VEn4v0ZQVuODq5SFpDvqIFkKCSo3q5VSmdxy4SgKM6', 0),
+(34, 'henrycole@example.com', 'Henry Cole', '$2y$10$ya2q0rRnRgymhenB8.PD/OdDyy216P4wAT64nOzZeYzfXxq0q6IX.', 0),
+(35, 'tinyvibes@example.com', 'TinyVibes', '$2y$10$QTM8Z.E/kP0wsn.AkdrqCOYqZMePk5OgNjxr3g8GSNLqrxBFVYcPG', 0),
+(36, 'phoebearnett@example.com', 'Phoebe Arnett', '$2y$10$01mYsYA6KPIEAply3r2QCObyVWkh1Vj/kzzCTs8YMJgxKD0ugPLDi', 0),
+(37, 'minimood@example.com', 'MiniMood', '$2y$10$U7wK1OTFu9fVrGWZUWFsO.FjSXreCnEK7P58g39R7wxOQRXlfXFgq', 0),
+(38, 'julianparks@example.com', 'Julian Parks', '$2y$10$s1bDCG//G8DVX7NdomTsEueed40CbOys3lR0R9AKPPv83/jWpNXHq', 0),
+(39, 'scalelab@example.com', 'ScaleLab', '$2y$10$jko2asuW9YeZSM94T6.u2u6wd3dpg/U9GgoECMpL9rgkRdlNl4hK.', 0),
+(40, 'islamoore@example.com', 'Isla Moore', '$2y$10$.pXJJNLmCiEm.xqFbcYaA.v4E1YHMUw9IR9rcvjFQH2CrMrRV4vCO', 0),
+(41, 'dollcrafthub@example.com', 'DollCraftHub', '$2y$10$jycmEbm5HRHHW91KfUtgieJzc4R8Mb/SBm7XfiX/rrOZ6xQP6zt9e', 0),
+(42, 'theomin@example.com', 'Theo Min', '$2y$10$MLdvVAATyN6QbuuQ8rSqeuk4UmHplVRiYJBBlCvYlqFVKaZxL.5cq', 0),
+(43, 'propsandplays@example.com', 'PropsAndPlays', '$2y$10$P4MuA4kMQr3ohzPBal6qe.147wSJMam0k7luYPFuGkT1NrqsGQ88K', 0),
+(44, 'harperlane@example.com', 'Harper Lane', '$2y$10$vVbC5czrv1frQ34frYB2Pu2b00mVJ5SlCG/AIhF3BmUOkrjVRa28y', 0),
+(45, 'tinyatelier@example.com', 'TinyAtelier', '$2y$10$0zh34oXQtkbGGDSQ/fKrr.yPje8aWKyTjOe6Fnu9VjrwM7a7NwiL2', 0),
+(46, 'rowanellis@example.com', 'Rowan Ellis', '$2y$10$Hg5LsUAGlMWK1lUn6QICseUUmxl1edIpMZf7/Y7Tr9rf2BAChpDpO', 0),
+(47, 'miniscalejoy@example.com', 'MiniScaleJoy', '$2y$10$0OUMEIFwQWMggP4Gdo5kRuCCJIXghvykQHcWOYYIM2lhc47e.1nTi', 0),
+(48, 'averyknox@example.com', 'Avery Knox', '$2y$10$Ks584R7fbp4NIWUDq/oAUOo9TD54/14.KvgHtqwG4WL.13idzDx32', 0),
+(49, 'microhome@example.com', 'MicroHome', '$2y$10$dJlnA.ikbh9WlzUJma8Pn.0zkwZANJ0Z7ZKvW8c..gWaozzmn84ji', 0),
+(50, 'lucafield@example.com', 'Luca Field', '$2y$10$cVy7oVFqz/6frtFEmGVZk.kxBZpxCh5K/iIN5y.SePnt6tfqILRYC', 0),
+(51, 'smallworlds@example.com', 'SmallWorlds', '$2y$10$R4yIfpYN3llbqeBm.indVuPc00vqOIIUUClpqT5OsPcAOMgMAcX/m', 0),
+(52, 'norawells@example.com', 'Nora Wells', '$2y$10$JG2oM2hbb/tulyHGXJuvw.UzriY9JH1uBZNZBnEdg9sTZsWJpZIsK', 0),
+(53, 'tinydetailer@example.com', 'TinyDetailer', '$2y$10$tmiHNVWXIH9aEE3AdfOEq.qpcLpiSKdkL.RCYHHn0KZOvCEbqVvK2', 0),
+(54, 'oscarvale@example.com', 'Oscar Vale', '$2y$10$MBzdgXGTsT65knsUfNeD3ekPlQAa6gliprVuysje/N89EC79hA47q', 0),
+(55, 'minicollectr@example.com', 'MiniCollectr', '$2y$10$BmM2sgwlOvLJitc9Tlh6WedxnVR4o/TUj0oG.D0TRtDDAbhjE5LOO', 0),
+(56, 'elirose@example.com', 'Eli Rose', '$2y$10$8fUJmiC5A4.ohg5.88SKKu78faJ0t.V6MosGqO5TwmT9zBGKV1ZwG', 0);
 
 -- --------------------------------------------------------
 
@@ -2241,7 +2241,8 @@ ALTER TABLE `review`
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`user_id`);
+  ADD PRIMARY KEY (`user_id`),
+  ADD UNIQUE KEY `user_email` (`user_email`);
 
 --
 -- Indexes for table `wishlist_product`

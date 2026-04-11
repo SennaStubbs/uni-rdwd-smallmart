@@ -3,6 +3,8 @@
     if (!defined('ALLOW_ACCESS')) {
         exit('No direct script access allowed');
     }
+
+    include('dbconnect.php');
 ?>
 
 <nav>
@@ -98,7 +100,7 @@
         WISHLIST
     </a>
     <!-- Log in / account -->
-    <a href="/smallmart/website/" class="button">
+    <a href="/smallmart/website/log-in" class="button">
         <span class="material-symbols-outlined">account_circle</span>
         LOG IN
     </a>

@@ -39,8 +39,9 @@
                         <button type="button" class="visibility material-symbols-outlined" onclick="ToggleInputVisibility(this)">visibility</button>
                     </div>
 				</form>
+                <p class="hidden" id="error-message"></p>
 				<p>Already have an account? <a href="/smallmart/website/log-in">Log in here!</a></p>
-				<button form="sign-up" type="submit">SIGN UP</button>
+				<button form="sign-up" type="submit" onclick="SignUp()">SIGN UP</button>
 			</div>
         </main>
 

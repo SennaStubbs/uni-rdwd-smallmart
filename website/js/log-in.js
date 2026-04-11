@@ -1,35 +1,42 @@
-function ToggleInputVisibility(button) {
-    let input = button.parentElement.getElementsByTagName('input')[0];
-    input.type = input.type == "password" ? "text" : "password";
-    button.innerHTML = input.type == "password" ? "visibility" : "visibility_off";
-}
-
+// Submitting a log in form
 var errorText = document.getElementById('error-message');
 async function LogIn(event) {
     let form = event.currentTarget.form;
     let formData = new FormData(form);
 
     let formValidity = form.reportValidity();
-    // let formValidity = true;
-
     if (formValidity) {
-        await fetch(window.location.origin + "/smallmart/website/operations/user/log-in", {
+        await fetch(window.location.origin + (form.id == "log-in" ? "/smallmart/website/operations/user/log-in" : "/smallmart/website/operations/user/sign-up"), {
             method: 'POST',
             body: formData,
         })
         .then((response) => response.text())
         .then((data) => {
             let errors = data.match(/error:/g) ? data.replace(/error:/g, '\n').trim().replace('\n', '<br>') : "";
-            console.log(data);
             if (errors != "") {
                 errorText.innerHTML = errors;
                 errorText.classList.remove('hidden');
             }
             else if(data == "success") {
                 errorText.classList.add('hidden');
-
                 window.location.href = window.location.origin + "/smallmart/website/user";
             }
         });
+    } else {
+        // Focus on the entered input, if submitted with the 'ENTER' key
+        if (event.target.tagName.toLowerCase() == "input") {
+            event.target.focus();
+        }
     }
+}
+
+// Checking for 'ENTER' key inputs
+var inputs = document.getElementsByTagName('main')[0].getElementsByTagName('input');
+for (let input of inputs) {
+    input.addEventListener('keypress', function(event) {
+        if (event.key == "Enter") {
+            event.preventDefault();
+            LogIn(event);
+        }
+    });
 }

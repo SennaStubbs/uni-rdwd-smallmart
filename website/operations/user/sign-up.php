@@ -10,11 +10,15 @@
             exit();
         }
 		
-		if (isset($_POST['email']) && isset($_POST['password']) &&
-            trim(htmlspecialchars($_POST['email'])) != "" && trim(htmlspecialchars($_POST['password'])) != "") {
+		if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['confirm_password']) &&
+            trim(htmlspecialchars($_POST['email'])) != "" && trim(htmlspecialchars($_POST['password'])) != ""
+            && trim(htmlspecialchars($_POST['confirm_password'])) != "") {
+
             $email = htmlspecialchars($_POST['email']);
             $email = filter_var($email, FILTER_VALIDATE_EMAIL);
             $password = htmlspecialchars($_POST['password']);
+            $confirm_password = htmlspecialchars($_POST['confirm_password'])
+            
             if ($email && $password) {
                 include("../../inc/dbconnect.php");
 
