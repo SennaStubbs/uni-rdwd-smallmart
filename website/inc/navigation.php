@@ -95,13 +95,32 @@
         <!-- </div> -->
     </div>
     <!-- Wishlist -->
-    <a href="/smallmart/website/" style="font-weight: normal" class="button">
+    <a <?php if (isset($_SESSION['user_id'])) { echo 'href="/smallmart/website/wishlist"'; } else { echo 'href="/smallmart/website/log-in"'; } ?> style="font-weight: normal" class="button">
         <span class="material-symbols-outlined">favorite</span>
         WISHLIST
     </a>
     <!-- Log in / account -->
+    <?php
+        // Get user information
+        $userId = isset($_SESSION['user_id']) ? (int)$_SESSION['user_id'] : -1;
+
+        $stmt = "SELECT user_display_name FROM user WHERE user_id = ?";
+        $sql = $dbconnect->prepare($stmt);
+        $sql->bind_param('i', $userId);
+        $sql->execute();
+        $user_result = $sql->get_result();
+
+        if (isset($_SESSION['user_id']) && mysqli_num_rows($user_result)) {
+            $row = mysqli_fetch_assoc($user_result);
+    ?>
+    <a href="/smallmart/website/user" class="button" title="Logged in as: <?php echo $row['user_display_name'] ?>">
+        <span class="material-symbols-outlined filled">account_circle</span>
+        ACCOUNT
+    </a>
+    <?php } else { ?>
     <a href="/smallmart/website/log-in" class="button">
         <span class="material-symbols-outlined">account_circle</span>
         LOG IN
     </a>
+    <?php } ?>
 </nav>

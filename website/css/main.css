@@ -60,6 +60,11 @@ body {
     user-select: none;
 }
 
+.material-symbols-outlined.filled {
+    user-select: none;
+    font-variation-settings: 'FILL' 1;
+}
+
 /* Other classes */
 .hidden {
     display: none !important;
@@ -2394,23 +2399,41 @@ main.user .container .tab-content {
     text-shadow: 0px 1px 0px var(--text-shadow-thin);
 }
 
+/* Tab content buttons */
+main.user .container .tab-content button:not(.visibility) {
+    width: fit-content;
+
+    margin: 0;
+    padding: 4px 8px;
+
+    background-color: var(--web-tone-2);
+    box-shadow: 0px 4px 0px var(--web-shadow-2);
+    border: none;
+    border-radius: 15px;
+
+    color: var(--text-light);
+    text-shadow: 0px 1px 0px var(--text-shadow-thin);
+    font-size: 26px;
+    font-weight: 700;
+    
+
+    user-select: none;
+    cursor: pointer;
+}
+
 /* Editable forms */
 main.user .container .tab-content form {
+    position: relative;
+
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 0 10px;
     align-items: center;
 }
 
-main.user .container .tab-content form .buttons {
-    flex: 1;
-    
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-}
-
 main.user .container .tab-content form label {
+    width: max-content;
 
     text-align: right;
 
@@ -2434,6 +2457,8 @@ main.user .container .tab-content form input {
     color: var(--text-dark);
     text-shadow: 0px 1px 0px var(--text-shadow-thin);
     font-size: 20px;
+
+    box-sizing: border-box;
 }
 
 main.user .container .tab-content form *[disabled] {
@@ -2443,23 +2468,45 @@ main.user .container .tab-content form *[disabled] {
     user-select: none;
 }
 
-/* Change button */
-main.user .container .tab-content form button {
+/* Visibilty toggle */
+main.user .container .tab-content form div {
+    position: relative;
+}
+
+main.user .container .tab-content form .visibility {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    height: 100%;
+    aspect-ratio: 1;
+
     margin: 0;
+    padding: 0;
+
+    background-color: transparent;
+    border: none;
+
+    color: var(--text-dark);
+    font-size: 28px;
+    text-shadow: 0px 1px 0px var(--text-shadow-thin);
+    word-wrap: normal;
+
+    cursor: pointer;
+}
+
+main.user .container .tab-content form div:has(.visibility:not(.hidden)) input {
+    padding-right: 33px;
+}
+
+/* Change button */
+main.user .container .tab-content form button:not(.visibility) {
     padding: 3px 6px;
 
-    background-color: var(--web-tone-2);
     box-shadow: 0px 3px 0px var(--web-shadow-2);
-    border: none;
     border-radius: 10px;
 
-    color: var(--text-light);
-    text-shadow: 0px 1px 0px var(--text-shadow-thin);
     font-size: 20px;
-    font-weight: 700;
-
-    user-select: none;
-    cursor: pointer;
 }
 
 main.user .container .tab-content form button.submit {
@@ -2467,4 +2514,37 @@ main.user .container .tab-content form button.submit {
     box-shadow: 0px 3px 0px var(--web-shadow-4);
 
     color: var(--text-dark);
+}
+
+/* Detail message */
+main.user .container .tab-content form p {
+    width: 100%;
+
+    margin: 5px 0 0 0;
+}
+
+.error-message {
+    color: #320000;
+}
+
+/* Log out button */
+#log-out {
+    width: fit-content;
+
+    margin: 0 auto;
+    padding: 4px 10px;
+
+    background-color: var(--web-tone-4);
+    box-shadow: 0px 5px 0px var(--web-shadow-4);
+    border: none;
+    border-radius: 15px;
+
+    color: var(--text-dark);
+    text-shadow: 0px 1px 0px var(--text-shadow-thin);
+    font-size: 36px;
+    font-weight: 700;
+    
+
+    user-select: none;
+    cursor: pointer;
 }

@@ -27,7 +27,7 @@
         <!-- Navigation bar -->
         <?php include("../website/inc/navigation.php"); ?>
 
-		<!-- Page rows -->
+		<!-- Log in panel -->
         <main class="center-page log-in">
 			<div class="container">
 				<form id="log-in" name="log-in">
@@ -36,7 +36,7 @@
 					<label for="password" name="password">Password</label>
 					<div>
 					    <input id="password" name="password" type="password" placeholder="Enter password here..." maxlength="30" required>
-                        <button tabindex="-1" type="button" class="visibility material-symbols-outlined" onclick="ToggleInputVisibility(this)">visibility</button>
+                        <button tabindex="-1" type="button" class="visibility material-symbols-outlined" onclick="ToggleInputVisibility(this, event)">visibility</button>
                     </div>
 				</form>
                 <p class="hidden" id="error-message"></p>

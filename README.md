@@ -8,8 +8,6 @@ A responsive dynamic website for a catalogue of (real) miniature items. Every pr
     - User account
     - User wishlist
 
-- User log in and sign up
-
 ## Optional tasks
 - Category / search sorting (featured, newest, oldest)
     - Will require more columns in 'product' table
@@ -19,5 +17,8 @@ A responsive dynamic website for a catalogue of (real) miniature items. Every pr
     - Split CSS into separate pages (e.g. product page)
     - Move re-used PHP code into 'functions.php'
 
-# Odd things to note
+# Things to note
 - When signing up, there is not an option to set your display name. This is something that can be done after sign up in the user settings, redirected to after signing up and/or logging in, but should be an input field when signing up.
+- The icons rely on [Google's Material Icons](https://fonts.google.com/icons), meaning that if their system went down this website would be unable to load their icons and create an ugly frontend. The necessary icons should, ideally, be stored on the web server to be loaded from for a both quick and reliable source of icons.
+- User is not logged out automatically after a certain time period, only when the current session ends.
+- When changing a user detail on the user page, there is no message to state whether the update was successful or not. The most obvious way of knowing if it was is when changing the display name, where the page is reloaded and the personalised welcome message is updated with the new display name.

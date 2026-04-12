@@ -31,6 +31,7 @@
             <h1 class="title"><?php echo strtoupper(htmlspecialchars($search)) ?></h1>
         </header>
 
+		<!-- Main contents -->
         <main>
             <div class="grid-spacer">
 				<?php if (isset($total_products) && $total_products > 0) { ?>

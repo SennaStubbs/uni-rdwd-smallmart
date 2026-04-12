@@ -46,7 +46,7 @@
         <!-- Navigation bar -->
         <?php include("../website/inc/navigation.php"); ?>
 
-		<!-- Page rows -->
+		<!-- Main contents -->
         <main class="user">
 			<h1 class="welcome">Hello, <?php echo $user_row['user_display_name'] ?>!</h1>
             <div class="divider"></div>
@@ -59,10 +59,11 @@
                 <div class="tab-content" id="tab-account">
                     <form id="display-name">
                         <label for="user_display_name">Display name:</label>
-                        <input id="user_display_name" name="user_display_name" required value="<?php echo $user_row['user_display_name'] ?>" maxlength="30" disabled>
+                        <input id="user_display_name" name="user_display_name" required maxlength="30" value="<?php echo $user_row['user_display_name'] ?>" maxlength="30" disabled>
                         <button class="change" type="button" onclick="StartChange(this)">Change</button>
                         <button class="submit hidden" type="button">Submit</button>
                         <button class="cancel hidden" type="button">Cancel</button>
+                        <p class="error-message hidden"></p>
                     </form>
                     <form id="email">
                         <label for="user_email">Email:</label>
@@ -70,26 +71,38 @@
                         <button class="change" type="button" onclick="StartChange(this)">Change</button>
                         <button class="submit hidden" type="button">Submit</button>
                         <button class="cancel hidden" type="button">Cancel</button>
+                        <p class="error-message hidden"></p>
                     </form>
                 </div>
                 <div class="tab-content hidden" id="tab-security">
                     <form id="password">
-                        <label for="user_password">Current Password:</label>
-                        <input id="user_password" name="user_password" type="password" required value="<?php echo str_repeat('#', strlen($user_row['user_password'] . $user_row['user_display_name'])); ?>" maxlength="255" disabled>
-                        <button class="change" type="button" onclick="StartPasswordChange(this)">Change</button>
+                        <label for="user_password">Password:</label>
+                        <div>
+                            <input id="user_password" name="user_password" type="password" required value="<?php echo str_repeat('#', 100); ?>" maxlength="30" disabled>
+                            <button tabindex="-1" type="button" class="visibility material-symbols-outlined hidden" onclick="ToggleInputVisibility(this, event)">visibility</button>
+                        </div>
+                        <button class="change" type="button" onclick="StartChange(this)">Change</button>
                     </form>
-                    <form id="new_password" style="display: none;">
-                        <label for="new_user_password">New Password:</label>
-                        <input id="new_user_password" name="user_password" type="password" required value="<?php echo str_repeat('#', strlen($user_row['user_password'] . $user_row['user_display_name'])); ?>" maxlength="255" disabled>
+                    <form id="new_password" class="hidden">
+                        <label for="new_user_password">New password:</label>
+                        <div>
+                            <input id="new_user_password" name="new_user_password" type="password" required value="" maxlength="30">
+                            <button tabindex="-1" type="button" class="visibility material-symbols-outlined" onclick="ToggleInputVisibility(this, event)">visibility</button>
+                        </div>
                     </form>
-                    <form id="confirm_password" style="display: none;">
-                        <label for="confirm_user_password">Confirm New Password:</label>
-                        <input id="confirm_user_password" name="user_password" type="password" required value="<?php echo str_repeat('#', strlen($user_row['user_password'] . $user_row['user_display_name'])); ?>" maxlength="255" disabled>
+                    <form id="confirm_password" class="hidden">
+                        <label for="confirm_user_password">Confirm new password:</label>
+                        <div>
+                            <input id="confirm_user_password" name="confirm_user_password" type="password" required value="" maxlength="30">
+                            <button tabindex="-1" type="button" class="visibility material-symbols-outlined" onclick="ToggleInputVisibility(this, event)">visibility</button>
+                        </div>
                         <button class="submit hidden" type="button">Submit</button>
                         <button class="cancel hidden" type="button">Cancel</button>
+                        <p class="error-message hidden"></p>
                     </form>
                 </div>
             </div>
+            <button id="log-out" onclick="window.location.href='/smallmart/website/operations/user/log-out'">LOG OUT</button>
         </main>
 
 		<!-- Footer -->

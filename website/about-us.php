@@ -66,7 +66,7 @@
 
         <div class="grid-spacer"></div>
 
-		<!-- Page rows -->
+		<!-- Main contents -->
         <main class="center-page about">
 			<div class="content-container">
                 <p>

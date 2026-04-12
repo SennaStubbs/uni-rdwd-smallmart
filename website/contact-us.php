@@ -66,7 +66,7 @@
 
         <div class="grid-spacer"></div>
 
-		<!-- Page rows -->
+		<!-- Main contents -->
         <main class="center-page contact">
 			<div class="content-container">
                 <p>Looking to contact us for support or business inquiries? Email us at:</p>

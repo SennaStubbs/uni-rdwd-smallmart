@@ -65,6 +65,7 @@
 			<?php endif ?>
         </header>
 
+		<!-- Main contents -->
         <main>
             <div class="grid-spacer">
 				<div class="numbers">

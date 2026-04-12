@@ -7,7 +7,7 @@
 		session_start();
 
         function SillyException($e) {
-            echo $e;
+            echo "error:Something went wrong!";
             exit();
         }
         set_exception_handler('SillyException');
@@ -46,7 +46,7 @@
                 if ($password == $confirm_password) {
                     // Validating password
                     // Getting password info
-                    $length = strlen($password);
+                    $length = mb_strlen($password);
                     $lowercase = 0;
                     $uppercase = 0;
                     $numbers = 0;

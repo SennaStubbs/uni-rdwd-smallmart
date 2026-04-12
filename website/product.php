@@ -70,7 +70,7 @@
         <!-- Navigation bar -->
         <?php include("../website/inc/navigation.php"); ?>
 
-		<!-- Page rows -->
+		<!-- Main contents -->
         <main class="product-page">
             <div class="main-container">
                 <div class="container">

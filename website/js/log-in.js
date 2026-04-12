@@ -36,12 +36,12 @@ async function SignUp(event) {
     let formData = new FormData(form);
 
     let formValidity = form.reportValidity();
-    if (formValidity || true) {
+    if (formValidity) {
         // Check if 'password' and 'confirm-password' and the same
         let password = document.getElementById('password').value;
         let confirmPassword = document.getElementById('confirm-password').value;
 
-        if (password == confirmPassword || true) {
+        if (password == confirmPassword) {
             // Client-side password validation
             let length = password.length;
             let lowercase = 0;
@@ -58,7 +58,7 @@ async function SignUp(event) {
                 else if (char.match(/[^a-zA-Z\d]/))
                     symbols++;
             }
-            if (length >= 8 && lowercase >= 1 && uppercase >= 1 && numbers >= 3 && symbols >=1 && length <= 30 || true) {
+            if (length >= 8 && lowercase >= 1 && uppercase >= 1 && numbers >= 3 && symbols >=1 && length <= 30) {
                 console.log(window.location.origin + "/smallmart/website/operations/user/sign-up");
                 await fetch(window.location.origin + "/smallmart/website/operations/user/sign-up", {
                     method: 'POST',
@@ -126,15 +126,4 @@ async function SignUp(event) {
             event.target.focus();
         }
     }
-}
-
-// Checking for 'ENTER' key inputs
-var inputs = document.getElementsByTagName('main')[0].getElementsByTagName('input');
-for (let input of inputs) {
-    input.addEventListener('keypress', function(event) {
-        if (event.key == "Enter") {
-            event.preventDefault();
-            LogIn(event);
-        }
-    });
 }

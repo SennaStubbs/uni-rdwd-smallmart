@@ -70,8 +70,21 @@ document.addEventListener('invalid', (function () {
 })(), true);
 
 // Password visibility toggle
-function ToggleInputVisibility(button) {
+function ToggleInputVisibility(button, event) {
+    if (event)
+        event.preventDefault();
     let input = button.parentElement.getElementsByTagName('input')[0];
     input.type = input.type == "password" ? "text" : "password";
     button.innerHTML = input.type == "password" ? "visibility" : "visibility_off";
+}
+
+// Checking for 'ENTER' key inputs
+var inputs = document.getElementsByTagName('main')[0].getElementsByTagName('input');
+for (let input of inputs) {
+    input.addEventListener('keypress', function(event) {
+        if (event.key == "Enter") {
+            event.preventDefault();
+            LogIn(event);
+        }
+    });
 }

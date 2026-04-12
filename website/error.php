@@ -20,6 +20,7 @@
         <!-- Navigation bar -->
         <?php include("../website/inc/navigation.php"); ?>
 
+        <!-- Error message -->
         <main class="center-page error">
             <img src="/smallmart/website/assets/misc/pug.png">
             <h1>This page does not exist!</h1>
