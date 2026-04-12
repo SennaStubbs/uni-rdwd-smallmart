@@ -5,7 +5,6 @@ A responsive dynamic website for a catalogue of (real) miniature items. Every pr
 - Responsive elements
 - Animated web elements
 - Remaining pages from the design
-    - User account
     - User wishlist
 
 ## Optional tasks

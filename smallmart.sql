@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 10, 2026 at 09:46 PM
+-- Generation Time: Apr 12, 2026 at 01:59 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -2201,7 +2201,8 @@ INSERT INTO `user` (`user_id`, `user_email`, `user_display_name`, `user_password
 (53, 'tinydetailer@example.com', 'TinyDetailer', '$2y$10$tmiHNVWXIH9aEE3AdfOEq.qpcLpiSKdkL.RCYHHn0KZOvCEbqVvK2', 0),
 (54, 'oscarvale@example.com', 'Oscar Vale', '$2y$10$MBzdgXGTsT65knsUfNeD3ekPlQAa6gliprVuysje/N89EC79hA47q', 0),
 (55, 'minicollectr@example.com', 'MiniCollectr', '$2y$10$BmM2sgwlOvLJitc9Tlh6WedxnVR4o/TUj0oG.D0TRtDDAbhjE5LOO', 0),
-(56, 'elirose@example.com', 'Eli Rose', '$2y$10$8fUJmiC5A4.ohg5.88SKKu78faJ0t.V6MosGqO5TwmT9zBGKV1ZwG', 0);
+(56, 'elirose@example.com', 'Eli Rose', '$2y$10$8fUJmiC5A4.ohg5.88SKKu78faJ0t.V6MosGqO5TwmT9zBGKV1ZwG', 0),
+(57, 'testingaccount@example.com', 'Testing', '$2y$10$R5BfdgCRisNFdEyxutmC3urTLYu19e.P2uZweSEFMf3Ky.yLmFnRa', 0);
 
 -- --------------------------------------------------------
 
@@ -2276,7 +2277,7 @@ ALTER TABLE `review`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary key for a user', AUTO_INCREMENT=57;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary key for a user', AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT for table `wishlist_product`
