@@ -2204,11 +2204,15 @@ main.log-in .container div:has(.visibility) input {
 
 /* Message */
 main.log-in .container p {
+    min-width: 100%;
+    width: min-content;
+
     margin: 0;
 
     font-size: 20px;
     text-shadow: 0px 1px 0px var(--text-shadow-thin);
     text-align: center;
+    word-wrap: normal;
 }
 
 main.log-in .container p a {
@@ -2436,6 +2440,7 @@ main.user .container .tab-content form *[disabled] {
     opacity: 50%;
 
     cursor: not-allowed;
+    user-select: none;
 }
 
 /* Change button */

@@ -35,8 +35,8 @@
 					<input id="email" name="email" type="email" placeholder="Enter email here..." required>
 					<label for="password" name="password">Password</label>
 					<div>
-					    <input id="password" name="password" type="password" placeholder="Enter password here..." required>
-                        <button type="button" class="visibility material-symbols-outlined" onclick="ToggleInputVisibility(this)">visibility</button>
+					    <input id="password" name="password" type="password" placeholder="Enter password here..." maxlength="30" required>
+                        <button tabindex="-1" type="button" class="visibility material-symbols-outlined" onclick="ToggleInputVisibility(this)">visibility</button>
                     </div>
 				</form>
                 <p class="hidden" id="error-message"></p>

@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Log In | Smallmart</title>
+        <title>Sign Up | Smallmart</title>
         <link rel="icon" type="image/png" href="/smallmart/website/assets/brand/small-logo.png">
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="/smallmart/website/css/main.css">
@@ -30,18 +30,18 @@
 					<input id="email" name="email" type="email" placeholder="Enter email here..." required>
 					<label for="password" name="password">Password</label>
                     <div>
-					    <input id="password" name="password" type="password" placeholder="Enter password here..." required>
-                        <button type="button" class="visibility material-symbols-outlined" onclick="ToggleInputVisibility(this)">visibility</button>
+					    <input id="password" name="password" type="password" placeholder="Enter password here..." maxlength="30" required>
+                        <button tabindex="-1" type="button" class="visibility material-symbols-outlined" onclick="ToggleInputVisibility(this)">visibility</button>
                     </div>
                     <label for="confirm-password" name="confirm-password">Confirm Password</label>
                     <div>
-					    <input id="confirm-password" name="confirm-password" type="password" placeholder="Enter password here..." required>
-                        <button type="button" class="visibility material-symbols-outlined" onclick="ToggleInputVisibility(this)">visibility</button>
+					    <input id="confirm-password" name="confirm_password" type="password" placeholder="Enter password here..." maxlength="30" required>
+                        <button tabindex="-1" type="button" class="visibility material-symbols-outlined" onclick="ToggleInputVisibility(this)">visibility</button>
                     </div>
 				</form>
                 <p class="hidden" id="error-message"></p>
 				<p>Already have an account? <a href="/smallmart/website/log-in">Log in here!</a></p>
-				<button form="sign-up" type="submit" onclick="SignUp()">SIGN UP</button>
+				<button form="sign-up" type="button" onclick="SignUp(event)">SIGN UP</button>
 			</div>
         </main>
 
