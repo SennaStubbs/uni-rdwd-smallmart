@@ -3,10 +3,10 @@ A responsive dynamic website for a catalogue of (real) miniature items. Every pr
 
 ## Set up
 1. Install **XAMPP Control Panel**
-2. Install **phpMyAdmin** on *version 5.2.3* or later (Downloads can be found [here](https://www.phpmyadmin.net/downloads/))
+2. Install **phpMyAdmin** on *version 5.2.3* or later (Downloads can be found [here](https://www.phpmyadmin.net/downloads/), simply replace the **'phpMyAdmin'** folder in  in your **'xampp'** directory with the new version (e.g. ***C:\\xampp\\phpMyAdmin***) with **XAMPP** fully shutdown)
 3. Start modules **'Apache'** and **'MySQL'**
 4. Import the **'smallmart'** database into **phpMyAdmin**
-5. Place the **'website'** folder into **'htdocs'** of your **'xampp'** directory (e.g. *C:\\xampp\\htdocs*)
+5. Place the **'website'** folder into **'htdocs'** in your **'xampp'** directory (e.g. ***C:\\xampp\\htdocs***)
 6. Go to **'http://localhost/smallmart/website/'** in your browser
 
 # To Do
