@@ -119,24 +119,32 @@ async function AddToWishlist(event, productId, reload) {
     .then((data) => {
         console.log(data);
         if (data == "added") {
-            if (button.classList.contains('favourite')) {
-                button.classList.add('filled');
-            }
-            else {
+            if (!button.classList.contains('favourite')) {
                 button.innerHTML = '<span class="material-symbols-outlined filled">favorite</span>Remove from wishlist';
             }
             if (reload)
                 window.location.reload();
+
+            // Go through every product on the page and update to identical products
+            for (let product of document.getElementsByClassName('product')) {
+                if (product.id.match(new RegExp('product-' + productId + '-'))) {
+                    product.getElementsByClassName('favourite')[0].classList.add('filled');
+                }
+            }
         }
         else if (data == "removed") {
-            if (button.classList.contains('favourite')) {
-                button.classList.remove('filled');
-            }
-            else {
+            if (!button.classList.contains('favourite')) {
                 button.innerHTML = '<span class="material-symbols-outlined">favorite</span>Add to wishlist';
             }
             if (reload)
                 window.location.reload();
+            
+            // Go through every product on the page and update to identical products
+            for (let product of document.getElementsByClassName('product')) {
+                if (product.id.match(new RegExp('product-' + productId + '-'))) {
+                    product.getElementsByClassName('favourite')[0].classList.remove('filled');
+                }
+            }
         }
         else if (data == "log-out") {
             window.location.replace('/smallmart/website/operations/user/log-out');

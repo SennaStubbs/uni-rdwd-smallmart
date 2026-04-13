@@ -13,7 +13,7 @@
     $review_row = mysqli_fetch_assoc($review_results);
 ?>
 
-<div class="product"
+<div class="product" id="product-<?php echo $row['product_id'] ?>-<?php echo $row['category_id'] ?>"
     style="order: <?php if (isset($split_details["featured"])) { echo (int)$split_details["featured"]; } else { echo '999999999'; } ?>"
     onauxclick="ClickLink(event, '/smallmart/website/product.php?id=<?php echo $row['product_id'] ?>')"
     onclick="ClickLink(event, '/smallmart/website/product.php?id=<?php echo $row['product_id'] ?>')">

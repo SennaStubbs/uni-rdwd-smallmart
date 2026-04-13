@@ -4,8 +4,6 @@ A responsive dynamic website for a catalogue of (real) miniature items. Every pr
 # To Do
 - Responsive elements
 - Animated web elements
-- Remaining pages from the design
-    - User wishlist
 
 ## Optional tasks
 - Category / search sorting (featured, newest, oldest)
@@ -13,8 +11,8 @@ A responsive dynamic website for a catalogue of (real) miniature items. Every pr
 - Review sorting (highest, lowest, newest, oldest)
 - User management
 - Re-organise files and directories
-    - Split CSS into separate pages (e.g. product page)
     - Move re-used PHP code into 'functions.php'
+- Sort each product into the correct category(ies)
 
 # Things to note
 - When signing up, there is not an option to set your display name. This is something that can be done after sign up in the user settings, redirected to after signing up and/or logging in, but should be an input field when signing up.
