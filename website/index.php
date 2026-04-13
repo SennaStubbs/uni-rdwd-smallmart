@@ -52,6 +52,7 @@
         <link rel="icon" type="image/png" href="/smallmart/website/assets/brand/small-logo.png">
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="/smallmart/website/css/main.css">
+        <link rel="stylesheet" type="text/css" href="/smallmart/website/css/home.css">
     </head>
     <body>
         <!-- Navigation bar -->
@@ -61,7 +62,7 @@
         <header class="home" style="background-image: url(/smallmart/website/assets/header.webp)">
             <div class="content">
                 <p>Large sale for various miniature products! Up to 50% off!!</p>
-                <a>Check it out!</a>
+                <a href="/smallmart/website/category.php?id=10">Check it out!</a>
             </div>
         </header>
 
@@ -83,7 +84,9 @@
 								include('../website/inc/split_details.php');
 								if (isset($split_details)) {
 									if (isset($split_details["featured"]) && (int)$split_details["featured"] > 0) { ?>
-					<button onclick="ClickLink(event, '/smallmart/website/category?id=<?php echo $row['category_id'] ?>')" class="collection" style="order: <?php echo (int)$split_detail[1] ?>">
+					<button onauxclick="ClickLink(event, '/smallmart/website/category?id=<?php echo $row['category_id'] ?>')"
+						onclick="ClickLink(event, '/smallmart/website/category?id=<?php echo $row['category_id'] ?>')"
+						class="collection" style="order: <?php echo (int)$split_detail[1] ?>">
                         <div class="image" style="background-image: url(<?php echo $row['category_image'] ?>)"></div>
                         <div class="title">
                             <h1><?php echo $row['category_name'] ?></h1>

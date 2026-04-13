@@ -1,0 +1,93 @@
+/* Content container for information pages */
+.content-container {
+    padding: 15px; 
+
+    background-color: var(--web-tone-6);
+    box-shadow: 0px 6px 0px inset var(--web-tone-2);
+    border-radius: 10px;
+}
+
+/* About page */
+.about {
+    color: var(--text-light);
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 0px 3px 0px var(--text-shadow-thin);
+}
+
+.about .content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    width: 1460px;
+    max-width: 100%;
+
+    margin: 25px;
+}
+
+.about * {
+    margin: 0;
+}
+
+.about a {
+    width: fit-content;
+
+    padding: 3px 8px;
+    
+    background-color: var(--web-tone-2);
+    box-shadow: 0px 4px 0px var(--web-shadow-2);
+    border-radius: 5px;
+
+    color: var(--text-light);
+    font-weight: bold;
+    text-decoration: solid;
+
+    cursor: pointer;
+    user-select: none;
+}
+
+/* Contact page */
+.contact .content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    width: 1460px;
+    max-width: calc(100% - 50px);
+    max-height: calc(100% - 50px);
+
+    margin: 25px 25px;
+
+    color: var(--text-light);
+    text-shadow: 0px 3px 0px var(--text-shadow-thin);
+    font-size: 40px;
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+.contact * {
+    margin: 0;
+}
+
+.contact h1 {
+    font-size: 64px;
+    font-weight: bold;
+}
+
+/* Google maps embed */
+.contact iframe {
+    padding: 5px;
+
+    background-color: var(--web-tone-5);
+    border-radius: 10px;
+
+    box-shadow: 0px 3px 0px var(--web-shadow-5);
+
+    box-sizing: border-box;
+}

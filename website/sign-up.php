@@ -16,6 +16,7 @@
         <link rel="icon" type="image/png" href="/smallmart/website/assets/brand/small-logo.png">
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="/smallmart/website/css/main.css">
+        <link rel="stylesheet" type="text/css" href="/smallmart/website/css/log-in.css">
     </head>
     <body>
         <!-- Navigation bar -->

@@ -19,7 +19,12 @@ async function LogIn(event) {
             }
             else if(data == "success") {
                 errorText.classList.add('hidden');
-                window.location.href = window.location.origin + "/smallmart/website/user";
+                if (urlSearchParams.get('redirect')) {
+                    window.location.href = window.location.origin + "/smallmart/website/" + urlSearchParams.get('redirect');
+                }
+                else {
+                    window.location.href = window.location.origin + "/smallmart/website/user";
+                }
             }
         });
     } else {
@@ -126,4 +131,15 @@ async function SignUp(event) {
             event.target.focus();
         }
     }
+}
+
+// Checking for 'ENTER' key inputs
+var inputs = document.getElementsByTagName('main')[0].getElementsByTagName('input');
+for (let input of inputs) {
+    input.addEventListener('keypress', function(event) {
+        if (event.key == "Enter") {
+            event.preventDefault();
+            LogIn(event);
+        }
+    });
 }

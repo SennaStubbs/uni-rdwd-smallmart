@@ -65,6 +65,7 @@
         <link rel="icon" type="image/png" href="/smallmart/website/assets/brand/small-logo.png">
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="/smallmart/website/css/main.css">
+        <link rel="stylesheet" type="text/css" href="/smallmart/website/css/product-page.css">
     </head>
     <body>
         <!-- Navigation bar -->
@@ -193,7 +194,17 @@
                             </div>
                         </div>
                         <?php endif ?>
-                        <button class="add-to-wishlist"><span class="material-symbols-outlined">favorite</span>Add to wishlist</button>
+                        <?php 
+                            // Check wishlist status of product
+                            $userId = isset($_SESSION['user_id']) ? (int)$_SESSION['user_id'] : -1;
+
+                            $stmt = "SELECT * FROM wishlist_product WHERE user_id = ? AND product_id = ?";
+                            $sql = $dbconnect->prepare($stmt);
+                            $sql->bind_param('ii', $userId, $productId);
+                            $sql->execute();
+                            $wishlist_result = $sql->get_result();
+                        ?>
+                        <button class="add-to-wishlist" onclick="AddToWishlist(event, <?php echo $productId ?>)"><span class="material-symbols-outlined <?php if (mysqli_num_rows($wishlist_result) > 0) { echo 'filled'; } ?>">favorite</span><?php if (mysqli_num_rows($wishlist_result) > 0) { echo 'Remove from wishlist'; } else { echo 'Add to wishlist'; } ?></button>
                         <div class="divider"></div>
                         <p><?php echo $product_row['product_description'] ?></p>
                     </div>

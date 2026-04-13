@@ -41,6 +41,9 @@ function StartChange(changeButton) {
     let input = currentForm.getElementsByTagName('input')[0];
     let errorText = currentForm.getElementsByClassName('error-message')[0];
 
+    // For 'ENTER' key checking
+    var inputs = [input];
+
     // Password only elements
     if (currentForm.id == "password") {
         var currentVisibility = currentForm.getElementsByClassName('visibility')[0];
@@ -55,6 +58,9 @@ function StartChange(changeButton) {
         submitButton = confirmPasswordForm.getElementsByClassName('submit')[0];
         cancelButton = confirmPasswordForm.getElementsByClassName('cancel')[0];
         errorText = confirmPasswordForm.getElementsByClassName('error-message')[0];
+
+        inputs.push(newInput);
+        inputs.push(confirmInput);
 
         currentForm.getElementsByTagName('label')[0].innerHTML = "Current password:";
         newPasswordForm.classList.remove('hidden');
@@ -93,16 +99,9 @@ function StartChange(changeButton) {
         errorText.innerHTML = "Error: " + text;
     }
 
-    async function SubmitChange(event) {
-        if (event)
-            if (event.type == "keypress")
-                if (event.key == "Enter")
-                    event.preventDefault();
-                else
-                    return;
-        
+    async function SubmitChange() {        
         if (input.value != originalInputValue || currentForm.id == "password") {
-            if (true || currentForm.reportValidity()) {
+            if (currentForm.reportValidity() && (currentForm.id == "password" ? (newPasswordForm.reportValidity() && confirmPasswordForm.reportValidity()) : true)) {
                 let formData = new FormData();
 
                 // Client-side validation
@@ -234,7 +233,17 @@ function StartChange(changeButton) {
     }
 
     submitButton.addEventListener('click', SubmitChange);
-    input.addEventListener('keypress', SubmitChange)
+
+    // Checking for 'ENTER' key inputs
+    for (let _input of inputs) {
+        console.log(_input);
+        _input.addEventListener('keypress', function(event) {
+            if (event.key == "Enter") {
+                event.preventDefault();
+                SubmitChange();
+            }
+        });
+    }
 
     cancelButton.addEventListener('click', CancelChange);
 }

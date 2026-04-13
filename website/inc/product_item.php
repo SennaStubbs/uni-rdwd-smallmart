@@ -13,15 +13,10 @@
     $review_row = mysqli_fetch_assoc($review_results);
 ?>
 
-<?php if (isset($split_details["featured"])) {
-    if ((int)$split_details["featured"]) { ?>
-<div class="product" style="order: <?php echo $split_details["featured"] ?>" onclick="window.location.href = '/smallmart/website/product.php?id=<?php echo $row['product_id'] ?>'">
-    <?php } else { ?>
-<div class="product" style="order: 999999999" onclick="window.location.href = '/smallmart/website/product.php?id=<?php echo $row['product_id'] ?>'">
-    <?php }
-} else { ?>
-<div class="product" style="order: 999999999" onclick="window.location.href = '/smallmart/website/product.php?id=<?php echo $row['product_id'] ?>'">
-<?php } ?>
+<div class="product"
+    style="order: <?php if (isset($split_details["featured"])) { echo (int)$split_details["featured"]; } else { echo '999999999'; } ?>"
+    onauxclick="ClickLink(event, '/smallmart/website/product.php?id=<?php echo $row['product_id'] ?>')"
+    onclick="ClickLink(event, '/smallmart/website/product.php?id=<?php echo $row['product_id'] ?>')">
     <div class="details">
         <div class="title">
             <!-- Product name -->
@@ -41,25 +36,34 @@
                 $starValue = Clamp($review_row['review_average'] - $index, 0, 1);
                 $starFillValue = $starValue * (71 - 29);
                 ?>
-        <div class="star">
-            <span class="material-symbols-outlined star-outline">star</span>
-            <span class="material-symbols-outlined star-fill"
-                style="clip-path: polygon(
-                    /* Starting points */
-                    29% 100%,
-                    29% 0%,
-                    /* Fill amounts */
-                    <?php echo 29 + $starFillValue; ?>% 0%,
-                    <?php echo 29 + $starFillValue; ?>% 100%
-                );">
-                star
-            </span>
-        </div>
-            <?php }
-        ?>
-        <p><?php echo number_format($review_row['review_average'], 1) ?> (<?php echo $review_row['review_count'] ?>)</p>
+                <div class="star">
+                    <span class="material-symbols-outlined star-outline">star</span>
+                    <span class="material-symbols-outlined star-fill"
+                        style="clip-path: polygon(
+                            /* Starting points */
+                            29% 100%,
+                            29% 0%,
+                            /* Fill amounts */
+                            <?php echo 29 + $starFillValue; ?>% 0%,
+                            <?php echo 29 + $starFillValue; ?>% 100%
+                        );">
+                        star
+                    </span>
+                </div>
+            <?php } ?>
+                <p><?php echo number_format($review_row['review_average'], 1) ?> (<?php echo $review_row['review_count'] ?>)</p>
             </div>
-            <button class="favourite material-symbols-outlined">
+            <?php 
+                // Check wishlist status of product
+                $userId = isset($_SESSION['user_id']) ? (int)$_SESSION['user_id'] : -1;
+
+                $stmt = "SELECT * FROM wishlist_product WHERE user_id = ? AND product_id = ?";
+                $sql = $dbconnect->prepare($stmt);
+                $sql->bind_param('ii', $userId, $row['product_id']);
+                $sql->execute();
+                $product_wishlist_result = $sql->get_result();
+            ?>
+            <button class="favourite material-symbols-outlined <?php if (mysqli_num_rows($product_wishlist_result) > 0) { echo 'filled'; } ?>" onclick="AddToWishlist(event, <?php echo $row['product_id']; if (isset($reload)) { echo ', ' . htmlspecialchars($reload); } ?>)">
                 favorite
             </button>
         </div>

@@ -1,3 +1,5 @@
+let urlSearchParams = new URLSearchParams(window.location.search);
+
 // Dropdown
 function ToggleDropdown(dropdownBtn, relative, visible) {
     let dropdownMenu = document.getElementById(dropdownBtn.dataset.dropdownId);
@@ -47,17 +49,41 @@ if (document.body.clientHeight < 1500) {
 
 // Button that behaviours like an anchor tag, with the option to open in a new tab
 function ClickLink(event, url, openInNewTab = false) {
-
     // Make sure the user is not trying to press a different link
-    if (event.target.tagName != "A" && [0, 1].includes(event.button)) {
+    if (event.target.tagName != "A" && event.button != 2 && !event.target.classList.contains('favourite')) {
         event.preventDefault();
         
-        if (openInNewTab == true)
+        if (openInNewTab == true || event.button == 1)
             window.open(url, '_blank').focus();
         else
             window.location.href = url
     }
 }
+
+// Prevent middle click scroll on clickable objects
+document.addEventListener('mousedown', function (event) {
+    if (event.button == 1) {
+        let parent = event.target;
+        for (let i = 0; i < 10; i++) {
+            if (parent.onauxclick) {
+                if (parent.onauxclick.toString().match(/ClickLink(.*?)/g) != null) {
+                    event.preventDefault();
+                    return false;
+                }
+            }
+            
+            if (parent.tagName.toLowerCase() == "button") {
+                event.preventDefault();
+                return false;
+            } else {
+                if (parent.parentElement)
+                    parent = parent.parentElement;
+                else
+                    return true;
+            }
+        }
+    }
+});
 
 // Prevent invalid message appearing on inputs with 'hide-validation-message' class
 document.addEventListener('invalid', (function () {
@@ -78,13 +104,45 @@ function ToggleInputVisibility(button, event) {
     button.innerHTML = input.type == "password" ? "visibility" : "visibility_off";
 }
 
-// Checking for 'ENTER' key inputs
-var inputs = document.getElementsByTagName('main')[0].getElementsByTagName('input');
-for (let input of inputs) {
-    input.addEventListener('keypress', function(event) {
-        if (event.key == "Enter") {
-            event.preventDefault();
-            LogIn(event);
+// Add item to wishlist
+async function AddToWishlist(event, productId, reload) {
+    let button = event.target;
+
+    let formData = new FormData();
+    formData.append('product-id', productId);
+
+    await fetch(window.location.origin + "/smallmart/website/operations/product/add-to-wishlist", {
+        method: 'POST',
+        body: formData,
+    })
+    .then((response) => response.text())
+    .then((data) => {
+        console.log(data);
+        if (data == "added") {
+            if (button.classList.contains('favourite')) {
+                button.classList.add('filled');
+            }
+            else {
+                button.innerHTML = '<span class="material-symbols-outlined filled">favorite</span>Remove from wishlist';
+            }
+            if (reload)
+                window.location.reload();
+        }
+        else if (data == "removed") {
+            if (button.classList.contains('favourite')) {
+                button.classList.remove('filled');
+            }
+            else {
+                button.innerHTML = '<span class="material-symbols-outlined">favorite</span>Add to wishlist';
+            }
+            if (reload)
+                window.location.reload();
+        }
+        else if (data == "log-out") {
+            window.location.replace('/smallmart/website/operations/user/log-out');
+        }
+        else if (data == "log-in") {
+            window.location.href = '/smallmart/website/log-in?redirect=' + window.location.href.replace(/.*?\/smallmart\/website\/(.*)/, '$1%20');
         }
     });
 }

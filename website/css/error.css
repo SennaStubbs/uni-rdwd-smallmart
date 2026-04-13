@@ -1,0 +1,48 @@
+/* Error page */
+.error h1 {
+    margin: 10px 0;
+
+    color: var(--text-light);
+    text-shadow: 0px 1px 0px var(--text-shadow-thin);
+    text-align: center;
+}
+
+.error img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.error {
+    flex-direction: column;
+}
+
+.error p {
+    margin: 5px 0;
+
+    color: var(--text-light);
+    text-shadow: 0px 1px 0px var(--text-shadow-thin);
+    font-size: 24px;
+    text-align: center;
+}
+
+.error a {
+    margin: 10px 0;
+    padding: 2px 8px;
+
+    background-color: var(--web-tone-2);
+
+    border-radius: 5px;
+
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 700;
+    text-shadow: 0px 1px 0px var(--text-shadow-thin);
+    text-align: center;
+
+    box-shadow: 0px 5px 0px var(--web-shadow-2);
+
+    user-select: none;
+
+    cursor: pointer;
+}

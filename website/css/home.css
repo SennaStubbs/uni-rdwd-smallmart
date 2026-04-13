@@ -1,0 +1,340 @@
+main.rows {
+    display: flex;
+    flex-flow: column;
+    gap: 2px;
+}
+
+.row {
+    position: relative;
+
+    width: 100%;
+    height: fit-content;
+
+    padding: 7px 9px 50px 9px;
+
+    background-color: var(--web-tone-3);
+
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+
+    box-shadow: 0px 2px 0px var(--web-shadow-3);
+
+    box-sizing: border-box;
+}
+
+.row:last-child {
+    box-shadow: none;
+}
+
+.row .container {
+    position: relative;
+
+    width: var(--main-content-width);
+    max-width: 100%;
+
+    margin: 0 auto;
+}
+
+.row .row-title {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: 6px;
+
+    height: 33px;
+
+    margin: 0 0 5px 11px;
+
+    color: var(--text-light);
+    font-size: 24px;
+    font-weight: 700;
+    text-shadow: 0px 2px 0px var(--text-shadow-thin);
+}
+
+.row .row-title .material-symbols-outlined {
+    font-size: 32px;
+}
+
+/* 'View All' button */
+.row .row-title a {
+    margin-bottom: 5px;
+    padding: 0 4px;
+
+    background-color: var(--web-tone-2);
+
+    border-radius: 5px;
+
+    color: inherit;
+    text-decoration: none;
+    font-weight: 400;
+    text-shadow: 0px 1px 0px var(--text-shadow-thin);
+
+    box-shadow: 0px 5px 0px var(--web-shadow-2);
+
+    user-select: none;
+
+    cursor: pointer;
+}
+
+/* Row products */
+.row .products-container {
+    display: grid;
+    grid-template-columns: repeat(5, 230px);
+    gap: 12px;
+    /* gap: 12px 34px; */
+    justify-content: space-between;
+
+    margin: 0 9px;
+
+    box-sizing: border-box;
+}
+
+/* Reviews row */
+.row .reviews-row-container {
+    display: grid;
+    grid-template-columns: repeat(6, 186px);
+    gap: 12px;
+    /* gap: 12px 34px; */
+    justify-content: space-between;
+
+    margin: 0 9px;
+
+    box-sizing: border-box;
+}
+
+.row .reviews-row-container .review {
+    display: flex;
+    flex-flow: column;
+
+    min-height: 188px;
+
+    padding: 5px;
+
+    background-color: var(--web-tone-4);
+
+    border-radius: 5px;
+
+    box-shadow: 0px 4px 0px var(--web-shadow-4);
+
+    color: var(--text-dark);
+
+    box-sizing: border-box;
+}
+
+/* Review product name */
+.row .reviews-row-container .review .product-name {
+    width: fit-content;
+    margin: 0 auto 3px auto;
+
+    opacity: 75%;
+
+    color: var(--text-dark);
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    text-shadow: 0px 1px 0px var(--text-shadow-thin);
+
+    cursor: pointer;
+}
+
+/* Review title */
+.row .reviews-row-container .review .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin: 0 2px;
+}
+
+.row .reviews-row-container .review .title h1 {
+    margin: 0;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    text-shadow: 0px 1px 0px var(--text-shadow-thin);
+}
+
+.row .reviews-row-container .review .title h2 {
+    margin: 0;
+
+    font-size: 14px;
+    font-weight: 100;
+
+    text-shadow: 0px 1px 0px var(--text-shadow-thin);
+}
+
+/* Review star rating */
+.reviews-row-container .review .rating {
+    display: flex;
+    align-items: center;
+
+    margin: 1px 4px 0 4px;
+}
+
+.reviews-row-container .review .rating .star {
+    height: 20px;
+}
+
+
+.reviews-row-container .review .rating .star span {
+    font-size: 20px;
+}
+
+.reviews-row-container .review .rating p {
+    margin: 0 0 0 2px;
+
+    font-size: 12px;
+
+    text-shadow: 0px 1px 0px var(--text-shadow-thin);
+}
+
+.reviews-row-container .review .rating p span {
+    font-weight: 700;
+}
+
+/* Review text */
+.reviews-row-container .review .review-text {
+    flex: 1;
+
+    margin: 0 2px;
+
+    font-size: 14px;
+    text-shadow: 0px 1px 0px var(--text-shadow-thin);
+}
+
+/* User of review */
+.reviews-row-container .review .user {
+    margin: 0 2px -2px 2px;
+
+    font-size: 14px;
+    text-shadow: 0px 1px 0px var(--text-shadow-thin);
+}
+
+/* Collections row */
+.row.collections {
+    z-index: 1;
+
+    /* height: 282px !important; */
+    min-height: 282px;
+
+    padding: 0;
+
+    background-color: var(--web-tone-1);
+
+    border-radius: 0;
+
+    box-shadow: 0px 2px 0px var(--web-shadow-1);
+}
+
+.row.collections .container {
+    display: flex;
+    flex-flow: row;
+    gap: 31px;
+
+    top: -68px;
+
+    /* min-height: 300px; */
+
+    padding: 0 22px;
+
+    box-sizing: border-box;
+}
+
+/* Collection */
+.collections .collection {
+    flex: 1;
+
+    display: flex;
+    flex-flow: column;
+    gap: -5px;
+
+    width: 291px;
+    /* height: fit-content; */
+    min-height: 300px;
+
+    margin: 0 0 -15px 0;
+    padding: 0;
+
+    background-color: transparent;
+    border: none;
+
+    user-select: none;
+
+    cursor: pointer;
+}
+
+.collections .collection .image {
+    flex: 0;
+
+    width: 100%;
+    height: 220px;
+    min-height: 220px;
+
+    background-color: var(--web-tone-5);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.collections .collection .title {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    margin-top: -5px;
+    padding: 8px;
+
+    background-color: var(--web-tone-4);
+
+    border-radius: 5px;
+
+    box-shadow: 0px 5px 0px var(--web-shadow-4);
+
+    box-sizing: border-box;
+}
+
+.collections .collection h1 {
+    width: 100%;
+
+    margin: 0;
+
+    color: var(--text-dark);
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+
+    text-shadow: 0px 1px 0px var(--text-shadow-thin);
+}
+
+.collections .collection a {
+    position: relative;
+
+    width: fit-content;
+    /* height: 100%; */
+
+    padding: 2px 10px;
+
+    background-color: var(--web-tone-2);
+
+    border-radius: 5px;
+
+    box-shadow: 0px 2px 0px var(--web-shadow-2);
+
+    color: var(--text-light);
+    font-size: 24px;
+    text-decoration: none;
+
+    text-shadow: 0px 1px 0px var(--text-shadow-thin);
+}

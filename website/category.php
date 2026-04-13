@@ -45,6 +45,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL,GRAD@100..700,0..1,100&icon_names=account_circle,attach_money,blender,chevron_right,close,delete,favorite,filter_alt,fork_spoon,house,keyboard_arrow_down,keyboard_arrow_up,menu,mode_comment,mood,music_note_2,nature,search,star,star_shine,stars,stars_2,sunny,visibility&display=block" />
         <!-- CSS -->
         <link rel="stylesheet" type="text/css" href="/smallmart/website/css/main.css">
+        <link rel="stylesheet" type="text/css" href="/smallmart/website/css/products-grid.css">
     </head>
     <body>
         <!-- Navigation bar -->

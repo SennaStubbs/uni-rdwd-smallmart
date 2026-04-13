@@ -95,7 +95,7 @@
         <!-- </div> -->
     </div>
     <!-- Wishlist -->
-    <a <?php if (isset($_SESSION['user_id'])) { echo 'href="/smallmart/website/wishlist"'; } else { echo 'href="/smallmart/website/log-in"'; } ?> style="font-weight: normal" class="button">
+    <a <?php if (isset($_SESSION['user_id'])) { echo 'href="/smallmart/website/wishlist"'; } else { echo 'href="/smallmart/website/log-in?redirect=wishlist"'; } ?> style="font-weight: normal" class="button">
         <span class="material-symbols-outlined">favorite</span>
         WISHLIST
     </a>
@@ -110,7 +110,7 @@
         $sql->execute();
         $user_result = $sql->get_result();
 
-        if (isset($_SESSION['user_id']) && mysqli_num_rows($user_result)) {
+        if (isset($_SESSION['user_id']) && mysqli_num_rows($user_result) > 0) {
             $row = mysqli_fetch_assoc($user_result);
     ?>
     <a href="/smallmart/website/user" class="button" title="Logged in as: <?php echo $row['user_display_name'] ?>">
