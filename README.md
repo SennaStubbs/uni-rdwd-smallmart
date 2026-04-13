@@ -1,6 +1,14 @@
 # Smallmart - A responsive website for 'Responsive Dynamic Web Development'
 A responsive dynamic website for a catalogue of (real) miniature items. Every product, and their associated images, are sourced from [Miniatures Shop](https://miniaturesshop.com/). All reviews and user accounts (except Administrator) were generated using Microsoft Copilot.
 
+## Set up
+1. Install **XAMPP Control Panel**
+2. Install **phpMyAdmin** on *version 5.2.3* or later (Downloads can be found [here](https://www.phpmyadmin.net/downloads/))
+3. Start modules **'Apache'** and **'MySQL'**
+4. Import the **'smallmart'** database into **phpMyAdmin**
+5. Place the **'website'** folder into **'htdocs'** of your **'xampp'** directory (e.g. *C:\\xampp\\htdocs*)
+6. Go to **'http://localhost/smallmart/website/'** in your browser
+
 # To Do
 - Responsive elements
 - Animated web elements
