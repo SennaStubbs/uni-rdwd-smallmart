@@ -70,7 +70,7 @@
         <main class="rows">
 			<!-- Collections -->
             <div class="row collections">
-                <div class="container">
+                <div id="collections-container" class="container">
 					<?php
 						// Getting featured collections
 						$stmt = "SELECT * FROM category";
@@ -78,13 +78,14 @@
 						$sql->execute();
 						$collections_result = $sql->get_result();
 
+						$index = 1;
 						if (mysqli_num_rows($collections_result) > 0) {
 							while($row = mysqli_fetch_assoc($collections_result)) {
 								$details = $row['category_details'];
 								include('../website/inc/split_details.php');
 								if (isset($split_details)) {
 									if (isset($split_details["featured"]) && (int)$split_details["featured"] > 0) { ?>
-					<button onauxclick="ClickLink(event, '/smallmart/website/category?id=<?php echo $row['category_id'] ?>')"
+					<button id="collection-<?php echo $index ?>" onauxclick="ClickLink(event, '/smallmart/website/category?id=<?php echo $row['category_id'] ?>')"
 						onclick="ClickLink(event, '/smallmart/website/category?id=<?php echo $row['category_id'] ?>')"
 						class="collection" style="order: <?php echo (int)$split_detail[1] ?>">
                         <div class="image" style="background-image: url(<?php echo $row['category_image'] ?>)"></div>
@@ -93,18 +94,25 @@
                             <a href="/smallmart/website/category?id=<?php echo $row['category_id'] ?>">View Collection</a>
                         </div>
 					</button>
-									<?php }
+									<?php
+										$index++;
+									}
 								}
 							}
 						}
 					?>
                 </div>
+				<div class="slide-buttons">
+					<?php for ($i = 1; $i <= $index - 1; $i++) { ?>
+					<button id="collection-button-<?php echo $i ?>" onclick="MoveCategorySlide(<?php echo $i ?>)"></button>
+					<?php } ?>
+				</div>
             </div>
             <div class="row">
                 <div class="container">
                     <div class="row-title">
                         <span class="material-symbols-outlined">star_shine</span>
-                        FEATURED
+                        <span>FEATURED</span>
                         <a href="/smallmart/website/category?id=8">View All</a>
                     </div>
                     <div class="products-container">
@@ -116,7 +124,7 @@
                 <div class="container">
                     <div class="row-title">
                         <span class="material-symbols-outlined">stars</span>
-                        NEWLY ADDED
+                        <span>NEWLY ADDED</span>
                         <a href="/smallmart/website/category?id=9">View All</a>
                     </div>
                     <div class="products-container">
@@ -128,7 +136,7 @@
                 <div class="container">
                     <div class="row-title">
                         <span class="material-symbols-outlined" style="width: 0.75em; margin-left: -0.25em">attach_money</span>
-                        ON SALE
+                        <span>ON SALE</span>
                         <a href="/smallmart/website/category?id=10">View All</a>
                     </div>
                     <div class="products-container">
@@ -140,9 +148,9 @@
                 <div class="container">
                     <div class="row-title">
                         <span class="material-symbols-outlined">mode_comment</span>
-                        RECENT REVIEWS
+                        <span>RECENT REVIEWS</span>
                     </div>
-                    <div class="reviews-row-container">
+                    <div id="reviews-row-container">
 						<?php
 							// Get reviews
 							$stmt = "SELECT review_id, review_title, review_text, review_published_datetime, review_rating, user_id, product_id
@@ -163,58 +171,14 @@
 									$sql->bind_param('i', $row['product_id']);
 									$sql->execute();
 									$product_result = $sql->get_result();
-									$product_row = mysqli_fetch_assoc($product_result); ?>
-						<div class="review">
-							<a class="product-name" href="/smallmart/website/product.php?id=<?php echo $row['product_id'] ?>"><?php echo $product_row['product_name'] ?></a>
-							<div class="title">
-								<!-- Review title -->
-								<h1><?php echo $row['review_title'] ?></h1>
-								<!-- Review published date -->
-								<h2><?php echo date_format(datetime::createFromFormat('Y-m-d H:i:s', $row['review_published_datetime']), 'd/m/Y') ?></h2>
-							</div>
-							<div class="divider"></div>
-							<div class="rating">
-								<?php
-									// Set star fills
-									for ($index = 0; $index < 5; $index++) {
-										$starValue = Clamp($row['review_rating'] - $index, 0, 1);
-										$starFillValue = $starValue * (71 - 29);
-										?>
-								<div class="star">
-									<span class="material-symbols-outlined star-outline">star</span>
-									<span class="material-symbols-outlined star-fill"
-										style="clip-path: polygon(
-											/* Starting points */
-											29% 100%,
-											29% 0%,
-											/* Fill amounts */
-											<?php echo 29 + $starFillValue; ?>% 0%,
-											<?php echo 29 + $starFillValue; ?>% 100%
-										);">
-										star
-									</span>
-								</div>
-									<?php } ?>
-								<p><?php echo $row['review_rating'] ?><span>/5</span></p>
-							</div>
-							<p class="review-text"><?php echo substr($row['review_text'], 0, 147) . '...' ?></p>
-							<div class="divider"></div>
-							<?php
-								// Get review user
-								$stmt = "SELECT user_display_name
-											FROM user
-											WHERE user_id = ?";
-								$sql = $dbconnect->prepare($stmt);
-								$sql->bind_param('i', $row['user_id']);
-								$sql->execute();
-								$user_result = $sql->get_result();
-								$user_row = mysqli_fetch_assoc($user_result);
-							?>
-							<p class="user"><?php echo $user_row['user_display_name'] ?></p>
-						</div>
-							<?php }
+									$product_row = mysqli_fetch_assoc($product_result);
+
+									include('inc/home_review.php');
+						
+								}
 							}
 						?>
+						<button id="load-more-reviews" onclick="LoadMoreRecentReviews()">Load More Reviews</button>
                     </div>
                 </div>
             </div>
@@ -225,5 +189,6 @@
 
         <!-- JavaScript -->
         <script type="text/javascript" src="/smallmart/website/js/main.js"></script>
+        <script type="text/javascript" src="/smallmart/website/js/home.js"></script>
     </body>
 </html>

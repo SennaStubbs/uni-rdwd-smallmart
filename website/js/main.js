@@ -1,8 +1,22 @@
 let urlSearchParams = new URLSearchParams(window.location.search);
 
 // Dropdown
+let currentDropdown = "";
 function ToggleDropdown(dropdownBtn, relative, visible) {
     let dropdownMenu = document.getElementById(dropdownBtn.dataset.dropdownId);
+    if (typeof(visible) != 'boolean')
+        currentDropdown = dropdownBtn.dataset.dropdownId;
+
+    // Set menu position relative to button, if applicable
+    function RelativeResize() {
+        let buttonRect = dropdownBtn.getBoundingClientRect();
+        let menuRect = dropdownMenu.getBoundingClientRect();
+        dropdownMenu.style.left = ((buttonRect.left + (buttonRect.width / 2)) - (menuRect.width / 2)) + 'px';
+
+        if (currentDropdown != dropdownBtn.dataset.dropdownId)
+            window.removeEventListener('resize', RelativeResize, true);
+
+    }
 
     // Hide other dropdown menus
     if (typeof(visible) != 'boolean') {
@@ -15,10 +29,15 @@ function ToggleDropdown(dropdownBtn, relative, visible) {
     }
 
     // Toggle menu
-    if (visible)
+    if (visible) {
         dropdownMenu.classList.remove('hidden');
-    else
+        currentDropdown = dropdownBtn.dataset.dropdownId;
+    }
+    else {
         dropdownMenu.classList.add('hidden');
+        if (currentDropdown == dropdownBtn.dataset.dropdownId)
+            currentDropdown = "";
+    }
 
     // Change arrow rotation, if it exists
     let arrowElement = dropdownBtn.getElementsByClassName('material-symbols-outlined');
@@ -28,11 +47,10 @@ function ToggleDropdown(dropdownBtn, relative, visible) {
         else
             arrowElement[0].innerHTML = 'keyboard_arrow_down';
 
-    // Set menu position relative to button, if applicable
-    if (relative == true) {
-        let buttonRect = dropdownBtn.getBoundingClientRect();
-        let menuRect = dropdownMenu.getBoundingClientRect();
-        dropdownMenu.style.left = ((buttonRect.left + (buttonRect.width / 2)) - (menuRect.width / 2)) + 'px';
+    if (relative == true && visible) {
+        RelativeResize();
+
+        window.addEventListener('resize', RelativeResize, true);
     }
 }
 
