@@ -30,6 +30,7 @@
 
 		<!-- Log in panel -->
         <main class="center-page log-in">
+            <h1>WELCOME</h1>
 			<div class="container">
 				<form id="log-in" name="log-in">
 					<label for="email" name="email">Email</label>

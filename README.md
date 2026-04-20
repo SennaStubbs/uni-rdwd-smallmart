@@ -1,13 +1,14 @@
 # Smallmart - A responsive website for 'Responsive Dynamic Web Development'
-A responsive dynamic website for a catalogue of (real) miniature items. Every product, and their associated images, are sourced from [Miniatures Shop](https://miniaturesshop.com/). All reviews and user accounts (except Administrator) were generated using Microsoft Copilot.
+A responsive dynamic website for a catalogue of (real) miniature items. Every product, and their associated images, are sourced from [Miniatures Shop](https://miniaturesshop.com/). All reviews and user accounts were generated using Microsoft Copilot.
+
+This project was developed for the **Responsive Dynamic Web Development** module of a foundation degree in **Computer Science and Digital Technologies**.
 
 ## Set up
 1. Install **XAMPP Control Panel**
-2. Install **phpMyAdmin** on *version 5.2.3* or later (Downloads can be found [here](https://www.phpmyadmin.net/downloads/), simply replace the **'phpMyAdmin'** folder in  in your **'xampp'** directory with the new version (e.g. ***C:\\xampp\\phpMyAdmin***) with **XAMPP** fully shutdown)
-3. Start modules **'Apache'** and **'MySQL'**
-4. Import the **'smallmart'** database into **phpMyAdmin**
-5. Place the **'website'** folder into **'htdocs'** in your **'xampp'** directory (e.g. ***C:\\xampp\\htdocs***)
-6. Go to **'http://localhost/smallmart/website/'** in your browser
+2. Start modules **'Apache'** and **'MySQL'**
+3. Import the **'smallmart'** database into **phpMyAdmin** (the version of the SQL being imported may need to be changed to an earlier version than what is currently listed)
+4. Place the **'website'** folder into **'htdocs'** in your **'xampp'** directory (e.g. ***C:\\xampp\\htdocs***)
+5. Go to **'http://localhost/smallmart/website/'** in your browser
 
 ---
 
@@ -29,5 +30,6 @@ A responsive dynamic website for a catalogue of (real) miniature items. Every pr
 - The icons rely on [Google's Material Icons](https://fonts.google.com/icons), meaning that if their system went down this website would be unable to load their icons and create an ugly frontend. The necessary icons should, ideally, be stored on the web server to be loaded from for a both quick and reliable source of icons.
 - User is not logged out automatically after a certain time period, only when the current session ends.
 - When changing a user detail on the user page, there is no message to state whether the update was successful or not. The most obvious way of knowing if it was is when changing the display name, where the page is reloaded and the personalised welcome message is updated with the new display name.
-- In my opinion, the 'wishlist_product' join table is not necessary, with a 'wishlist' column in the 'user' table with comma-separated product ids being viable enough. On top of this, someone spam adding and removing product from their wishlist can increment the 'wishlish_prod_id' to extreme values, and could end up failing when reaching the possible maximum while there is a scaling user-base. A cooldown for this function should also be put in place for each user, checking when their last change was and preventing it in the case of spam. Although using this JOIN table does allow for the possibility of an 'added datetime' as a column, which can be good for properly sorting the wishlist for the user.
+- In my opinion, the 'wishlist_product' join table is not necessary, with a 'wishlist' column in the 'user' table with comma-separated product ids being viable enough. On top of this, someone spam adding and removing product from their wishlist can increment the 'wishlish_prod_id' to extreme values, and could end up failing when reaching the possible maximum while there is a scaling user-base. A cooldown for this function should also be put in place for each user, checking when their last change was and preventing it in the case of spam. Although using this JOIN table does allow for the possibility of an 'added datetime' as a column, which can be good for properly sorting the wishlist for the user (which should've been implemented).
 - The **select** element for sorting products on a category page uses an experimental feature that is only available on newer version of **Chrome** and **Microsoft Edge**. This sorting also does not work.
+- With the 'user_access_level' column, an administrator dashboard can easily be implemented
