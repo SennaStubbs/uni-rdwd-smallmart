@@ -172,11 +172,11 @@
                             
                             <p><?php echo number_format($totalReviews_Row['avgRating'], '1')?> (<?php echo $totalReviews_Row['totalCount'] ?>)</p>
                         </div>
-                        <?php //if (isset($split_details["discounted-price"])) { ?>
-                        <!-- <h2><span class="og-price">£<?php //echo number_format($product_row['product_price'] / 100, 2) ?></span>£<?php //echo number_format($split_detail[1] / 100, 2) ?></h2> -->
-                        <?php //} else { ?>
+                        <?php if (isset($split_details["discounted-price"])) { ?>
+                        <h2><span class="og-price">£<?php echo number_format($product_row['product_price'] / 100, 2) ?></span>£<?php echo number_format($split_details["discounted-price"] / 100, 2) ?></h2>
+                        <?php } else { ?>
                         <h2>£<?php echo number_format($product_row['product_price'] / 100, 2) ?></h2>
-                        <?php //} ?>
+                        <?php } ?>
                         <?php if (isset($variants)): ?>
                         <div class="variants">
                             <h3><?php echo $variant_title ?></h3>
