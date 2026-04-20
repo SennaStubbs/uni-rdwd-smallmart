@@ -804,10 +804,13 @@ main.rows {
     /* 'Load more reviews' button */
     #load-more-reviews {
         grid-area: auto / auto / auto / span 2;
+    }
+}
 
-        padding: 0 10px;
-
-        font-size: 34px;
+@media screen and (max-width: 500px) {
+    /* Row products */
+    .row .products-container {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -820,16 +823,5 @@ main.rows {
     /* 'Load more reviews' button */
     #load-more-reviews {
         grid-area: auto / auto / auto / span 1;
-
-        padding: 0 10px;
-
-        font-size: 34px;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    /* Row products */
-    .row .products-container {
-        grid-template-columns: 1fr;
     }
 }

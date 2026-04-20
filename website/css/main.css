@@ -27,6 +27,7 @@
     --text-light: #FFFFFF;
     --text-dark: #000000;
     --text-discount: #266198;
+    --text-discount-light: #9DD0FF;
 
     --text-shadow-thin: rgba(0, 0, 0, 0.25);
     --text-shadow-thick: rgba(0, 0, 0, 0.5);
@@ -534,7 +535,7 @@ header {
     position: relative;
 
     width: 100%;
-    height: 330px;  
+    height: var(--header-height);  
 
     background-color: var(--web-tone-5);
     background-size: cover;
@@ -903,20 +904,6 @@ main {
     box-sizing: border-box;
 }
 
-/* Counters in spacer */
-.grid-spacer .numbers {
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-}
-
-/* Sort by container */
-.grid-spacer .sort-by {
-    display: flex;
-    flex-direction: row;
-    gap: 13px;
-}
-
 /* Hyperlinks */
 p a {
     color: #1BBBFF;
@@ -1007,6 +994,19 @@ p a:active {
         font-size: 28px;
     }
 
+    /* Header */
+    :has(header) {
+        --header-height: 320px;
+    }
+
+    header.small {
+        padding: 5px !important;
+    }
+
+    header.small h1.title {
+        font-size: 96px !important;
+    }
+
     /* Footer */
     footer {
         gap: 1px;
@@ -1033,6 +1033,12 @@ p a:active {
     /* Log in button */
     nav a.account span:not(.material-symbols-outlined) {
         display: none;
+    }
+}
+
+@media screen and (max-width: 1040px) {
+    .grid-spacer {
+        height: 50px;
     }
 }
 
@@ -1100,6 +1106,15 @@ p a:active {
     /* Navigation bar */
     nav {
         padding: 0 10px;
+    }
+
+    /* Header */
+    :has(header) {
+        --header-height: 220px;
+    }
+
+    header.small h2 {
+        font-size: 48px !important;
     }
 
     /* Footer */

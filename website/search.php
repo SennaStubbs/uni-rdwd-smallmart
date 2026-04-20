@@ -37,20 +37,16 @@
             <div class="grid-spacer">
 				<?php if (isset($total_products) && $total_products > 0) { ?>
 				<div class="numbers">
+					<button class="filters-dropdown-button"><span class="material-symbols-outlined">filter_alt</span><span>FILTERS</span></button>
 					<p class="page-no">Page <b><?php echo $page; ?></b> of <b><?php echo $total_pages; ?></b></p>
 					<p class="product-no">Showing <b><?php echo max(0, min(1, mysqli_num_rows($product_result))) + $offset; ?> - <?php echo mysqli_num_rows($product_result) + $offset; ?></b> of <b><?php echo $total_products; ?></b> products</p>
 				</div>
 				<div class="sort-by">
 					<label>Sort by</label>
 					<select>
-						<option>Featured</option>
-						<option>Most Popular</option>
-						<option>Name: A-Z</option>
-						<option>Name: Z-A</option>
+						<option>Relevance</option>
 						<option>Price: Low-High</option>
 						<option>Price: High-Low</option>
-						<option>Oldest</option>
-						<option>Newest</option>
 					</select>
 				</div>
 				<?php } ?>
@@ -59,18 +55,45 @@
 			<?php if (isset($total_products) && $total_products > 0) { ?>
 			<div class="products-grid-main">
 				<div class="products-filters">
-					<a><span class="material-symbols-outlined">keyboard_arrow_right</span>FEATURED</a>
-					<a><span>•</span>Newly Added</a>
-					<a><span>•</span>On Sale</a>
-					<a><span>•</span>Popular</a>
+					<?php
+						// Get categories that have 'main_category=true' in their details
+						$stmt = "SELECT *
+								FROM category
+								WHERE SUBSTRING_INDEX(
+										SUBSTRING_INDEX(category_details, 'main_category=', -1),
+										',', 1) = 'true'";
+						$sql = $dbconnect->prepare($stmt);
+						$sql->execute();
+						$main_cate_results = $sql->get_result();
+
+						if (mysqli_num_rows($main_cate_results) > 0) {
+							while($row = mysqli_fetch_assoc($main_cate_results)) { ?>
+					<a href="/smallmart/website/category?id=<?php echo $row['category_id'] ?>">
+						<span>•</span><?php echo $row['category_name']; ?>
+					</a>
+						<?php }
+						}
+					?>
 					<div class="divider"></div>
-					<a><span>•</span>Food</a>
-					<a><span>•</span>Musical Instruments</a>
-					<a><span>•</span>Kitchen Collection</a>
-					<a><span>•</span>Foliage</a>
-					<a><span>•</span>House Furniture</a>
-					<a><span>•</span>Outdoor Furniture</a>
-					<a><span>•</span>Miscellaneous</a>
+					<?php
+						// Get categories that do not have 'main_category=true' in their details
+						$stmt = "SELECT *
+								FROM category
+								WHERE SUBSTRING_INDEX(
+										SUBSTRING_INDEX(category_details, 'main_category=', -1),
+										',', 1) != 'true'";
+						$sql = $dbconnect->prepare($stmt);
+						$sql->execute();
+						$category_result = $sql->get_result();
+						
+						if (mysqli_num_rows($category_result) > 0) {
+							while($row = mysqli_fetch_assoc($category_result)) { ?>
+						<a href="/smallmart/website/category?id=<?php echo $row['category_id'] ?>">
+							<span>•</span><?php echo $row['category_name']; ?>
+						</a>
+							<?php }
+						}
+					?>
 				</div>
 				<div class="products-section">
 					<div class="products-grid">

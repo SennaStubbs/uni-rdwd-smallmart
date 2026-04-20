@@ -104,7 +104,7 @@
                 </div>
 				<div class="slide-buttons">
 					<?php for ($i = 1; $i <= $index - 1; $i++) { ?>
-					<button id="collection-button-<?php echo $i ?>" onclick="MoveCategorySlide(<?php echo $i ?>)"></button>
+					<button id="collection-button-<?php echo $i ?>" onclick="MoveCategorySlide(<?php echo $i ?>)" class="<?php echo $i == 1 ? 'selected' : '' ?>"></button>
 					<?php } ?>
 				</div>
             </div>

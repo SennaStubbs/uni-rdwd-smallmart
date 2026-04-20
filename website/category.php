@@ -70,6 +70,7 @@
         <main>
             <div class="grid-spacer">
 				<div class="numbers">
+					<button class="filters-dropdown-button" data-dropdown-id="filters-dropdown-menu" onclick="ToggleDropdown(this)"><span class="material-symbols-outlined">filter_alt</span><span>FILTERS</span></button>
 					<p class="page-no">Page <b><?php echo $page; ?></b> of <b><?php echo $total_pages; ?></b></p>
 					<p class="product-no">Showing <b><?php echo max(0, min(1, mysqli_num_rows($product_result))) + $offset; ?> - <?php echo mysqli_num_rows($product_result) + $offset; ?></b> of <b><?php echo $total_products; ?></b> products</p>
 				</div>
@@ -89,18 +90,51 @@
 			</div>
 			<div class="products-grid-main">
 				<div class="products-filters">
-					<a><span class="material-symbols-outlined">keyboard_arrow_right</span>FEATURED</a>
-					<a><span>•</span>Newly Added</a>
-					<a><span>•</span>On Sale</a>
-					<a><span>•</span>Popular</a>
+					<?php
+						// Get categories that have 'main_category=true' in their details
+						$stmt = "SELECT *
+								FROM category
+								WHERE SUBSTRING_INDEX(
+										SUBSTRING_INDEX(category_details, 'main_category=', -1),
+										',', 1) = 'true'";
+						$sql = $dbconnect->prepare($stmt);
+						$sql->execute();
+						$main_cate_results = $sql->get_result();
+
+						if (mysqli_num_rows($main_cate_results) > 0) {
+							while($row = mysqli_fetch_assoc($main_cate_results)) { ?>
+					<a href="/smallmart/website/category?id=<?php echo $row['category_id'] ?>">
+						<?php echo $row['category_id'] == $categoryId ?
+						'<span class="material-symbols-outlined">keyboard_arrow_right</span>' . strtoupper($row['category_name'])
+						:
+						'<span>•</span>' . $row['category_name']; ?>
+					</a>
+						<?php }
+						}
+					?>
 					<div class="divider"></div>
-					<a><span>•</span>Food</a>
-					<a><span>•</span>Musical Instruments</a>
-					<a><span>•</span>Kitchen Collection</a>
-					<a><span>•</span>Foliage</a>
-					<a><span>•</span>House Furniture</a>
-					<a><span>•</span>Outdoor Furniture</a>
-					<a><span>•</span>Miscellaneous</a>
+					<?php
+						// Get categories that do not have 'main_category=true' in their details
+						$stmt = "SELECT *
+								FROM category
+								WHERE SUBSTRING_INDEX(
+										SUBSTRING_INDEX(category_details, 'main_category=', -1),
+										',', 1) != 'true'";
+						$sql = $dbconnect->prepare($stmt);
+						$sql->execute();
+						$category_result = $sql->get_result();
+						
+						if (mysqli_num_rows($category_result) > 0) {
+							while($row = mysqli_fetch_assoc($category_result)) { ?>
+						<a href="/smallmart/website/category?id=<?php echo $row['category_id'] ?>">
+							<?php echo $row['category_id'] == $categoryId ?
+							'<span class="material-symbols-outlined">keyboard_arrow_right</span>' . strtoupper($row['category_name'])
+							:
+							'<span>•</span>' . $row['category_name']; ?>
+						</a>
+							<?php }
+						}
+					?>
 				</div>
 				<div class="products-section">
 					<div class="products-grid">
@@ -142,6 +176,44 @@
 				</div>
 			</div>
         </main>
+
+		<!-- Filters menu for mobile -->
+		<div id="filters-dropdown-menu">
+			<div class="container">
+				<div class="title">
+					MENU
+					<button class="material-symbols-outlined" data-dropdown-id="filters-dropdown-menu" onclick="ToggleDropdown(this)">close</button>
+					<div class="divider"></div>
+				</div>
+				<div class="contents">
+					<h1>Type</h1>
+					<label><input type="checkbox"><span>Food</span></label>
+					<label><input type="checkbox"><span>Musical Instruments</span></label>
+					<label><input type="checkbox"><span>Kitchen Collection</span></label>
+					<label><input type="checkbox"><span>Foliage</span></label>
+					<label><input type="checkbox"><span>House Furniture</span></label>
+					<label><input type="checkbox"><span>Outdoor Furniture</span></label>
+					<label><input type="checkbox"><span>Miscellaneous</span></label>
+					<div class="divider"></div>
+					<h1>Size</h1>
+					<label><input type="checkbox"><span>Tiny (Less than 3cm)</span></label>
+					<label><input type="checkbox"><span>Small (3cm - 6cm)</span></label>
+					<label><input type="checkbox"><span>Medium (7cm - 10cm)</span></label>
+					<label><input type="checkbox"><span>Large (11cm - 15cm)</span></label>
+					<label><input type="checkbox"><span>Massive (More than 15cm)</span></label>
+					<div class="divider"></div>
+					<h1>Price Range</h1>
+					<label><input type="checkbox"><span>£0.49 or less</span></label>
+					<label><input type="checkbox"><span>£0.50 - £0.99</span></label>
+					<label><input type="checkbox"><span>£1.00 - £1.99</span></label>
+					<label><input type="checkbox"><span>£2.00 - £2.99</span></label>
+					<label><input type="checkbox"><span>£3.00 - £3.99</span></label>
+					<label><input type="checkbox"><span>£4.00 - £4.99</span></label>
+					<label><input type="checkbox"><span>£5.00 or more</span></label>
+					<div class="divider"></div>
+				</div>
+			</div>
+		</div>
 
 		<!-- Footer -->
         <?php include("../website/inc/footer.php"); ?>
