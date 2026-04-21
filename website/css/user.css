@@ -276,6 +276,82 @@ main.user .tabs-container .tab-content form p {
 }
 
 /* Responsiveness */
-@media screen and (max-width: 0px) {
+@media screen and (max-width: 1050px) {
+    main.user .tabs-container .tab-content form input {
+        width: 400px;
+    }
+}
 
+@media screen and (max-width: 950px) {
+    /* Tab content */
+    main.user .tabs-container .tab-content {
+        gap: 24px;
+    }
+
+    main.user .tabs-container .tab-content form {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    main.user .tabs-container .tab-content form label {
+        text-align: center;
+    }
+
+    
+    main.user .tabs-container .tab-content form div {
+        width: 100%;
+    }
+
+    main.user .tabs-container .tab-content form input {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    /* Page title */
+    main.user .container h1.welcome {
+        font-size: 64px;
+    }
+
+    /* Dividers */
+    main.user .container .divider {
+        height: 3px;
+        min-height: 3px;
+    }
+
+    main.user .container .vertical-divider {
+        width: 3px;
+        min-width: 3px;
+    }
+
+    /* Tab content */
+    main.user .tabs-container .tab-content {
+        gap: 32px;
+    }
+
+    /* Forms */
+    main.user .tabs-container .tab-content form {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    main.user .tabs-container .tab-content form label,
+    main.user .tabs-container .tab-content form input {
+        font-size: 28px;
+    }
+
+    main.user .tabs-container .tab-content form button:not(.visibility) {
+        font-size: 28px;
+    }
+
+    /* Visibility button */
+    main.user .tabs-container .tab-content form .visibility {
+        font-size: 36px;
+    }
+
+    /* Log out button */
+    #log-out {
+        font-size: 52px;
+    }
 }
