@@ -157,3 +157,123 @@ main.wishlist .empty-wishlist {
     font-size: 28px;
     text-align: center;
 }
+
+/* Responsiveness */
+@media screen and (max-width: 1420px) {
+    main.wishlist .products-grid {
+        grid-template-columns: repeat(4, 256px);
+    }
+}
+
+
+/* Tablet */
+@media screen and (max-width: 1280px) {
+    /* Bottom page counter */
+    main.wishlist .product-no {
+        font-size: 20px;
+    }
+    
+    /* Pagination */
+    main.wishlist .pagination {
+        height: 60px;
+
+        padding: 9px;
+    }
+
+    main.wishlist .pagination a {
+        font-size: 36px;
+    }
+
+    main.wishlist .pagination a.direction {
+        width: 120px;
+    }
+}
+
+
+@media screen and (max-width: 1160px) {
+    main.wishlist .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    main.wishlist .container {
+        padding: 16px 12px 44px 12px
+    }
+
+    main.wishlist .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px 24px;
+    }
+
+    /* Products */
+    .product {
+        min-width: 300px;
+        min-height: 300px;
+    }
+
+    .product .image-container {
+        height: 222px;
+
+        margin-bottom: -180px;
+        padding: 6px;
+    }
+
+    .product .details {
+        padding-top: 180px;
+    }
+
+    /* Product name */
+    .product .details .title h1 {
+        font-size: 22px;
+    }
+
+    /* Product price */
+    .product .details .title h2 {
+        display: flex;
+        align-items: center;
+
+        font-size: 18px;
+    }
+    
+    /* Original price in discounted product */
+    .product .details .title h2 span.og-price {
+        bottom: 80%;
+
+        font-size: 12px;
+    }
+
+    /* Discounted price */
+    .product .details .title h2:has(span.og-price) {
+        display: initial;
+
+        top: 6px;
+    }
+
+    /* Product rating and favourite button */
+    .product .details .rating p {
+        font-size: 18px;
+    }
+
+    /* Stars */
+    .product .details .rating span {
+        font-size: 24px;
+    }
+
+    .product .details .bottom button.favourite {
+        padding: 4px;
+
+        border: none;
+
+        box-shadow: 0px 3px 0px var(--web-shadow-2);
+
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    main.wishlist .products-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
