@@ -13,17 +13,17 @@ This project was developed for the **Responsive Dynamic Web Development** module
 ---
 
 # To Do
-- Responsive elements
 - Animated web elements
 
 ## Optional tasks
-- Category / search sorting (featured, newest, oldest)
-    - Will require more columns in 'product' table
-- Review sorting (highest, lowest, newest, oldest)
-- User management
 - Re-organise files and directories
     - Move re-used PHP code into 'functions.php'
 - Sort each product into the correct category(ies)
+
+# Tasks that were not completed
+- Category / search sorting (featured, newest, oldest)
+- Review sorting (highest, lowest, newest, oldest)
+- User management
 
 # Things to note
 - When signing up, there is not an option to set your display name. This is something that can be done after sign up in the user settings, redirected to after signing up and/or logging in, but should be an input field when signing up.
