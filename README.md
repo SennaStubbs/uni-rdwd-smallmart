@@ -10,6 +10,8 @@ This project was developed for the **Responsive Dynamic Web Development** module
 4. Place the **'website'** folder into **'htdocs'** in your **'xampp'** directory (e.g. ***C:\\xampp\\htdocs***)
 5. Go to **'http://localhost/smallmart/website/'** in your browser
 
+All accounts except for '**testingaccount@example.com**' use the password '*bleh*'. The **testingaccount@example.com** account uses the password '*this I5 4 VAL1D PASSWORD!!*'.
+
 ---
 
 # To Do
@@ -26,6 +28,8 @@ This project was developed for the **Responsive Dynamic Web Development** module
 - User management
 
 # Things to note
+These are notes that were taken during development to address certain issues that would/should be addressed in a real development setting.
+
 - When signing up, there is not an option to set your display name. This is something that can be done after sign up in the user settings, redirected to after signing up and/or logging in, but should be an input field when signing up.
 - The icons rely on [Google's Material Icons](https://fonts.google.com/icons), meaning that if their system went down this website would be unable to load their icons and create an ugly frontend. The necessary icons should, ideally, be stored on the web server to be loaded from for a both quick and reliable source of icons.
 - User is not logged out automatically after a certain time period, only when the current session ends.
@@ -34,3 +38,5 @@ This project was developed for the **Responsive Dynamic Web Development** module
 - The **select** element for sorting products on a category page uses an experimental feature that is only available on newer version of **Chrome** and **Microsoft Edge**. This sorting also does not work.
 - With the 'user_access_level' column, an administrator dashboard can easily be implemented to manage all users, products, and reviews.
 - The pagination on any page is not properly scalable, easily going off the screen on devices with smaller screens.
+- There is no system for when a user forgets their password.
+- No testing for common web attacks was performed.
