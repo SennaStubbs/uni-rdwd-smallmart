@@ -178,7 +178,7 @@
         </main>
 
 		<!-- Filters menu for mobile -->
-		<div id="filters-dropdown-menu">
+		<div id="filters-dropdown-menu" class="hidden">
 			<div class="container">
 				<div class="title">
 					MENU

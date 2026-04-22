@@ -669,7 +669,7 @@ header.search h2.search-title {
     }
 
     /* Filters menu */
-    #filters-dropdown-menu {
+    #filters-dropdown-menu:not(.hidden) {
         display: block;
     }
 

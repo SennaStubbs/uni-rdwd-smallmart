@@ -41,7 +41,7 @@ function ToggleDropdown(dropdownBtn, relative, visible) {
 
     // Change arrow rotation, if it exists
     let arrowElement = dropdownBtn.getElementsByClassName('material-symbols-outlined');
-    if (arrowElement.length > 0)
+    if (['keyboard_arrow_up', 'keyboard_arrow_down'].includes(arrowElement[0].innerHTML) && arrowElement.length > 0)
         if (visible)
             arrowElement[0].innerHTML = 'keyboard_arrow_up';
         else

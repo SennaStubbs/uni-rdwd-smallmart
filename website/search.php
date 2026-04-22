@@ -37,7 +37,7 @@
             <div class="grid-spacer">
 				<?php if (isset($total_products) && $total_products > 0) { ?>
 				<div class="numbers">
-					<button class="filters-dropdown-button"><span class="material-symbols-outlined">filter_alt</span><span>FILTERS</span></button>
+					<button class="filters-dropdown-button" data-dropdown-id="filters-dropdown-menu" onclick="ToggleDropdown(this)"><span class="material-symbols-outlined">filter_alt</span><span>FILTERS</span></button>
 					<p class="page-no">Page <b><?php echo $page; ?></b> of <b><?php echo $total_pages; ?></b></p>
 					<p class="product-no">Showing <b><?php echo max(0, min(1, mysqli_num_rows($product_result))) + $offset; ?> - <?php echo mysqli_num_rows($product_result) + $offset; ?></b> of <b><?php echo $total_products; ?></b> products</p>
 				</div>
@@ -141,6 +141,44 @@
 			</div>
 			<?php } ?>
         </main>
+
+		<!-- Filters menu for mobile -->
+		<div id="filters-dropdown-menu" class="hidden">
+			<div class="container">
+				<div class="title">
+					MENU
+					<button class="material-symbols-outlined" data-dropdown-id="filters-dropdown-menu" onclick="ToggleDropdown(this)">close</button>
+					<div class="divider"></div>
+				</div>
+				<div class="contents">
+					<h1>Type</h1>
+					<label><input type="checkbox"><span>Food</span></label>
+					<label><input type="checkbox"><span>Musical Instruments</span></label>
+					<label><input type="checkbox"><span>Kitchen Collection</span></label>
+					<label><input type="checkbox"><span>Foliage</span></label>
+					<label><input type="checkbox"><span>House Furniture</span></label>
+					<label><input type="checkbox"><span>Outdoor Furniture</span></label>
+					<label><input type="checkbox"><span>Miscellaneous</span></label>
+					<div class="divider"></div>
+					<h1>Size</h1>
+					<label><input type="checkbox"><span>Tiny (Less than 3cm)</span></label>
+					<label><input type="checkbox"><span>Small (3cm - 6cm)</span></label>
+					<label><input type="checkbox"><span>Medium (7cm - 10cm)</span></label>
+					<label><input type="checkbox"><span>Large (11cm - 15cm)</span></label>
+					<label><input type="checkbox"><span>Massive (More than 15cm)</span></label>
+					<div class="divider"></div>
+					<h1>Price Range</h1>
+					<label><input type="checkbox"><span>£0.49 or less</span></label>
+					<label><input type="checkbox"><span>£0.50 - £0.99</span></label>
+					<label><input type="checkbox"><span>£1.00 - £1.99</span></label>
+					<label><input type="checkbox"><span>£2.00 - £2.99</span></label>
+					<label><input type="checkbox"><span>£3.00 - £3.99</span></label>
+					<label><input type="checkbox"><span>£4.00 - £4.99</span></label>
+					<label><input type="checkbox"><span>£5.00 or more</span></label>
+					<div class="divider"></div>
+				</div>
+			</div>
+		</div>
 
 		<!-- Footer -->
         <?php include("../website/inc/footer.php"); ?>
