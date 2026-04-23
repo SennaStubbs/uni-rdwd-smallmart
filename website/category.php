@@ -11,7 +11,7 @@
 		// $stmt = $dbconnect -> prepare($sql);
 		// $stmt -> execute();
         // $product_result = $stmt->get_result();
-		include("../website/inc/pagination.php");
+		include("../website/operations/product/pagination.php");
     }
 
 	// Get category information
@@ -27,9 +27,7 @@
 		$category_row = mysqli_fetch_assoc($category_result);
 
 		$details = $category_row['category_details'];
-		include('../website/inc/split_details.php');
-		$category_details = isset($split_details) ? $split_details : [];
-		
+		$category_details = SplitDetails($details);
 	} else {
 		header('location: error');
 		exit;
@@ -52,7 +50,7 @@
         <?php include("../website/inc/navigation.php"); ?>
 
         <!-- Header -->
-        <header style="background-image: url(/smallmart/website/assets/header.webp)">
+        <header style="background-image: url(/smallmart/website/assets/misc/header.webp)">
 			<?php if (isset($category_details['bg_col']) && isset($category_details['button_col']) && isset($category_details['button_acc_col']) && isset($category_details['text_col'])): ?>
 			<div class="bg-colour" style="background-color: <?php echo $category_details['bg_col'] ?>"></div>
             <h1 class="title" style="background-color: <?php echo $category_details['button_col'] ?>;
@@ -142,7 +140,7 @@
 							if (mysqli_num_rows($product_result) > 0) {
 								while($row = mysqli_fetch_assoc($product_result)) {
 									$details = $row['product_details'];
-									include('inc/product_item.php');
+									include('inc/templates/product_item.php');
 								}
 							}
 						?>

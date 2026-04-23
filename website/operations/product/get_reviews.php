@@ -2,8 +2,8 @@
 
     define('ALLOW_ACCESS', true);
 
-    include("../inc/dbconnect.php");
-    include("../inc/functions.php");
+    include("../../inc/dbconnect.php");
+    include("../../inc/functions.php");
 
     if (isset($_POST['product-id']) && isset($_POST['offset'])) {
         $_productId = (int)$_POST['product-id'];
@@ -22,7 +22,7 @@
 
         if (mysqli_num_rows($review_results) > 0) {
             while($row = mysqli_fetch_assoc($review_results)) {
-                include('../inc/review.php');
+                include('../../inc/templates/review.php');
             }
         }
     }

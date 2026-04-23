@@ -2,8 +2,8 @@
 
     define('ALLOW_ACCESS', true);
 
-    include("../inc/dbconnect.php");
-    include("../inc/functions.php");
+    include("../../inc/dbconnect.php");
+    include("../../inc/functions.php");
 
     if (isset($_POST['offset'])) {
         $_offset = (int)$_POST['offset'];
@@ -30,7 +30,7 @@
                 $product_result = $sql->get_result();
                 $product_row = mysqli_fetch_assoc($product_result);
 
-                include('../inc/home_review.php');
+                include('../../inc/templates/home_review.php');
             }
         }
     }

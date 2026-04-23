@@ -6,7 +6,7 @@
 
         include("../website/inc/dbconnect.php");
         include("../website/inc/functions.php");
-		include("../website/inc/search_pagination.php");
+		include("../website/operations/product/search_pagination.php");
     }
 ?>
 
@@ -26,7 +26,7 @@
         <?php include("../website/inc/navigation.php"); ?>
 
         <!-- Header -->
-        <header class="small search" style="background-image: url(/smallmart/website/assets/header.webp)">
+        <header class="small search" style="background-image: url(/smallmart/website/assets/misc/header.webp)">
 			<div class="bg-colour"></div>
 			<h2 class="search-title">SEARCHING FOR</h2>
             <h1 class="title"><?php echo strtoupper(htmlspecialchars($search)) ?></h1>
@@ -101,7 +101,7 @@
 							if (mysqli_num_rows($product_result) > 0) {
 								while($row = mysqli_fetch_assoc($product_result)) {
 									$details = $row['product_details'];
-									include('inc/product_item.php');
+									include('inc/templates/product_item.php');
 								}
 							}
 						?>

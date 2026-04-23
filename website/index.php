@@ -38,7 +38,7 @@
 			if (mysqli_num_rows($prod_results) > 0) {
 				while($row = mysqli_fetch_assoc($prod_results)) {
 					$details = $row['product_details'];
-					include('inc/product_item.php');
+					include('inc/templates/product_item.php');
 				}
 			}
 		}
@@ -59,7 +59,7 @@
         <?php include("../website/inc/navigation.php"); ?>
 
         <!-- Header -->
-        <header class="home" style="background-image: url(/smallmart/website/assets/header.webp)">
+        <header class="home" style="background-image: url(/smallmart/website/assets/misc/header.webp)">
             <div class="content">
                 <p>Large sale for various miniature products! Up to 50% off!!</p>
                 <a href="/smallmart/website/category.php?id=10" class="animate-button-5px"><span>Check it out!</span></a>
@@ -82,21 +82,19 @@
 						if (mysqli_num_rows($collections_result) > 0) {
 							while($row = mysqli_fetch_assoc($collections_result)) {
 								$details = $row['category_details'];
-								include('../website/inc/split_details.php');
-								if (isset($split_details)) {
-									if (isset($split_details["featured"]) && (int)$split_details["featured"] > 0) { ?>
-					<button id="collection-<?php echo $index ?>" onauxclick="ClickLink(event, '/smallmart/website/category?id=<?php echo $row['category_id'] ?>')"
-						onclick="ClickLink(event, '/smallmart/website/category?id=<?php echo $row['category_id'] ?>')"
-						class="collection animate-button-5px" style="order: <?php echo (int)$split_detail[1] ?>">
-                        <div class="image" style="background-image: url(<?php echo $row['category_image'] ?>)"></div>
-                        <div class="title">
-                            <h1><?php echo $row['category_name'] ?></h1>
-                            <a class="animate-button-2px" href="/smallmart/website/category?id=<?php echo $row['category_id'] ?>"><span>View Collection</span></a>
-                        </div>
-					</button>
-									<?php
-										$index++;
-									}
+								$split_details = SplitDetails($details);
+								if (isset($split_details["featured"]) && (int)$split_details["featured"] > 0) { ?>
+				<button id="collection-<?php echo $index ?>" onauxclick="ClickLink(event, '/smallmart/website/category?id=<?php echo $row['category_id'] ?>')"
+					onclick="ClickLink(event, '/smallmart/website/category?id=<?php echo $row['category_id'] ?>')"
+					class="collection animate-button-5px" style="order: <?php echo (int)$split_detail[1] ?>">
+					<div class="image" style="background-image: url(<?php echo $row['category_image'] ?>)"></div>
+					<div class="title">
+						<h1><?php echo $row['category_name'] ?></h1>
+						<a class="animate-button-2px" href="/smallmart/website/category?id=<?php echo $row['category_id'] ?>"><span>View Collection</span></a>
+					</div>
+				</button>
+								<?php
+									$index++;
 								}
 							}
 						}
@@ -173,7 +171,7 @@
 									$product_result = $sql->get_result();
 									$product_row = mysqli_fetch_assoc($product_result);
 
-									include('inc/home_review.php');
+									include('inc/templates/home_review.php');
 						
 								}
 							}

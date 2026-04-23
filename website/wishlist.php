@@ -19,7 +19,7 @@
             $user_result = $sql->get_result();
 
             if (mysqli_num_rows($user_result) > 0) {
-                include('inc/wishlist_pagination.php');
+                include('operations/product/wishlist_pagination.php');
                 $reload = true;
             } else {
                 // Something is wrong with the user account, forcefully log them out
@@ -68,7 +68,7 @@
                                 $row = mysqli_fetch_assoc($product_result);
 
                                 $details = $row['product_details'];
-					            include('inc/product_item.php');
+					            include('inc/templates/product_item.php');
                             } ?>
                 </div>
                 <p class="product-no">Showing <b><?php echo max(0, min(1, mysqli_num_rows($wishlist_result))) + $offset; ?> - <?php echo mysqli_num_rows($wishlist_result) + $offset; ?></b> of <b><?php echo $total_products; ?></b> products</p>

@@ -58,7 +58,7 @@
         <?php include("../website/inc/navigation.php"); ?>
 
         <!-- Header -->
-        <header class="small" style="background-image: url(/smallmart/website/assets/header.webp)">
+        <header class="small" style="background-image: url(/smallmart/website/assets/misc/header.webp)">
 			<div class="bg-colour" style="background-color: #F200FF"></div>
             <h1 class="title" style="background-color: #DC0293; box-shadow: 0px 5px 0px #BA0060; color: white">
 				CONTACT US

@@ -21,7 +21,7 @@
             $images = explode(',', $product_row['product_image']);
 
             $details = $product_row['product_details'];
-            include('../website/inc/split_details.php');
+            $split_details = SplitDetails($details);
 
             // Getting variants
             if (isset($split_details['variants'])) {
@@ -227,7 +227,7 @@
                     <?php
                         if (mysqli_num_rows($reviews_result) > 0) {
 							while($row = mysqli_fetch_assoc($reviews_result)) {
-                                include('../website/inc/review.php');
+                                include('../website/inc/templates/review.php');
                             }
                         } else { ?>
                         <h1 id="no-reviews">This product has no reviews.</h1>
@@ -258,7 +258,7 @@
                             if (mysqli_num_rows($prod_results) > 0) {
                                 while($row = mysqli_fetch_assoc($prod_results)) {
                                     $details = $row['product_details'];
-                                    include('inc/product_item.php');
+                                    include('inc/templates/product_item.php');
                                 }
                             }
                         ?>
@@ -273,7 +273,7 @@
                 <button class="animate-button-5px" onclick="CloseImageViewer()"><span class="material-symbols-outlined">close</span></button>
             </div>
             <div id="viewer-main-image">
-                <img src="/smallmart/website/assets/header.webp">
+                <img src="/smallmart/website/assets/misc/header.webp">
             </div>
             <!-- Other images available to view -->
             <div id="viewer-images">

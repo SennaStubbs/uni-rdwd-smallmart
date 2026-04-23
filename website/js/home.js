@@ -6,7 +6,7 @@ async function LoadMoreRecentReviews() {
     const formData = new FormData();
     formData.append("offset", reviewsCount);
 
-    await fetch(window.location.origin + "/smallmart/website/operations/home_get_reviews", {
+    await fetch(window.location.origin + "/smallmart/website/operations/product/home_get_reviews", {
         method: 'POST',
         body: formData,
     })

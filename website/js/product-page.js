@@ -15,7 +15,7 @@ async function LoadMoreReviews() {
     formData.append("product-id", productId);
     formData.append("offset", reviewsCount);
 
-    await fetch(window.location.origin + "/smallmart/website/operations/get_reviews", {
+    await fetch(window.location.origin + "/smallmart/website/operations/product/get_reviews", {
         method: 'POST',
         body: formData,
     })

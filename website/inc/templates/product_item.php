@@ -1,6 +1,6 @@
 
 <?php
-    include('../website/inc/split_details.php');
+    $split_details = SplitDetails($details);
 
     // Get review ratings
     $stmt = "SELECT COUNT(review_id) as review_count, AVG(review_rating) review_average
