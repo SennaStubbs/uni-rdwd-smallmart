@@ -13,6 +13,7 @@ This project was developed for the **Responsive Dynamic Web Development** module
 All accounts except for '**testingaccount@example.com**' use the password '*bleh*'. The **testingaccount@example.com** account uses the password '*this I5 4 VAL1D PASSWORD!!*'.
 
 ---
+
 # Tasks that were not completed
 - Category / search sorting (featured, newest, oldest)
 - Review sorting (highest, lowest, newest, oldest)
