@@ -13,15 +13,6 @@ This project was developed for the **Responsive Dynamic Web Development** module
 All accounts except for '**testingaccount@example.com**' use the password '*bleh*'. The **testingaccount@example.com** account uses the password '*this I5 4 VAL1D PASSWORD!!*'.
 
 ---
-
-# To Do
-- Animated web elements
-
-## Optional tasks
-- Re-organise files and directories
-    - Move re-used PHP code into 'functions.php'
-- Sort each product into the correct category(ies)
-
 # Tasks that were not completed
 - Category / search sorting (featured, newest, oldest)
 - Review sorting (highest, lowest, newest, oldest)
@@ -40,3 +31,4 @@ These are notes that were taken during development to address certain issues tha
 - The pagination on any page is not properly scalable, easily going off the screen on devices with smaller screens.
 - There is no system for when a user forgets their password.
 - No testing for common web attacks was performed.
+- The category details leaves room for custom images as the header background for each category.
