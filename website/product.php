@@ -85,11 +85,11 @@
                                 $imageIndex = 0;
                                 foreach ($split_variants[array_keys($split_variants)[$selected_variant != "" ? $selected_variant - 1 : 0]] as $v_image) {
                                     if ($index == 1 ) {?>
-                        <button class="main-image-container" onclick="OpenImageViewer(<?php echo $imageIndex ?>)">
+                        <button class="main-image-container animate-button-6px" onclick="OpenImageViewer(<?php echo $imageIndex ?>)">
                             <img class="image" src="<?php echo $v_image ?>" />
                         </button>
                                 <?php } else { ?>
-                        <button class="image-container" onclick="OpenImageViewer(<?php echo $imageIndex ?>)">
+                        <button class="image-container animate-button-6px" onclick="OpenImageViewer(<?php echo $imageIndex ?>)">
                             <img class="image" src="<?php echo $v_image ?>" />
                         </button>
                                     <?php }
@@ -102,7 +102,7 @@
                                 foreach ($split_variants as $variant) {
                                     if (($index != $selected_variant && $selected_variant != "") || ($selected_variant == "" && $index != 1)) {
                                         foreach ($variant as $v_image) {?>
-                        <button class="image-container" onclick="OpenImageViewer(<?php echo $imageIndex ?>)">
+                        <button class="image-container animate-button-6px" onclick="OpenImageViewer(<?php echo $imageIndex ?>)">
                             <img class="image" src="<?php echo $v_image ?>" />
                         </button>
                                     <?php
@@ -118,11 +118,11 @@
                                 $index = 1;
                                 foreach ($images as $image) {
                                     if ($index == 1) { ?>
-                        <button class="main-image-container" onclick="OpenImageViewer(<?php echo $index - 1 ?>)">
+                        <button class="main-image-container animate-button-6px" onclick="OpenImageViewer(<?php echo $index - 1 ?>)">
                             <img class="image" src="<?php echo $image ?>" />
                         </button>
                                     <?php } else { ?>
-                        <button class="image-container" onclick="OpenImageViewer(<?php echo $index - 1 ?>)">
+                        <button class="image-container animate-button-6px" onclick="OpenImageViewer(<?php echo $index - 1 ?>)">
                             <img class="image" src="<?php echo $image ?>" />
                         </button>
                                     <?php }
@@ -184,8 +184,8 @@
                                 <?php
                                     $index = 1;
                                     foreach ($split_variants as $key=>$value) { ?>
-                                        <a <?php if ($selected_variant == $index || ($selected_variant == "" and $index == 1)) { echo 'class="selected"'; } else { echo 'href="/smallmart/website/product?id=' . $productId . '&variant=' . $index . '"'; } ?>>
-                                            <?php echo $key ?>
+                                        <a <?php if ($selected_variant == $index || ($selected_variant == "" and $index == 1)) { echo 'class="selected"'; } else { echo 'class="animate-button-3px" href="/smallmart/website/product?id=' . $productId . '&variant=' . $index . '"'; } ?>>
+                                            <span><?php echo $key ?></span>
                                         </a>
                                         <?php
                                         $index++;
@@ -204,7 +204,7 @@
                             $sql->execute();
                             $wishlist_result = $sql->get_result();
                         ?>
-                        <button class="add-to-wishlist" onclick="AddToWishlist(event, <?php echo $productId ?>)"><span class="material-symbols-outlined <?php if (mysqli_num_rows($wishlist_result) > 0) { echo 'filled'; } ?>">favorite</span><?php if (mysqli_num_rows($wishlist_result) > 0) { echo 'Remove from wishlist'; } else { echo 'Add to wishlist'; } ?></button>
+                        <button class="add-to-wishlist animate-button-3px" onclick="AddToWishlist(event, <?php echo $productId ?>)"><span class="material-symbols-outlined <?php if (mysqli_num_rows($wishlist_result) > 0) { echo 'filled'; } ?>">favorite</span><span><?php if (mysqli_num_rows($wishlist_result) > 0) { echo 'Remove from wishlist'; } else { echo 'Add to wishlist'; } ?></span></button>
                         <div class="divider"></div>
                         <p><?php echo $product_row['product_description'] ?></p>
                     </div>
@@ -232,7 +232,7 @@
                         } else { ?>
                         <h1 id="no-reviews">This product has no reviews.</h1>
                     <?php } ?>
-                    <button id="load-more-reviews" onclick="LoadMoreReviews()">LOAD MORE REVIEWS</button>
+                    <button id="load-more-reviews" class="animate-button-5px" onclick="LoadMoreReviews()"><span>LOAD MORE REVIEWS</span></button>
                 </div>
                 <div class="divider"></div>
                 <div class="related-products">
@@ -270,7 +270,7 @@
         <!-- Product image viewer -->
         <div id="image-viewer" class="hidden">
             <div class="close">
-                <button class="material-symbols-outlined" onclick="CloseImageViewer()">close</button>
+                <button class="animate-button-5px" onclick="CloseImageViewer()"><span class="material-symbols-outlined">close</span></button>
             </div>
             <div id="viewer-main-image">
                 <img src="/smallmart/website/assets/header.webp">

@@ -38,12 +38,12 @@
 					<label for="password" name="password">Password</label>
 					<div>
 					    <input id="password" name="password" type="password" placeholder="Enter password here..." maxlength="30" required>
-                        <button tabindex="-1" type="button" class="visibility material-symbols-outlined" onclick="ToggleInputVisibility(this, event)">visibility</button>
+                        <button tabindex="-1" type="button" class="visibility material-symbols-outlined animate-button-bg" onclick="ToggleInputVisibility(this, event)">visibility</button>
                     </div>
 				</form>
                 <p class="hidden" id="error-message"></p>
-				<p>Don't have an account? <a href="/smallmart/website/sign-up">Sign up here!</a></p>
-				<button form="log-in" type="button" onclick="LogIn(event)">LOG IN</button>
+				<p>Don't have an account? <a href="/smallmart/website/sign-up" class="animate-button-bg-round">Sign up here!</a></p>
+				<button form="log-in" type="button" onclick="LogIn(event)" class="animate-button-4px"><span>LOG IN</span></button>
 			</div>
         </main>
 

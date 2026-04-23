@@ -71,18 +71,20 @@ var selectedImageIndex = 0;
 function OpenImageViewer(imageIndex = 0) {
     viewerContainer.classList.remove('hidden');
     viewerImages.getElementsByTagName('button')[selectedImageIndex].classList.remove('selected');
+    viewerImages.getElementsByTagName('button')[selectedImageIndex].classList.add('animate-button-6px');
 
     selectedImageIndex = imageIndex;
     viewerMainImage.src = imagesList[selectedImageIndex];
 
     viewerImagesCounter.innerHTML = (selectedImageIndex + 1) + " of " + imagesList.length;
     viewerImages.getElementsByTagName('button')[selectedImageIndex].classList.add('selected');
+    viewerImages.getElementsByTagName('button')[selectedImageIndex].classList.remove('animate-button-6px');
 }
 
 // Load images into viewer
 var imagesHtml = "";
 for (let [key, image] of Object.entries(imagesList)) {
-    imagesHtml += `<button onclick=OpenImageViewer(` + key + `)><div class="image" style="background-image: url('` + image + `')"></div></button>`;
+    imagesHtml += `<button class="animate-button-6px" onclick=OpenImageViewer(` + key + `)><div class="image" style="background-image: url('` + image + `')"></div></button>`;
 }
 viewerImages.innerHTML += imagesHtml;
 

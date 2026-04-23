@@ -62,17 +62,17 @@
                         <form id="display-name">
                             <label for="user_display_name">Display name:</label>
                             <input id="user_display_name" name="user_display_name" required maxlength="30" value="<?php echo $user_row['user_display_name'] ?>" maxlength="30" disabled>
-                            <button class="change" type="button" onclick="StartChange(this)">Change</button>
-                            <button class="submit hidden" type="button">Submit</button>
-                            <button class="cancel hidden" type="button">Cancel</button>
+                            <button class="change animate-button-3px" type="button" onclick="StartChange(this)"><span>Change</span></button>
+                            <button class="submit animate-button-3px hidden" type="button"><span>Submit</span></button>
+                            <button class="cancel animate-button-3px hidden" type="button"><span>Cancel</span></button>
                             <p class="error-message hidden"></p>
                         </form>
                         <form id="email">
                             <label for="user_email">Email:</label>
                             <input id="user_email" name="user_email" type="email" required value="<?php echo $user_row['user_email'] ?>" maxlength="255" disabled>
-                            <button class="change" type="button" onclick="StartChange(this)">Change</button>
-                            <button class="submit hidden" type="button">Submit</button>
-                            <button class="cancel hidden" type="button">Cancel</button>
+                            <button class="change animate-button-3px" type="button" onclick="StartChange(this)"><span>Change</span></button>
+                            <button class="submit animate-button-3px hidden" type="button"><span>Submit</span></button>
+                            <button class="cancel animate-button-3px hidden" type="button"><span>Cancel</span></button>
                             <p class="error-message hidden"></p>
                         </form>
                     </div>
@@ -81,30 +81,30 @@
                             <label for="user_password">Password:</label>
                             <div>
                                 <input id="user_password" name="user_password" type="password" required value="<?php echo str_repeat('#', 100); ?>" maxlength="30" disabled>
-                                <button tabindex="-1" type="button" class="visibility material-symbols-outlined hidden" onclick="ToggleInputVisibility(this, event)">visibility</button>
+                                <button tabindex="-1" type="button" class="visibility material-symbols-outlined animate-button-bg hidden" onclick="ToggleInputVisibility(this, event)">visibility</button>
                             </div>
-                            <button class="change" type="button" onclick="StartChange(this)">Change</button>
+                            <button class="change animate-button-3px" type="button" onclick="StartChange(this)"><span>Change</span></button>
                         </form>
                         <form id="new_password" class="hidden">
                             <label for="new_user_password">New password:</label>
                             <div>
                                 <input id="new_user_password" name="new_user_password" type="password" required value="" maxlength="30">
-                                <button tabindex="-1" type="button" class="visibility material-symbols-outlined" onclick="ToggleInputVisibility(this, event)">visibility</button>
+                                <button tabindex="-1" type="button" class="visibility material-symbols-outlined animate-button-bg" onclick="ToggleInputVisibility(this, event)">visibility</button>
                             </div>
                         </form>
                         <form id="confirm_password" class="hidden">
                             <label for="confirm_user_password">Confirm new password:</label>
                             <div>
                                 <input id="confirm_user_password" name="confirm_user_password" type="password" required value="" maxlength="30">
-                                <button tabindex="-1" type="button" class="visibility material-symbols-outlined" onclick="ToggleInputVisibility(this, event)">visibility</button>
+                                <button tabindex="-1" type="button" class="visibility material-symbols-outlined animate-button-bg" onclick="ToggleInputVisibility(this, event)">visibility</button>
                             </div>
-                            <button class="submit hidden" type="button">Submit</button>
-                            <button class="cancel hidden" type="button">Cancel</button>
+                            <button class="submit animate-button-3px hidden" type="button"><span>Submit</span></button>
+                            <button class="cancel animate-button-3px hidden" type="button"><span>Cancel</span></button>
                             <p class="error-message hidden"></p>
                         </form>
                     </div>
                 </div>
-                <button id="log-out" onclick="window.location.href='/smallmart/website/operations/user/log-out'">LOG OUT</button>
+                <button id="log-out" onclick="window.location.href='/smallmart/website/operations/user/log-out'" class="animate-button-5px"><span>LOG OUT</span></button>
             </div>
         </main>
 

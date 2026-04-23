@@ -73,22 +73,22 @@
                 </div>
                 <p class="product-no">Showing <b><?php echo max(0, min(1, mysqli_num_rows($wishlist_result))) + $offset; ?> - <?php echo mysqli_num_rows($wishlist_result) + $offset; ?></b> of <b><?php echo $total_products; ?></b> products</p>
                 <div class="pagination">
-                    <a class="direction prev <?php if ($page <= 1): ?>hidden<?php endif; ?>" href="?<?php
+                    <a class="direction prev <?php if ($page <= 1): ?>hidden<?php endif; ?> animate-button-2px" href="?<?php
                         echo http_build_query(array(
                             'page' => $page - 1
-                        )) ?>">PREV</a>
+                        )) ?>"><span>PREV</span></a>
                     <?php for ($i = 1; $i <= $total_pages; $i++): ?>
-                        <a class="number <?php if ($i === $page) echo 'active'; ?>" href="?<?php
+                        <a class="number <?php if ($i === $page) echo 'active'; ?> animate-button-2px" href="?<?php
                         echo http_build_query(array(
                             'page' => $i
                         )) ?>">
-                            <?php echo $i; ?>
+                            <span><?php echo $i; ?></span>
                         </a>
                     <?php endfor; ?>
-                    <a class="direction next <?php if ($page >= $total_pages): ?>hidden<?php endif; ?>" href="?<?php
+                    <a class="direction next <?php if ($page >= $total_pages): ?>hidden<?php endif; ?> animate-button-2px" href="?<?php
                         echo http_build_query(array(
                             'page' => $page + 1
-                        )) ?>">NEXT</a>
+                        )) ?>"><span>NEXT</span></a>
                 </div>
                     <?php } else { ?>
                 </div>

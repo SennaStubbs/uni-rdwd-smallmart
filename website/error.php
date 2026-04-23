@@ -26,7 +26,7 @@
             <img src="/smallmart/website/assets/misc/pug.png">
             <h1>This page does not exist!</h1>
             <p>Sorry :/</p>
-            <a onclick="history.back()">GO BACK</a>
+            <a onclick="history.back()" class="animate-button-5px"><span>GO BACK</span></a>
         </main>
 
 		<!-- Footer -->

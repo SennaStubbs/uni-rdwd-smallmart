@@ -61,7 +61,8 @@ body {
     user-select: none;
 }
 
-.material-symbols-outlined.filled {
+.material-symbols-outlined.filled,
+ .filled > .material-symbols-outlined {
     user-select: none;
     font-variation-settings: 'FILL' 1;
 }
@@ -644,8 +645,8 @@ footer p {
 }
 
 #back-to-top {
-    position: absolute;
-    top: -5px;
+    position: absolute !important;
+    top: -5px !important;
 
     width: calc(100% - 185px - 185px);
     max-width: 1360px;
@@ -656,19 +657,31 @@ footer p {
 
     background-color: var(--web-tone-2);
 
+    color: var(--web-shadow-2);
     box-shadow: 0px 5px 0px var(--web-shadow-2);
 
     border: none;
     border-radius: 5px;
 
-    color: var(--text-light);
-    font-size: 24px;
-    font-weight: 700;
-    text-shadow: 0px 1px 0px var(--text-shadow-thin);
 
     cursor: pointer;
 
     box-sizing: border-box;
+}
+
+#back-to-top:hover {
+    top: -2px !important;
+}
+
+#back-to-top:active {
+    top: -0px !important;
+}
+
+#back-to-top span {
+    color: var(--text-light);
+    font-size: 24px;
+    font-weight: 700;
+    text-shadow: 0px 1px 0px var(--text-shadow-thin);
 }
 
 /* Hidden 'back-to-top' footer */
@@ -698,9 +711,13 @@ main {
 
     padding-top: 12px;
 
-    box-sizing: border-box;
+    color: var(--web-shadow-4);
+    box-shadow: 0px 5px 0px;
+    border-radius: 5px;
 
+    overflow: hidden;
     cursor: pointer;
+    box-sizing: border-box;
 }
 
 .product * {
@@ -716,10 +733,9 @@ main {
     padding: 5px;
 
     background-color: var(--web-tone-5);
-    
     border-radius: 3px;
-
-    box-shadow: 0px 2px 0px var(--web-shadow-5);
+    color: var(--web-shadow-5);
+    box-shadow: 0px 2px 0px;
 
     box-sizing: border-box;
 }
@@ -746,7 +762,8 @@ main {
 
     background-color: var(--web-tone-4);
     border-radius: 5px;
-    box-shadow: 0px 5px 0px var(--web-shadow-4);
+
+    color: var(--text-dark);
 
     /* box-sizing: border-box; */
 }
@@ -869,21 +886,26 @@ main {
 }
 
 .product .details .bottom button.favourite {
+    height: fit-content;
+
     margin: 0;
     padding: 3px;
     
     background-color: var(--web-tone-2);
-
     border: none;
     border-radius: 5px;
+    color: var(--web-shadow-2);
+    box-shadow: 0px 2px 0px;
 
-    box-shadow: 0px 2px 0px var(--web-shadow-2);
+    cursor: pointer;
+}
+
+.product .details .bottom button.favourite span {
+    display: block;
 
     color: var(--text-light);
     font-size: 24px;
     text-shadow: 0px 1px 0px var(--text-shadow-thin);
-
-    cursor: pointer;
 }
 
 /* Top bar directly beneath header */
@@ -933,8 +955,108 @@ p a:active {
     cursor: pointer;
 }
 
-/* Responsiveness */
+/* Button animations */
+/* Class names repesent the box shadow's default offset */
+/* E.g. '.animate-button-5px' == default box shadow: '0px 5px 0px ___' */
+/* Done for correct offsetting */
 
+.animate-button-2px,
+.animate-button-3px,
+.animate-button-4px,
+.animate-button-5px,
+.animate-button-6px {
+    position: relative;
+    top: 0px;
+
+    transition: top .2s ease-in-out,
+                box-shadow .2s ease-in-out;
+}
+
+/* 2 pixel offset */
+.animate-button-2px:hover {
+    top: 1px !important;
+    box-shadow: 0px 1px !important;
+}
+
+.animate-button-2px:active {
+    top: 2px !important;
+    box-shadow: 0px 0px !important;
+}
+
+/* 3 pixel offset */
+.animate-button-3px:hover {
+    top: 1px !important;
+    box-shadow: 0px 2px !important;
+}
+
+.animate-button-3px:active {
+    top: 3px !important;
+    box-shadow: 0px 0px !important;
+}
+
+/* 4 pixel offset */
+.animate-button-4px:hover {
+    top: 2px !important;
+    box-shadow: 0px 2px !important;
+}
+
+.animate-button-4px:active {
+    top: 4px !important;
+    box-shadow: 0px 0px !important;
+}
+
+/* 5 pixel offset */
+.animate-button-5px:hover {
+    top: 3px !important;
+    box-shadow: 0px 2px !important;
+}
+
+.animate-button-5px:active {
+    top: 5px !important;
+    box-shadow: 0px 0px !important;
+}
+
+/* 6 pixel offset */
+.animate-button-6px:hover {
+    top: 2px !important;
+    box-shadow: 0px 4px !important;
+}
+
+.animate-button-6px:active {
+    top: 6px !important;
+    box-shadow: 0px 0px !important;
+}
+
+/* Other buttons */
+.animate-button-bg,
+.animate-button-bg-round,
+.animate-button-bg-light {
+    transition: background-color .2s ease-in-out;
+}
+
+.animate-button-bg:hover,
+.animate-button-bg-round:hover {
+    background-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+.animate-button-bg:active,
+.animate-button-bg-round:active {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.animate-button-bg-round {
+    border-radius: 5px;
+}
+
+.animate-button-bg-light:hover {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.animate-button-bg-light:active {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Responsiveness */
 /* Tablet */
 @media screen and (max-width: 1280px) {
     /* Navigation bar */
@@ -1028,6 +1150,9 @@ p a:active {
 
     #back-to-top {
         height: 45px;
+    }
+
+    #back-to-top span {
         font-size: 32px;
     }
 }
@@ -1138,7 +1263,17 @@ p a:active {
 
     #back-to-top {
         top: -24px;
+    }
 
+    #back-to-top:hover {
+        top: -21px;
+    }
+
+    #back-to-top:active {
+        top: -19px;
+    }
+
+    #back-to-top span {
         font-size: 36px;
     }
 }

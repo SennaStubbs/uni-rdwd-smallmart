@@ -68,7 +68,7 @@ if (document.body.clientHeight < 1500) {
 // Button that behaviours like an anchor tag, with the option to open in a new tab
 function ClickLink(event, url, openInNewTab = false) {
     // Make sure the user is not trying to press a different link
-    if (event.target.tagName != "A" && event.button != 2 && !event.target.classList.contains('favourite')) {
+    if (event.target.tagName != "A" && event.button != 2 && !event.target.classList.contains('favourite') && !event.target.parentElement.classList.contains('favourite')) {
         event.preventDefault();
         
         if (openInNewTab == true || event.button == 1)
@@ -125,6 +125,9 @@ function ToggleInputVisibility(button, event) {
 // Add item to wishlist
 async function AddToWishlist(event, productId, reload) {
     let button = event.target;
+    if (button.tagName.toLowerCase() == 'span')
+        button = button.parentElement;
+    console.log(button);
 
     let formData = new FormData();
     formData.append('product-id', productId);
@@ -138,7 +141,7 @@ async function AddToWishlist(event, productId, reload) {
         console.log(data);
         if (data == "added") {
             if (!button.classList.contains('favourite')) {
-                button.innerHTML = '<span class="material-symbols-outlined filled">favorite</span>Remove from wishlist';
+                button.innerHTML = '<span class="material-symbols-outlined filled">favorite</span><span>Remove from wishlist</span>';
             }
             if (reload)
                 window.location.reload();
@@ -152,7 +155,7 @@ async function AddToWishlist(event, productId, reload) {
         }
         else if (data == "removed") {
             if (!button.classList.contains('favourite')) {
-                button.innerHTML = '<span class="material-symbols-outlined">favorite</span>Add to wishlist';
+                button.innerHTML = '<span class="material-symbols-outlined">favorite</span><span>Add to wishlist</span>';
             }
             if (reload)
                 window.location.reload();

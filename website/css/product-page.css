@@ -164,24 +164,31 @@
     padding: 3px 6px;
 
     background-color: var(--web-tone-3);
+    color: var(--web-shadow-3);
     box-shadow: 0px 3px 0px var(--web-shadow-3);
     border: none;
     border-radius: 10px;
 
-    color: var(--text-light);
-    font-size: 24px;
-    text-shadow: 0px 1px 0px var(--text-shadow-thin);
     text-decoration: none;
 
     user-select: none;
     cursor: pointer;
 }
 
+.product-page .product-info .variants .variants-grid a span {
+    color: var(--text-light);
+    font-size: 24px;
+    text-shadow: 0px 1px 0px var(--text-shadow-thin);
+}
+
 .product-page .product-info .variants .variants-grid a.selected {
     top: 2px;
 
     background-color: var(--web-tone-2);
-    box-shadow: 0px 1px 0px var(--web-shadow-2);
+    color: var(--web-shadow-2);
+    box-shadow: 0px 1px 0px;
+    
+    cursor: default !important;
 }
 
 /* Add to wishlist button */
@@ -196,19 +203,21 @@
     padding: 4px;
 
     background-color: var(--web-tone-2);
-    box-shadow: 0px 3px 0px var(--web-shadow-2);
+    color: var(--web-shadow-2);
+    box-shadow: 0px 3px 0px;
     border: none;
     border-radius: 5px;
-
-    color: var(--text-light);
-    font-size: 24px;
-    text-shadow: 0px 1px 0px var(--text-shadow-thin);
 
     user-select: none;
     cursor: pointer;
 }
+main.product-page .product-info .add-to-wishlist span {
+    color: var(--text-light);
+    font-size: 24px;
+    text-shadow: 0px 1px 0px var(--text-shadow-thin);
+}
 
-.product-page .product-info .add-to-wishlist .material-symbols-outlined {
+.product-page .product-info .add-to-wishlist span.material-symbols-outlined {
     font-size: 28px;
 }
 
@@ -238,7 +247,8 @@
     margin: 0;
     padding: 10px;
 
-    box-shadow: 0px 6px 0px var(--web-shadow-5);
+    color: var(--web-shadow-5);
+    box-shadow: 0px 6px 0px;
 
     border: none;
     border-radius: 10px;
@@ -379,21 +389,24 @@
     padding: 4px 10px;
 
     background-color: var(--web-tone-2);
-    box-shadow: 0px 5px 0px var(--web-shadow-2);
+    color: var(--web-shadow-2);
+    box-shadow: 0px 5px 0px;
     
     border: none;
     border-radius: 5px;
-
-    color: var(--text-light);
-    text-shadow: 0px 1px 0px var(--text-shadow-thin);
-    font-size: 36px;
-    font-weight: 700;
-    text-align: center;
 
     cursor: pointer;
     user-select: none;
 
     box-sizing: border-box;
+}
+
+#load-more-reviews span {
+    color: var(--text-light);
+    text-shadow: 0px 1px 0px var(--text-shadow-thin);
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
 }
 
 /* No reviews to show */
@@ -479,16 +492,21 @@
     width: fit-content;
 
     background-color: var(--web-tone-2);
-    box-shadow: 0px 5px 0px var(--web-shadow-2);
+    color: var(--web-shadow-2);
+    box-shadow: 0px 5px 0px;
     border: none;
     border-radius: 100%;
-    
-    color: var(--text-light);
-    text-shadow: 0px 1px 0px var(--text-shadow-thin);
-    font-size: 50px;
 
     user-select: none;
     cursor: pointer;
+}
+
+#image-viewer .close button span {
+    display: block;
+
+    color: var(--text-light);
+    text-shadow: 0px 1px 0px var(--text-shadow-thin);
+    font-size: 50px;
 }
 
 /* Main image */
@@ -561,7 +579,8 @@
     margin: 0;
     padding: 5px;
 
-    box-shadow: 0px 6px 0px var(--web-shadow-5);
+    color: var(--web-shadow-5);
+    box-shadow: 0px 6px 0px;
 
     border: none;
     border-radius: 5px;
@@ -582,9 +601,10 @@
 }
 
 #viewer-images button.selected {
-    top: 4px;
+    top: 3px;
 
-    box-shadow: 0px 2px 0px var(--web-shadow-5);
+    box-shadow: 0px 3px 0px;
+    cursor: default !important;
 }
 
 /* Responsiveness */
@@ -686,7 +706,9 @@
         height: 50px;
 
         padding-right: 7px;
+    }
 
+    main.product-page .product-info .add-to-wishlist span {
         font-size: 40px;
     }
 
@@ -708,7 +730,7 @@
         margin-top: 8px;
     }
 
-    .product-page .product-info .variants .variants-grid a {
+    .product-page .product-info .variants .variants-grid a span {
         font-size: 32px;
     }
 
@@ -726,7 +748,7 @@
     }
 
     /* Load more reviews button */
-    #load-more-reviews {
+    #load-more-reviews span {
         font-size: 48px;
     }
 }

@@ -38,15 +38,19 @@
     padding: 3px 8px;
     
     background-color: var(--web-tone-2);
-    box-shadow: 0px 4px 0px var(--web-shadow-2);
+    color: var(--web-shadow-2);
+    box-shadow: 0px 4px 0px;
     border-radius: 5px;
 
-    color: var(--text-light);
-    font-weight: bold;
     text-decoration: solid;
 
     cursor: pointer;
     user-select: none;
+}
+
+.about a span {
+    color: var(--text-light);
+    font-weight: bold;
 }
 
 /* Contact page */

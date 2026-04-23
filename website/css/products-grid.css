@@ -142,15 +142,11 @@ header.search h2.search-title {
     padding: 0px 8px 0px 3px;
 
     background-color: var(--web-tone-2);
+    color: var(--web-shadow-2);
     box-shadow: 0px 3px 0px var(--web-shadow-2);
     border: none;
     border-radius: 5px;
     outline: none;
-
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--text-light);
-    text-shadow: 0px 2px 0px var(--text-shadow-thin);
 
     box-sizing: border-box;
 
@@ -160,6 +156,14 @@ header.search h2.search-title {
 
 .grid-spacer .numbers .filters-dropdown-button .material-symbols-outlined {
     font-size: 34px;
+    color: var(--text-light);
+}
+
+.grid-spacer .numbers .filters-dropdown-button span:not(.material-symbols-outlined) {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-light);
+    text-shadow: 0px 2px 0px var(--text-shadow-thin);
 }
 
 /* Products grid container */
@@ -286,7 +290,7 @@ header.search h2.search-title {
     font-size: 24px;
 }
 
-.products-grid-main .products-grid .product .details .bottom button.favourite {
+.products-grid-main .products-grid .product .details .bottom button.favourite span {
     font-size: 28.5px;
 }
 
@@ -346,12 +350,16 @@ header.search h2.search-title {
 
     border-radius: 5px;
 
-    box-shadow: 0px 2px 0px var(--web-shadow-3);
+    color: var(--web-shadow-3);
+    box-shadow: 0px 2px 0px;
 
+    text-decoration: none;
+}
+
+.products-section .pagination a span {
     color: var(--text-light);
     font-size: 24px;
     font-weight: bold;
-    text-decoration: none;
     text-shadow: 0px 1px 0px var(--text-shadow-thin);
 }
 
@@ -374,7 +382,7 @@ header.search h2.search-title {
 .products-section .pagination a.active {
     background-color: var(--web-tone-2);
 
-    box-shadow: 0px 2px 0px var(--web-shadow-2);
+    color: var(--web-shadow-2);
 }
 
 .products-section .pagination a.direction {
@@ -386,9 +394,14 @@ header.search h2.search-title {
 
     background-color: var(--web-tone-2);
 
-    box-shadow: 0px 2px 0px var(--web-shadow-2);
+    color: var(--web-shadow-2);
+    box-shadow: 0px 2px 0px;
 
     box-sizing: border-box;
+}
+
+.products-section .pagination a.direction span {
+    color: var(--text-light);
 }
 
 .products-section .pagination a.direction.next {
@@ -541,6 +554,7 @@ header.search h2.search-title {
 
     box-sizing: border-box;
     user-select: none;
+    cursor: pointer;
 }
 
 #filters-dropdown-menu .container .contents label span {
@@ -625,7 +639,7 @@ header.search h2.search-title {
         padding: 9px;
     }
 
-    .products-section .pagination a {
+    .products-section .pagination a span {
         font-size: 36px;
     }
 

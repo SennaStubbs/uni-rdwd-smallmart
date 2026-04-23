@@ -78,7 +78,7 @@
                     essence of their real-life counterparts.
                 </p>
                 <p><strong>Want to contact us?</strong></p>
-                <a href="/smallmart/website/contact-us">Click to visit!</a>
+                <a href="/smallmart/website/contact-us" class="animate-button-4px"><span>Click to visit!</span></a>
             </div>
         </main>
 

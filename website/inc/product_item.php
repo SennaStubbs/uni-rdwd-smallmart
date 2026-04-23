@@ -13,7 +13,7 @@
     $review_row = mysqli_fetch_assoc($review_results);
 ?>
 
-<div class="product" id="product-<?php echo $row['product_id'] ?>-<?php echo $row['category_id'] ?>"
+<div class="product animate-button-5px" id="product-<?php echo $row['product_id'] ?>-<?php echo $row['category_id'] ?>"
     style="order: <?php if (isset($split_details["featured"])) { echo (int)$split_details["featured"]; } else { echo '999999999'; } ?>"
     onauxclick="ClickLink(event, '/smallmart/website/product.php?id=<?php echo $row['product_id'] ?>')"
     onclick="ClickLink(event, '/smallmart/website/product.php?id=<?php echo $row['product_id'] ?>')">
@@ -63,12 +63,12 @@
                 $sql->execute();
                 $product_wishlist_result = $sql->get_result();
             ?>
-            <button class="favourite material-symbols-outlined <?php if (mysqli_num_rows($product_wishlist_result) > 0) { echo 'filled'; } ?>" onclick="AddToWishlist(event, <?php echo $row['product_id']; if (isset($reload)) { echo ', ' . htmlspecialchars($reload); } ?>)">
-                favorite
+            <button class="favourite animate-button-2px <?php if (mysqli_num_rows($product_wishlist_result) > 0) { echo 'filled'; } ?>" onclick="AddToWishlist(event, <?php echo $row['product_id']; if (isset($reload)) { echo ', ' . htmlspecialchars($reload); } ?>)">
+                <span class="material-symbols-outlined">favorite</span>
             </button>
         </div>
     </div>
-    <div class="image-container">
+    <div class="image-container animate-button-2px">
         <div class="image" style="background-image: url(<?php echo explode(',', $row['product_image'], 2)[0] ?>)"></div>
     </div>
 </div>

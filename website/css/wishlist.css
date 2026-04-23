@@ -90,15 +90,17 @@ main.wishlist .pagination a {
     aspect-ratio: 1;
 
     background-color: var(--web-tone-3);
-
     border-radius: 5px;
+    color: var(--web-shadow-3);
+    box-shadow: 0px 2px 0px;
 
-    box-shadow: 0px 2px 0px var(--web-shadow-3);
+    text-decoration: none;
+}
 
+main.wishlist .pagination a span {
     color: var(--text-light);
     font-size: 24px;
     font-weight: bold;
-    text-decoration: none;
     text-shadow: 0px 1px 0px var(--text-shadow-thin);
 }
 
@@ -121,7 +123,8 @@ main.wishlist .pagination a.number:last-child {
 main.wishlist .pagination a.active {
     background-color: var(--web-tone-2);
 
-    box-shadow: 0px 2px 0px var(--web-shadow-2);
+    color: var(--web-shadow-2);
+    box-shadow: 0px 2px 0px;
 }
 
 main.wishlist .pagination a.direction {
@@ -133,9 +136,14 @@ main.wishlist .pagination a.direction {
 
     background-color: var(--web-tone-2);
 
-    box-shadow: 0px 2px 0px var(--web-shadow-2);
+    color: var(--web-shadow-2);
+    box-shadow: 0px 2px 0px;
 
     box-sizing: border-box;
+}
+
+main.wishlist .pagination a.direction span {
+    color: var(--text-light);
 }
 
 main.wishlist .pagination a.direction.next {
@@ -180,7 +188,7 @@ main.wishlist .empty-wishlist {
         padding: 9px;
     }
 
-    main.wishlist .pagination a {
+    main.wishlist .pagination a span {
         font-size: 36px;
     }
 

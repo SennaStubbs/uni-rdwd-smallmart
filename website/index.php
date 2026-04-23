@@ -62,7 +62,7 @@
         <header class="home" style="background-image: url(/smallmart/website/assets/header.webp)">
             <div class="content">
                 <p>Large sale for various miniature products! Up to 50% off!!</p>
-                <a href="/smallmart/website/category.php?id=10">Check it out!</a>
+                <a href="/smallmart/website/category.php?id=10" class="animate-button-5px"><span>Check it out!</span></a>
             </div>
         </header>
 
@@ -87,11 +87,11 @@
 									if (isset($split_details["featured"]) && (int)$split_details["featured"] > 0) { ?>
 					<button id="collection-<?php echo $index ?>" onauxclick="ClickLink(event, '/smallmart/website/category?id=<?php echo $row['category_id'] ?>')"
 						onclick="ClickLink(event, '/smallmart/website/category?id=<?php echo $row['category_id'] ?>')"
-						class="collection" style="order: <?php echo (int)$split_detail[1] ?>">
+						class="collection animate-button-5px" style="order: <?php echo (int)$split_detail[1] ?>">
                         <div class="image" style="background-image: url(<?php echo $row['category_image'] ?>)"></div>
                         <div class="title">
                             <h1><?php echo $row['category_name'] ?></h1>
-                            <a href="/smallmart/website/category?id=<?php echo $row['category_id'] ?>">View Collection</a>
+                            <a class="animate-button-2px" href="/smallmart/website/category?id=<?php echo $row['category_id'] ?>"><span>View Collection</span></a>
                         </div>
 					</button>
 									<?php
@@ -113,7 +113,7 @@
                     <div class="row-title">
                         <span class="material-symbols-outlined">star_shine</span>
                         <span>FEATURED</span>
-                        <a href="/smallmart/website/category?id=8">View All</a>
+                        <a href="/smallmart/website/category?id=8" class="animate-button-5px"><span>View All</span></a>
                     </div>
                     <div class="products-container">
 						<?php LoadProducts($dbconnect, 8); ?>
@@ -125,7 +125,7 @@
                     <div class="row-title">
                         <span class="material-symbols-outlined">stars</span>
                         <span>NEWLY ADDED</span>
-                        <a href="/smallmart/website/category?id=9">View All</a>
+                        <a href="/smallmart/website/category?id=9" class="animate-button-5px"><span>View All</span></a>
                     </div>
                     <div class="products-container">
 						<?php LoadProducts($dbconnect, 9); ?>
@@ -137,7 +137,7 @@
                     <div class="row-title">
                         <span class="material-symbols-outlined" style="width: 0.75em; margin-left: -0.25em">attach_money</span>
                         <span>ON SALE</span>
-                        <a href="/smallmart/website/category?id=10">View All</a>
+                        <a href="/smallmart/website/category?id=10" class="animate-button-5px"><span>View All</span></a>
                     </div>
                     <div class="products-container">
 						<?php LoadProducts($dbconnect, 10); ?>
@@ -178,7 +178,7 @@
 								}
 							}
 						?>
-						<button id="load-more-reviews" onclick="LoadMoreRecentReviews()">Load More Reviews</button>
+						<button id="load-more-reviews" onclick="LoadMoreRecentReviews()" class="animate-button-5px"><span>Load More Reviews</span></button>
                     </div>
                 </div>
             </div>

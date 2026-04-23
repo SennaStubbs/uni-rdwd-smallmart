@@ -32,17 +32,17 @@
 					<label for="password" name="password">Password</label>
                     <div>
 					    <input id="password" name="password" type="password" placeholder="Enter password here..." maxlength="30" required>
-                        <button tabindex="-1" type="button" class="visibility material-symbols-outlined" onclick="ToggleInputVisibility(this, event)">visibility</button>
+                        <button tabindex="-1" type="button" class="visibility material-symbols-outlined animate-button-bg" onclick="ToggleInputVisibility(this, event)">visibility</button>
                     </div>
                     <label for="confirm-password" name="confirm-password">Confirm Password</label>
                     <div>
 					    <input id="confirm-password" name="confirm_password" type="password" placeholder="Enter password here..." maxlength="30" required>
-                        <button tabindex="-1" type="button" class="visibility material-symbols-outlined" onclick="ToggleInputVisibility(this, event)">visibility</button>
+                        <button tabindex="-1" type="button" class="visibility material-symbols-outlined animate-button-bg" onclick="ToggleInputVisibility(this, event)">visibility</button>
                     </div>
 				</form>
                 <p class="hidden" id="error-message"></p>
-				<p>Already have an account? <a href="/smallmart/website/log-in">Log in here!</a></p>
-				<button form="sign-up" type="button" onclick="SignUp(event)">SIGN UP</button>
+				<p>Already have an account? <a href="/smallmart/website/log-in" class="animate-button-bg-round">Log in here!</a></p>
+				<button form="sign-up" type="button" onclick="SignUp(event)" class="animate-button-4px"><span>SIGN UP</span></button>
 			</div>
         </main>
 

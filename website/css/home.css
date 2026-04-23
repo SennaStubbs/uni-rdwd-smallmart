@@ -46,24 +46,23 @@ header .content a {
     padding: 5px 20px;
 
     background-color: var(--web-tone-4);
-
     border-radius: 5px;
+    color: var(--web-shadow-4);
+    box-shadow: 0px 5px 0px;
 
-    box-shadow: 0px 5px 0px var(--web-shadow-4);
-
-    color: var(--text-dark);
     font-size: 36px;
     font-weight: 700;
     text-decoration: none;
     text-align: center;
-
     text-shadow: 0px 1px 0px var(--text-shadow-thin);
 
     box-sizing: border-box;
-
     user-select: none;
-
     cursor: pointer;
+}
+
+header .content a span {
+    color: var(--text-dark);
 }
 
 header.home {
@@ -139,23 +138,25 @@ main.rows {
 
 /* 'View All' button */
 .row .row-title a {
-    margin-bottom: 5px;
+    margin-bottom: auto;
     padding: 0 4px;
 
     background-color: var(--web-tone-2);
-
     border-radius: 5px;
-
-    color: inherit;
+    color: var(--web-shadow-2);
+    box-shadow: 0px 5px 0px;
+    
     text-decoration: none;
-    font-weight: 400;
-    text-shadow: 0px 1px 0px var(--text-shadow-thin);
-
-    box-shadow: 0px 5px 0px var(--web-shadow-2);
 
     user-select: none;
 
     cursor: pointer;
+}
+
+.row .row-title a span {
+    color: var(--text-light);
+    font-weight: 400;
+    text-shadow: 0px 1px 0px var(--text-shadow-thin);
 }
 
 /* Row products */
@@ -169,6 +170,186 @@ main.rows {
     margin: 0 9px;
 
     box-sizing: border-box;
+}
+
+/* Collections row */
+.row.collections {
+    z-index: 1;
+
+    /* height: 282px !important; */
+    min-height: 282px;
+
+    padding: 0;
+
+    background-color: var(--web-tone-1);
+
+    border-radius: 0;
+
+    box-shadow: 0px 2px 0px var(--web-shadow-1);
+}
+
+.row.collections .container {
+    display: flex;
+    flex-flow: row;
+    gap: 31px;
+
+    top: -68px;
+
+    /* min-height: 300px; */
+
+    padding: 0 22px;
+
+    box-sizing: border-box;
+}
+
+/* Collection */
+.collections .collection {
+    flex: 1;
+
+    display: flex;
+    flex-flow: column;
+    /* gap: -5px; */
+
+    width: 291px;
+    /* height: fit-content; */
+    min-height: 300px;
+
+    margin: 0 0 -15px 0;
+    padding: 0;
+
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    color: var(--web-shadow-4);
+    box-shadow: 0px 5px 0px;
+
+    overflow: hidden;
+
+    user-select: none;
+
+    cursor: pointer;
+}
+
+.collections .collection .image {
+    flex: 0;
+
+    width: 100%;
+    height: 220px;
+    min-height: 220px;
+
+    background-color: var(--web-tone-5);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.collections .collection .title {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
+
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    margin-top: -5px;
+    padding: 8px;
+
+    background-color: var(--web-tone-4);
+
+    box-sizing: border-box;
+}
+
+.collections .collection h1 {
+    width: 100%;
+
+    margin: 0;
+
+    color: var(--text-dark);
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+
+    text-shadow: 0px 1px 0px var(--text-shadow-thin);
+}
+
+.collections .collection a {
+    position: relative;
+
+    width: fit-content;
+    /* height: 100%; */
+
+    padding: 2px 10px;
+
+    background-color: var(--web-tone-2);
+    border-radius: 5px;
+    color: var(--web-shadow-2);
+    box-shadow: 0px 2px 0px;
+
+    font-size: 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px var(--text-shadow-thin);
+}
+
+.collections .collection a span {
+    color: var(--text-light);
+}
+
+/* Slide buttons for collections */
+.collections .slide-buttons {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 45px;
+
+    pointer-events: none;
+}
+
+.collections .slide-buttons button {
+    width: 18px;
+    height: 18px;
+
+    margin: 0;
+    padding: 0;
+
+    background-color: transparent;
+    border: 3px solid #ffffff;
+    border-radius: 100%;
+    outline: none;
+
+    box-shadow: 0px 2px 0px var(--text-shadow-thin);
+
+    box-sizing: border-box;
+
+    cursor: pointer;
+    pointer-events: visible;
+
+    transition: background-color .1s ease-in-out;
+}
+
+.collections .slide-buttons button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.collections .slide-buttons button:active {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.collections .slide-buttons button.selected {
+    background-color: #ffffff;
 }
 
 /* Reviews row */
@@ -302,15 +483,13 @@ main.rows {
     padding: 0px 5px;
 
     background-color: var(--web-tone-2);
-    box-shadow: 0px 5px 0px var(--web-shadow-2);
+    color: var(--web-shadow-2);
+    box-shadow: 0px 5px 0px;
     
     border: none;
     border-radius: 5px;
 
-    color: var(--text-light);
-    text-shadow: 0px 1px 0px var(--text-shadow-thin);
-    font-size: 24px;
-    text-align: center;
+    
 
     cursor: pointer;
     user-select: none;
@@ -318,172 +497,11 @@ main.rows {
     box-sizing: border-box;
 }
 
-/* Collections row */
-.row.collections {
-    z-index: 1;
-
-    /* height: 282px !important; */
-    min-height: 282px;
-
-    padding: 0;
-
-    background-color: var(--web-tone-1);
-
-    border-radius: 0;
-
-    box-shadow: 0px 2px 0px var(--web-shadow-1);
-}
-
-.row.collections .container {
-    display: flex;
-    flex-flow: row;
-    gap: 31px;
-
-    top: -68px;
-
-    /* min-height: 300px; */
-
-    padding: 0 22px;
-
-    box-sizing: border-box;
-}
-
-/* Collection */
-.collections .collection {
-    flex: 1;
-
-    display: flex;
-    flex-flow: column;
-    /* gap: -5px; */
-
-    width: 291px;
-    /* height: fit-content; */
-    min-height: 300px;
-
-    margin: 0 0 -15px 0;
-    padding: 0;
-
-    background-color: transparent;
-    border: none;
-
-    user-select: none;
-
-    cursor: pointer;
-}
-
-.collections .collection .image {
-    flex: 0;
-
-    width: 100%;
-    height: 220px;
-    min-height: 220px;
-
-    background-color: var(--web-tone-5);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
-
-.collections .collection .title {
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 4px;
-
-    position: relative;
-
-    width: 100%;
-    height: 100%;
-
-    margin-top: -5px;
-    padding: 8px;
-
-    background-color: var(--web-tone-4);
-
-    border-radius: 5px;
-
-    box-shadow: 0px 5px 0px var(--web-shadow-4);
-
-    box-sizing: border-box;
-}
-
-.collections .collection h1 {
-    width: 100%;
-
-    margin: 0;
-
-    color: var(--text-dark);
-    font-weight: 700;
+#load-more-reviews span {
+    color: var(--text-light);
+    text-shadow: 0px 1px 0px var(--text-shadow-thin);
     font-size: 24px;
     text-align: center;
-
-    text-shadow: 0px 1px 0px var(--text-shadow-thin);
-}
-
-.collections .collection a {
-    position: relative;
-
-    width: fit-content;
-    /* height: 100%; */
-
-    padding: 2px 10px;
-
-    background-color: var(--web-tone-2);
-
-    border-radius: 5px;
-
-    box-shadow: 0px 2px 0px var(--web-shadow-2);
-
-    color: var(--text-light);
-    font-size: 24px;
-    text-decoration: none;
-
-    text-shadow: 0px 1px 0px var(--text-shadow-thin);
-}
-
-/* Slide buttons for collections */
-.collections .slide-buttons {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    gap: 11px;
-
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    width: 100%;
-    height: 45px;
-
-    pointer-events: none;
-}
-
-.collections .slide-buttons button {
-    width: 18px;
-    height: 18px;
-
-    margin: 0;
-    padding: 0;
-
-    background-color: transparent;
-    border: 3px solid #ffffff;
-    border-radius: 100%;
-    outline: none;
-
-    box-shadow: 0px 2px 0px var(--text-shadow-thin);
-
-    box-sizing: border-box;
-
-    cursor: pointer;
-    pointer-events: visible;
-}
-
-.collections .slide-buttons button.selected {
-    background-color: #ffffff;
 }
 
 /* Responsiveness */
@@ -585,33 +603,14 @@ main.rows {
 
     .collections .collection .title {
         gap: 0px;
-
-        height: initial
     }
 
     .collections .collection h1 {
         font-size: 32px;
     }
 
-    .collections .collection a {
-        position: relative;
-
-        width: fit-content;
-        /* height: 100%; */
-
-        padding: 2px 5px;
-
-        background-color: var(--web-tone-2);
-
-        border-radius: 5px;
-
-        box-shadow: 0px 2px 0px var(--web-shadow-2);
-
-        color: var(--text-light);
+    .collections .collection a span {
         font-size: 32px;
-        text-decoration: none;
-
-        text-shadow: 0px 1px 0px var(--text-shadow-thin);
     }
     
     /* Scrollbar */
@@ -704,10 +703,10 @@ main.rows {
         padding: 4px;
 
         border: none;
+    }
 
-        box-shadow: 0px 3px 0px var(--web-shadow-2);
-
-        font-size: 32px;
+    .product .details .bottom button.favourite span {
+        font-size: 32px !important;
     }
 
     /* Reviews row */
@@ -730,7 +729,9 @@ main.rows {
         grid-area: auto / auto / auto / span 3;
 
         padding: 0 10px;
+    }
 
+    #load-more-reviews span {
         font-size: 34px;
     }
 }
