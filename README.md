@@ -6,7 +6,7 @@ This project was developed for the **Responsive Dynamic Web Development** module
 ## Set up
 1. Install **XAMPP Control Panel**
 2. Start modules **'Apache'** and **'MySQL'**
-3. Import the **'smallmart'** database into **phpMyAdmin** (the version of the SQL being imported may need to be changed to an earlier version than what is currently listed)
+3. Import the **'smallmart.sql'** database into **phpMyAdmin** (the version of the SQL being imported may need to be changed to an earlier version than what is currently listed)
 4. Place the **'website'** folder into **'htdocs'** in your **'xampp'** directory (e.g. ***C:\\xampp\\htdocs***)
 5. Go to **'http://localhost/smallmart/website/'** in your browser
 
