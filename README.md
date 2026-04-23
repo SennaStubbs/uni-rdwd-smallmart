@@ -1,5 +1,5 @@
 # Smallmart - A responsive website for 'Responsive Dynamic Web Development'
-A responsive dynamic website for a catalogue of (real) miniature items. Every product, and their associated images, are sourced from [Miniatures Shop](https://miniaturesshop.com/). All reviews and user accounts were generated using Microsoft Copilot.
+A responsive dynamic website for a catalogue of (real) miniature items. Every product, and their associated images, are sourced from [Miniatures Shop](https://miniaturesshop.com/). All reviews and user accounts were generated using [Microsoft Copilot](https://copilot.microsoft.com/).
 
 This project was developed for the **Responsive Dynamic Web Development** module of a foundation degree in **Computer Science and Digital Technologies**.
 
