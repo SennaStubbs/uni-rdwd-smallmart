@@ -7,10 +7,11 @@ This project was developed for the **Responsive Dynamic Web Development** module
 1. Install **XAMPP Control Panel**
 2. Start modules **'Apache'** and **'MySQL'**
 3. Import the **'smallmart.sql'** database into **phpMyAdmin** (the version of the SQL being imported may need to be changed to an earlier version than what is currently listed)
-4. Place the **'smallmart'** folder (the root of this project) into **'htdocs'** in your **'xampp'** directory (e.g. ***C:\\xampp\\htdocs***)
-5. Go to **'http://localhost/smallmart/website/'** in your browser (renaming any folders will break the website)
+4. Create a folder called **'smallmart'** in the '**htdocs**' directory of your **'xampp'** directory (e.g. ***C:\\xampp\\htdocs***)
+5. Place the **'website'** folder into the newly created **'smallmart'** directory
+6. Go to **'http://localhost/smallmart/website/'** in your browser (renaming any folders will break the website)
 
-All accounts except for '**testingaccount@example.com**' use the password '*bleh*'. The **testingaccount@example.com** account uses the password '*this I5 4 VAL1D PASSWORD!!*'.
+All accounts except for **'testingaccount@example.com'* use the password *'bleh'*. The **testingaccount@example.com** account uses the password *'this I5 4 VAL1D PASSWORD!!'*.
 
 ---
 
